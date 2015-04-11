@@ -39,5 +39,5 @@ filterSettings
 
 includeFilter in (Compile, filterResources) ~= { f => f || "*.txt" }
 
-mainClass in Compile := Some("cz.nanotrix.Kernel")
+mainClass in Compile := Some("cz.gdgscl.Kernel")
 
