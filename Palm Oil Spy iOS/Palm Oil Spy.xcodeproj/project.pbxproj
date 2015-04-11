@@ -13,6 +13,12 @@
 		7B81BC1D1AD96323006F1CB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B81BC1C1AD96323006F1CB7 /* Images.xcassets */; };
 		7B81BC201AD96323006F1CB7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B81BC1E1AD96323006F1CB7 /* LaunchScreen.xib */; };
 		7B81BC2C1AD96323006F1CB7 /* Palm_Oil_SpyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81BC2B1AD96323006F1CB7 /* Palm_Oil_SpyTests.swift */; };
+		7BD5D69D1AD971FA00627117 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD5D69C1AD971FA00627117 /* CoreGraphics.framework */; };
+		7BD5D69F1AD971FF00627117 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD5D69E1AD971FF00627117 /* AVFoundation.framework */; };
+		7BD5D6A11AD9722700627117 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD5D6A01AD9722700627117 /* Foundation.framework */; };
+		7BD5D6A31AD9722D00627117 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD5D6A21AD9722D00627117 /* UIKit.framework */; };
+		7BD5D6A51AD97B6400627117 /* PalmOilGlyphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5D6A41AD97B6400627117 /* PalmOilGlyphs.swift */; };
+		7BD5D6A81AD97B8300627117 /* BarCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5D6A71AD97B8300627117 /* BarCodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		7B81BC251AD96323006F1CB7 /* Palm Oil SpyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Palm Oil SpyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B81BC2A1AD96323006F1CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B81BC2B1AD96323006F1CB7 /* Palm_Oil_SpyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palm_Oil_SpyTests.swift; sourceTree = "<group>"; };
+		7BD5D69C1AD971FA00627117 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7BD5D69E1AD971FF00627117 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7BD5D6A01AD9722700627117 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7BD5D6A21AD9722D00627117 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7BD5D6A41AD97B6400627117 /* PalmOilGlyphs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalmOilGlyphs.swift; sourceTree = "<group>"; };
+		7BD5D6A71AD97B8300627117 /* BarCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarCodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD5D6A31AD9722D00627117 /* UIKit.framework in Frameworks */,
+				7BD5D6A11AD9722700627117 /* Foundation.framework in Frameworks */,
+				7BD5D69F1AD971FF00627117 /* AVFoundation.framework in Frameworks */,
+				7BD5D69D1AD971FA00627117 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +75,10 @@
 		7B81BC071AD96323006F1CB7 = {
 			isa = PBXGroup;
 			children = (
+				7BD5D6A21AD9722D00627117 /* UIKit.framework */,
+				7BD5D6A01AD9722700627117 /* Foundation.framework */,
+				7BD5D69E1AD971FF00627117 /* AVFoundation.framework */,
+				7BD5D69C1AD971FA00627117 /* CoreGraphics.framework */,
 				7B81BC121AD96323006F1CB7 /* Palm Oil Spy */,
 				7B81BC281AD96323006F1CB7 /* Palm Oil SpyTests */,
 				7B81BC111AD96323006F1CB7 /* Products */,
@@ -77,8 +97,9 @@
 		7B81BC121AD96323006F1CB7 /* Palm Oil Spy */ = {
 			isa = PBXGroup;
 			children = (
+				7BD5D6A91AD97EFD00627117 /* Controllers */,
+				7BD5D6A61AD97B6900627117 /* Views */,
 				7B81BC151AD96323006F1CB7 /* AppDelegate.swift */,
-				7B81BC171AD96323006F1CB7 /* ViewController.swift */,
 				7B81BC191AD96323006F1CB7 /* Main.storyboard */,
 				7B81BC1C1AD96323006F1CB7 /* Images.xcassets */,
 				7B81BC1E1AD96323006F1CB7 /* LaunchScreen.xib */,
@@ -110,6 +131,23 @@
 				7B81BC2A1AD96323006F1CB7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7BD5D6A61AD97B6900627117 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7BD5D6A41AD97B6400627117 /* PalmOilGlyphs.swift */,
+				7BD5D6A71AD97B8300627117 /* BarCodeView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7BD5D6A91AD97EFD00627117 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B81BC171AD96323006F1CB7 /* ViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +199,7 @@
 				TargetAttributes = {
 					7B81BC0F1AD96323006F1CB7 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = K22PG947W8;
 					};
 					7B81BC241AD96323006F1CB7 = {
 						CreatedOnToolsVersion = 6.3;
@@ -214,6 +253,8 @@
 			files = (
 				7B81BC181AD96323006F1CB7 /* ViewController.swift in Sources */,
 				7B81BC161AD96323006F1CB7 /* AppDelegate.swift in Sources */,
+				7BD5D6A51AD97B6400627117 /* PalmOilGlyphs.swift in Sources */,
+				7BD5D6A81AD97B8300627117 /* BarCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Palm Oil Spy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +392,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Palm Oil Spy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +452,7 @@
 				7B81BC311AD96323006F1CB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B81BC321AD96323006F1CB7 /* Build configuration list for PBXNativeTarget "Palm Oil SpyTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +461,7 @@
 				7B81BC341AD96323006F1CB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
