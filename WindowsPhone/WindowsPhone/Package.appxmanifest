@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
 
-  <Identity Name="f3b34fa4-56af-4884-ba25-4edbb4477ac8"
+  <Identity Name="7ac6d0e9-72e9-4676-9ac5-0ed39a937df8"
             Publisher="CN=Radar"
             Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="f3b34fa4-56af-4884-ba25-4edbb4477ac8" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="7ac6d0e9-72e9-4676-9ac5-0ed39a937df8" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>WindowsPhone</DisplayName>
