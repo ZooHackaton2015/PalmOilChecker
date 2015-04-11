@@ -16,17 +16,36 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
         </Grid.RowDefinitions>
-        <Canvas x:Name="viewfinderCanvas" Width="640" Height="480" 
-                   HorizontalAlignment="Left" >
+
+        <Canvas x:Name="viewfinderCanvas">
 
             <!--Camera viewfinder -->
             <Canvas.Background>
-                <VideoBrush x:Name="viewfinderBrush" />
+
+                <VideoBrush x:Name="viewfinderBrush">
+                    <VideoBrush.RelativeTransform>
+                        <CompositeTransform
+ x:Name="viewfinderTransform"
+ CenterX="0.5"
+ CenterY="0.5"
+ Rotation="90"/>
+                    </VideoBrush.RelativeTransform>
+                </VideoBrush>
             </Canvas.Background>
+            <TextBlock 
+ x:Name="focusBrackets" 
+ Text="[ ]" 
+ FontSize="40"
+ Visibility="Collapsed"/>
         </Canvas>
+        <!--Used for debugging >-->
+        <StackPanel Grid.Row="1" Margin="20, 0">
+            <TextBlock x:Name="tbBarcodeType" FontWeight="ExtraBold" />
+            <TextBlock x:Name="tbBarcodeData" FontWeight="ExtraBold" TextWrapping="Wrap" />
+        </StackPanel>
     </Grid>
 
 </phone:PhoneApplicationPage>
