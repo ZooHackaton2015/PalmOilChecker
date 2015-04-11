@@ -1,1 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
+
+.idea/**
+Server/project
+Server/target/
+Server/Server.iml
+Server/.idea/
