@@ -86,7 +86,7 @@ namespace WindowsPhone
             _phoneCamera.Focus();
         }
 
-        protected override void onNavigatingFrom(NavigatingCancelEventArgs e)
+        protected void onNavigatingFrom(NavigatingCancelEventArgs e)
         {
             _scanTimer.Stop();
 
