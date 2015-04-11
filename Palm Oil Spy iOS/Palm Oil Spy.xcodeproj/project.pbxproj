@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B81BC161AD96323006F1CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81BC151AD96323006F1CB7 /* AppDelegate.swift */; };
+		7B81BC181AD96323006F1CB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81BC171AD96323006F1CB7 /* ViewController.swift */; };
+		7B81BC1B1AD96323006F1CB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B81BC191AD96323006F1CB7 /* Main.storyboard */; };
+		7B81BC1D1AD96323006F1CB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B81BC1C1AD96323006F1CB7 /* Images.xcassets */; };
+		7B81BC201AD96323006F1CB7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B81BC1E1AD96323006F1CB7 /* LaunchScreen.xib */; };
+		7B81BC2C1AD96323006F1CB7 /* Palm_Oil_SpyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81BC2B1AD96323006F1CB7 /* Palm_Oil_SpyTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B81BC261AD96323006F1CB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B81BC081AD96323006F1CB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B81BC0F1AD96323006F1CB7;
+			remoteInfo = "Palm Oil Spy";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7B81BC101AD96323006F1CB7 /* Palm Oil Spy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Palm Oil Spy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B81BC141AD96323006F1CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B81BC151AD96323006F1CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7B81BC171AD96323006F1CB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7B81BC1A1AD96323006F1CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7B81BC1C1AD96323006F1CB7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7B81BC1F1AD96323006F1CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7B81BC251AD96323006F1CB7 /* Palm Oil SpyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Palm Oil SpyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B81BC2A1AD96323006F1CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B81BC2B1AD96323006F1CB7 /* Palm_Oil_SpyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palm_Oil_SpyTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B81BC0D1AD96323006F1CB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B81BC221AD96323006F1CB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B81BC071AD96323006F1CB7 = {
+			isa = PBXGroup;
+			children = (
+				7B81BC121AD96323006F1CB7 /* Palm Oil Spy */,
+				7B81BC281AD96323006F1CB7 /* Palm Oil SpyTests */,
+				7B81BC111AD96323006F1CB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B81BC111AD96323006F1CB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B81BC101AD96323006F1CB7 /* Palm Oil Spy.app */,
+				7B81BC251AD96323006F1CB7 /* Palm Oil SpyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B81BC121AD96323006F1CB7 /* Palm Oil Spy */ = {
+			isa = PBXGroup;
+			children = (
+				7B81BC151AD96323006F1CB7 /* AppDelegate.swift */,
+				7B81BC171AD96323006F1CB7 /* ViewController.swift */,
+				7B81BC191AD96323006F1CB7 /* Main.storyboard */,
+				7B81BC1C1AD96323006F1CB7 /* Images.xcassets */,
+				7B81BC1E1AD96323006F1CB7 /* LaunchScreen.xib */,
+				7B81BC131AD96323006F1CB7 /* Supporting Files */,
+			);
+			path = "Palm Oil Spy";
+			sourceTree = "<group>";
+		};
+		7B81BC131AD96323006F1CB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B81BC141AD96323006F1CB7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B81BC281AD96323006F1CB7 /* Palm Oil SpyTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B81BC2B1AD96323006F1CB7 /* Palm_Oil_SpyTests.swift */,
+				7B81BC291AD96323006F1CB7 /* Supporting Files */,
+			);
+			path = "Palm Oil SpyTests";
+			sourceTree = "<group>";
+		};
+		7B81BC291AD96323006F1CB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B81BC2A1AD96323006F1CB7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B81BC0F1AD96323006F1CB7 /* Palm Oil Spy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B81BC2F1AD96323006F1CB7 /* Build configuration list for PBXNativeTarget "Palm Oil Spy" */;
+			buildPhases = (
+				7B81BC0C1AD96323006F1CB7 /* Sources */,
+				7B81BC0D1AD96323006F1CB7 /* Frameworks */,
+				7B81BC0E1AD96323006F1CB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Palm Oil Spy";
+			productName = "Palm Oil Spy";
+			productReference = 7B81BC101AD96323006F1CB7 /* Palm Oil Spy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7B81BC241AD96323006F1CB7 /* Palm Oil SpyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B81BC321AD96323006F1CB7 /* Build configuration list for PBXNativeTarget "Palm Oil SpyTests" */;
+			buildPhases = (
+				7B81BC211AD96323006F1CB7 /* Sources */,
+				7B81BC221AD96323006F1CB7 /* Frameworks */,
+				7B81BC231AD96323006F1CB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B81BC271AD96323006F1CB7 /* PBXTargetDependency */,
+			);
+			name = "Palm Oil SpyTests";
+			productName = "Palm Oil SpyTests";
+			productReference = 7B81BC251AD96323006F1CB7 /* Palm Oil SpyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B81BC081AD96323006F1CB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = GDGSCL;
+				TargetAttributes = {
+					7B81BC0F1AD96323006F1CB7 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					7B81BC241AD96323006F1CB7 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 7B81BC0F1AD96323006F1CB7;
+					};
+				};
+			};
+			buildConfigurationList = 7B81BC0B1AD96323006F1CB7 /* Build configuration list for PBXProject "Palm Oil Spy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7B81BC071AD96323006F1CB7;
+			productRefGroup = 7B81BC111AD96323006F1CB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B81BC0F1AD96323006F1CB7 /* Palm Oil Spy */,
+				7B81BC241AD96323006F1CB7 /* Palm Oil SpyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B81BC0E1AD96323006F1CB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B81BC1B1AD96323006F1CB7 /* Main.storyboard in Resources */,
+				7B81BC201AD96323006F1CB7 /* LaunchScreen.xib in Resources */,
+				7B81BC1D1AD96323006F1CB7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B81BC231AD96323006F1CB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B81BC0C1AD96323006F1CB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B81BC181AD96323006F1CB7 /* ViewController.swift in Sources */,
+				7B81BC161AD96323006F1CB7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B81BC211AD96323006F1CB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B81BC2C1AD96323006F1CB7 /* Palm_Oil_SpyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B81BC271AD96323006F1CB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B81BC0F1AD96323006F1CB7 /* Palm Oil Spy */;
+			targetProxy = 7B81BC261AD96323006F1CB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7B81BC191AD96323006F1CB7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B81BC1A1AD96323006F1CB7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7B81BC1E1AD96323006F1CB7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B81BC1F1AD96323006F1CB7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7B81BC2D1AD96323006F1CB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7B81BC2E1AD96323006F1CB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B81BC301AD96323006F1CB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Palm Oil Spy/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7B81BC311AD96323006F1CB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Palm Oil Spy/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7B81BC331AD96323006F1CB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Palm Oil SpyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Palm Oil Spy.app/Palm Oil Spy";
+			};
+			name = Debug;
+		};
+		7B81BC341AD96323006F1CB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Palm Oil SpyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Palm Oil Spy.app/Palm Oil Spy";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B81BC0B1AD96323006F1CB7 /* Build configuration list for PBXProject "Palm Oil Spy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B81BC2D1AD96323006F1CB7 /* Debug */,
+				7B81BC2E1AD96323006F1CB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B81BC2F1AD96323006F1CB7 /* Build configuration list for PBXNativeTarget "Palm Oil Spy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B81BC301AD96323006F1CB7 /* Debug */,
+				7B81BC311AD96323006F1CB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7B81BC321AD96323006F1CB7 /* Build configuration list for PBXNativeTarget "Palm Oil SpyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B81BC331AD96323006F1CB7 /* Debug */,
+				7B81BC341AD96323006F1CB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B81BC081AD96323006F1CB7 /* Project object */;
+}
