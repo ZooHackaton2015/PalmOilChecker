@@ -1,41 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Navigation;
-using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
-using WindowsPhone.Resources;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
+
+// Dokumentaci k šabloně položky prázdné stránky najdete na adrese http://go.microsoft.com/fwlink/?LinkId=391641.
 
 namespace WindowsPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+    /// <summary>
+    /// Prázdné stránka, která může být použita samostatně, nebo v rámci prvku Frame.
+    /// </summary>
+    public sealed partial class MainPage : Page
     {
-        // Constructor
         public MainPage()
         {
-            InitializeComponent();
+            this.InitializeComponent();
 
-            // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
+            this.NavigationCacheMode = NavigationCacheMode.Required;
         }
 
-        // Sample code for building a localized ApplicationBar
-        //private void BuildLocalizedApplicationBar()
-        //{
-        //    // Set the page's ApplicationBar to a new instance of ApplicationBar.
-        //    ApplicationBar = new ApplicationBar();
+        /// <summary>
+        /// Vyvoláno, když má být tato stránka zobrazena v rámci.
+        /// </summary>
+        /// <param name="e">Data události popisující, jak bylo této stránky dosaženo.
+        /// Tento parametr se obvykle používá pro konfiguraci stránky.</param>
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // TODO: Připravit stránku, aby se zde zobrazila
 
-        //    // Create a new button and set the text value to the localized string from AppResources.
-        //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
-        //    appBarButton.Text = AppResources.AppBarButtonText;
-        //    ApplicationBar.Buttons.Add(appBarButton);
-
-        //    // Create a new menu item with the localized string from AppResources.
-        //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
-        //    ApplicationBar.MenuItems.Add(appBarMenuItem);
-        //}
+            // TODO: Pokud má vaše aplikace více stránek, zajistěte, že bude reagovat
+            // na hardwarové tlačítko Zpět, tak, že zaregistrujete zpracování
+            // události Windows.Phone.UI.Input.HardwareButtons.BackPressed.
+            // Pokud používáte objekt NavigationHelper, který poskytují některé šablony,
+            // je pro vás tato událost zpracována.
+        }
     }
 }
