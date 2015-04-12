@@ -36,7 +36,7 @@ def parse(ean:str) -> str:
         print("{ERROR:true}");
 
     dict = {};
-
+    dict["ERROR"] = "false";
     if(values[0] == "9500000000006"):#default company
         dict["ERROR"] = "true";
 
@@ -44,13 +44,7 @@ def parse(ean:str) -> str:
     for i in range(len(values)):
         dict[headers[i]] = values[i];
 
-    if(not "ERROR" in dict):
-        dict["ERROR"] = "false";
-
     print(json.dumps(dict));
-
-
-
 
 
 if __name__=='__main__':
