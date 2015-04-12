@@ -14,17 +14,10 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-
-
 public class MainActivity extends Activity implements OnClickListener {
 
     private Button scanBtn;
     private TextView formatTxt, contentTxt;
-    private String modes = "EAN_8,EAN13";
-    private Collection<String> supportedTypes= Arrays.asList(modes.split(","));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +34,7 @@ public class MainActivity extends Activity implements OnClickListener {
     public void onClick(View v){
         if(v.getId()==R.id.scan_button){
             IntentIntegrator scanIntegrator = new IntentIntegrator(this);
-            scanIntegrator.initiateScan(supportedTypes);
+            scanIntegrator.initiateScan(IntentIntegrator.PRODUCT_CODE_TYPES);
         }
     }
 
