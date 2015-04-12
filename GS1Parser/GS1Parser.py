@@ -31,12 +31,12 @@ def parse(ean):
     values = ["\t".join([sub(r"(\s)+",' ',x).strip() for x in e.itertext()]).strip() for e in table.xpath(".//td")];
 
     if(len(values)!=len(headers)):
-        print("{ERROR:true}");
+        print("{error:true}");
 
     dict = {};
-    dict["ERROR"] = "false";
+    dict["error"] = "false";
     if(values[0] == "9500000000006"):#default company
-        dict["ERROR"] = "true";
+        dict["error"] = "true";
 
 
     for i in range(len(values)):
@@ -49,6 +49,6 @@ if __name__=='__main__':
     try:
         parse(sys.argv[1])
     except Exception as e:
-        dict = {"ERROR":"true"}
+        dict = {"error":"true"}
         dict["exception"] = str(e);
         print(json.dumps(dict));
