@@ -25,9 +25,13 @@ def parse(ean):
     respData = resp.read();
 
     tree = etree.fromstring(respData,etree.HTMLParser());
-    table = tree.xpath("//table[@id='resultTable']")[0];
+    tables = tree.xpath("//table[@id='resultTable']");
+
+    if len(tables) <= 0:
+        raise Exception("response does not contain required data (invalid EAN number)");
+
+    table  = tables[0];
     headers = [e.strip().lower() for e in table.xpath(".//th/text()")];
-    
     values = ["\t".join([sub(r"(\s)+",' ',x).strip() for x in e.itertext()]).strip() for e in table.xpath(".//td")];
 
     if(len(values)!=len(headers)):
