@@ -35,13 +35,15 @@ def parse(ean):
     values = ["\t".join([sub(r"(\s)+",' ',x).strip() for x in e.itertext()]).strip() for e in table.xpath(".//td")];
 
     if(len(values)!=len(headers)):
-        print("{error:true}");
+        raise Exception("response contains invalid data (table have arbitrary number of columns)");
+
 
     dict = {};
-    dict["error"] = "false";
-    if(values[0] == "9500000000006"):#default company
-        dict["error"] = "true";
+    dict["error"] = False;
 
+
+    if(values[0] == "9500000000006"):#default company
+        dict["error"] = True;
 
     for i in range(len(values)):
         dict[headers[i]] = values[i];
@@ -53,6 +55,6 @@ if __name__=='__main__':
     try:
         parse(sys.argv[1])
     except Exception as e:
-        dict = {"error":"true"}
+        dict = {"error":True}
         dict["exception"] = str(e);
         print(json.dumps(dict));
