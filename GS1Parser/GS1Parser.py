@@ -1,12 +1,11 @@
 import json
 from lxml import etree;
 import urllib
-import urllib.parse
-import urllib.request
+import urllib2
 from re import sub
 import sys
 
-def parse(ean:str) -> str:
+def parse(ean):
     """parser for http://gepir.gs1.org/v32/xx/gtin.aspx?Lang=en-US"""
     
     data = {"ctl0_cphMain_LoginPanel_ScriptManager_HiddenField":	";;AjaxControlToolkit:en-US:c5c982cc-4942-4683-9b48-c2c58277700f:865923e8:411fea1c:e7c87f07;AjaxControlToolkit, Version=1.0.20229.20821, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e:en-US:c5c982cc-4942-4683-9b48-c2c58277700f:865923e8:91bd373d:ad1f21ce:596d588c:8e72a662:411fea1c:acd642d2:77c58d20:14b56adc:269a19ae:d7349d0c",
@@ -21,9 +20,9 @@ def parse(ean:str) -> str:
             "_ctl0:cphMain:TabContainerGTIN:TabPanelGTIN:rblGTIN":	"party",
             "_ctl0:cphMain:TabContainerGTIN:TabPanelGTIN:btnSubmitGTIN":	"Search"};
 
-    reqdata = urllib.parse.urlencode(data,True,encoding='utf-8').encode('utf-8');
-    req = urllib.request.Request("http://gepir.gs1.org/v32/xx/gtin.aspx?Lang=en-US",reqdata);
-    resp = urllib.request.urlopen(req);
+    reqdata = urllib.urlencode(data,True).encode('utf-8');
+    req = urllib2.Request("http://gepir.gs1.org/v32/xx/gtin.aspx?Lang=en-US",reqdata);
+    resp = urllib2.urlopen(req);
     respData = resp.read();
 
     tree = etree.fromstring(respData,etree.HTMLParser());
