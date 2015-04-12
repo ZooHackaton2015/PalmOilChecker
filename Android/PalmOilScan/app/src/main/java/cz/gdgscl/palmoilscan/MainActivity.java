@@ -14,11 +14,17 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 
-public abstract class MainActivity extends Activity implements OnClickListener {
+
+public class MainActivity extends Activity implements OnClickListener {
 
     private Button scanBtn;
     private TextView formatTxt, contentTxt;
+    private String modes = "EAN_8,EAN13";
+    private Collection<String> supportedTypes= Arrays.asList(modes.split(","));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +41,18 @@ public abstract class MainActivity extends Activity implements OnClickListener {
     public void onClick(View v){
         if(v.getId()==R.id.scan_button){
             IntentIntegrator scanIntegrator = new IntentIntegrator(this);
-            scanIntegrator.initiateScan();
+            scanIntegrator.initiateScan(supportedTypes);
+        }
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent intent){
+        IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+        if(scanningResult!=null){
+            String scanContent = scanningResult.getContents();
+            String scanFormat = scanningResult.getFormatName();
+        } else {
+            Toast toast = Toast.makeText(getApplicationContext(), "No scan data received!", Toast.LENGTH_SHORT);
+            toast.show();
         }
     }
 
