@@ -20,7 +20,7 @@ object CompanyService {
 
   case class CompanyServiceERR(err: String)
 
-  case class SetCompanyInfo(name: String, palmOil: Boolean)
+  case class SetCompanyInfo(name: String, info : CompanyInfo)
 
   case class DeleteCompanyInfo(name : String)
 
@@ -28,10 +28,9 @@ object CompanyService {
 
   case class GetUnknownCompanies()
 
-  case class UnknownCompanies(names : List[String])
+  case class UnknownCompanies(companies : List[String])
 
 }
-
 
 class CompanyService(
                       redis: Jedis,
@@ -44,10 +43,10 @@ class CompanyService(
       val replyTo = sender()
       Option(redis.hget(redisCompanyMap, comp)) match {
         case Some(oilInfo) => replyTo ! CompanyInfo(oilInfo.toBoolean)
-        case None => NoCompany()
+        case None => replyTo ! NoCompany()
       }
 
-    case SetCompanyInfo(comp, palmOil: Boolean) =>
+    case SetCompanyInfo(comp, CompanyInfo(palmOil))=>
       val pipe = redis.pipelined()
       pipe.hset(redisCompanyMap, comp, palmOil.toString)
       pipe.srem(redisUnkCompanySet, comp)

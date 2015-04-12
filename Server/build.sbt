@@ -1,5 +1,7 @@
 import sbtfilter.Plugin.FilterKeys._
 
+packageArchetype.akka_application
+
 name := "server"
 
 version := "0.1"
@@ -7,7 +9,7 @@ version := "0.1"
 scalaVersion := "2.11.6"
 
 val akkaV = "2.3.9"
-val scaldiV = "0.3.2"
+val scaldiV = "0.5.4"
 val sprayV = "1.3.2"
 val sprayJsonV = "1.3.1"
 val logbackV = "1.1.2"

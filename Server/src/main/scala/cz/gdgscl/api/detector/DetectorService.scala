@@ -23,13 +23,12 @@ object DetectorService {
 
   case class UpdateAvailableScripts()
 
-  case class DetectionResult(company: String, error: Option[Boolean])
+  case class DetectionResult(company: Option[String] = None, error: Boolean =false)
 
   val SCHEDULE_INTERVAL = 1 second
   val SCRIPT_REFRESH_INTERVAL = 1 minute
 
 }
-
 
 class DetectorService(redis: Jedis,
                       redisBarcodeMap: String,
@@ -37,6 +36,7 @@ class DetectorService(redis: Jedis,
                       redisUnkBarcodeSet: String,
                       scriptsDir: String) extends Actor with ActorLogging {
 
+  import context.dispatcher
   import cz.gdgscl.api.json.JsonAPIProtocol._
   import spray.json._
 
@@ -47,43 +47,50 @@ class DetectorService(redis: Jedis,
   context.system.scheduler.schedule(
     DetectorService.SCRIPT_REFRESH_INTERVAL,
     DetectorService.SCRIPT_REFRESH_INTERVAL,
-    self, DetectNextCompany())
+    self, UpdateAvailableScripts())
 
   override def receive = detect(listScriptsInDir())
 
   def detect(scripts: List[String]): Receive = {
 
     case UpdateAvailableScripts() =>
-      context.become(detect(listScriptsInDir()))
+      log.debug("Detecting new script files")
+      val actScripts = listScriptsInDir()
+      (actScripts.toSet -- scripts.toSet).toList match {
+        case Nil => log.debug("No new scripts detected")
+        case x : List[String] => log.debug(s"Detected new scripts ${x.mkString(",")}")
+      }
+      context.become(detect(actScripts))
 
     case DetectNextCompany() =>
-      val code = redis.srandmember(redisUnkBarcodeSet)
-
-      scripts.par.map(s => Try(s"$s $code" !!))
-        .filter(_.isSuccess)
-        .map(_.get)
-        .map(_.toJson.convertTo[DetectionResult])
-        .filter {
-        _.error match {
-          case None | Some(false) => true
-          case _ => false
-        }
-      }.toList match {
-        case Nil => log.info(s"No script returned non error result for barcode $code")
-        case x: List =>
-          x.map(comp => Option(redis.hget(redisCompanyMap, comp.company)))
-            .filter(_.isDefined)
-            .map(_.get.toBoolean) match {
-            case Nil => log.debug(s"No result found for barcode $code")
-            case x: List[Boolean] if x.forall(_ == true) || x.forall(_ == false) =>
-              val dec = x.head
-              log.debug(s"Decided for barcode $code - $x")
-              redis.hset(redisBarcodeMap, code, x.toString())
+      Option(redis.srandmember(redisUnkBarcodeSet)) match {
+        case Some(code) =>
+          scripts.par.map(s => Try(Seq("python", s, code) !!))
+            .filter(_.isSuccess)
+            .map(_.get)
+            .map(_.parseJson.convertTo[DetectionResult])
+            .filter(!_.error)
+            .toList match {
+            case Nil =>
+              log.info(s"No script returned non error result for barcode $code - discarding")
               redis.srem(redisUnkBarcodeSet, code)
-            case x: List[Boolean] =>
-              log.debug(s"Cannot decide on value for $code - discarding - results ${x.mkString(",")}")
-              redis.srem(redisUnkBarcodeSet, code)
+            case x: List[DetectionResult] =>
+              x.map(comp => Option(redis.hget(redisCompanyMap, comp.company.get)))
+                .filter(_.isDefined)
+                .map(_.get.toBoolean) match {
+                case Nil => log.debug(s"No result found for barcode $code")
+                case x: List[Boolean] if x.forall(_ == true) || x.forall(_ == false) =>
+                  val dec = x.head
+                  log.debug(s"Decided for barcode $code - $x")
+                  redis.hset(redisBarcodeMap, code, dec.toString)
+                  redis.srem(redisUnkBarcodeSet, code)
+                case x: List[Boolean] =>
+                  log.debug(s"Cannot decide on value for $code - discarding - results ${x.mkString(",")}")
+                  redis.srem(redisUnkBarcodeSet, code)
+              }
           }
+        case _ =>
+          log.debug("No new barcodes to detect")
       }
 
       context.system.scheduler.scheduleOnce(
@@ -92,6 +99,6 @@ class DetectorService(redis: Jedis,
   }
 
   def listScriptsInDir() = {
-    Paths.get(scriptsDir).toFile.listFiles().map(_.getAbsoluteFile.toString).toList
+    Paths.get(scriptsDir).toFile.listFiles().map(_.getAbsoluteFile.toString).filter(_.endsWith(".py")).toList
   }
 }

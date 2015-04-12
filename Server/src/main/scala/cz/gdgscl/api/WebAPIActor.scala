@@ -1,9 +1,9 @@
 package cz.gdgscl.api
 
-import akka.actor.{ActorLogging, ActorRef, Props}
+import akka.actor.{ActorLogging, Props}
 import cz.gdgscl.api.WebAPIActor.Start
-import cz.gdgscl.api.routes.BarcodeRoute
-import cz.gdgscl.api.utils.{WebAPITimeout, DefaultTimeout}
+import cz.gdgscl.api.routes.{BarcodeRoute, CompanyRoute}
+import cz.gdgscl.api.utils.{DefaultTimeout, WebAPITimeout}
 import spray.routing.Directive.pimpApply
 import spray.routing.HttpServiceActor
 
@@ -14,31 +14,36 @@ object WebAPIActor {
 
   def props(appName: String) = Props(new WebAPIActor(appName) with WebAPITimeout)
 
+  case class APIError(err : String)
+
   case class Start()
 
 }
 
 class WebAPIActor(appNameAndVersion: String) extends HttpServiceActor
-with ActorLogging with BarcodeRoute
+with ActorLogging with BarcodeRoute with CompanyRoute
  {
   this: DefaultTimeout =>
 
   import context.dispatcher
   import spray.httpx.marshalling.ToResponseMarshallable._
 
-  var barcodeServiceActor: Option[ActorRef] = None
+
 
   def receive = waitForInit
 
 
   def waitForInit: Receive = {
     case Start() =>
-      context.actorSelection("../barcodes").resolveOne().foreach(x => barcodeServiceActor = Some(x))
-
-      context.become(runRoute(
-          barcodeAPI(barcodeServiceActor) ~
-          appName
-      ))
+      for {
+        barcode <- context.actorSelection("../barcode").resolveOne()
+        company <- context.actorSelection("../company").resolveOne()
+      } yield {
+        context.become(runRoute(
+          barcodeAPI(barcode) ~
+            companyAPI(company) ~
+            appName
+        ))}
   }
   
   def appName = {

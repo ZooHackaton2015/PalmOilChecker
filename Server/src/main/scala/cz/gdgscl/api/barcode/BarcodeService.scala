@@ -8,7 +8,8 @@ import redis.clients.jedis.Jedis
 object BarcodeService {
 
   def props(redis: Jedis,
-            redisBarcodeMap: String) = Props(new BarcodeService(redis, redisBarcodeMap))
+            redisBarcodeMap: String,
+            redisBarcodeUnkSet : String) = Props(new BarcodeService(redis, redisBarcodeMap,redisBarcodeUnkSet))
 
   case class BarcodeInfo(palmOil: Boolean)
 
@@ -27,7 +28,8 @@ object BarcodeService {
 }
 
 class BarcodeService( redis: Jedis,
-                      redisBarcodeMap: String) extends Actor with ActorLogging with DefaultTimeout {
+                      redisBarcodeMap: String,
+                      redisBarcodeUnkSet : String) extends Actor with ActorLogging with DefaultTimeout {
 
   override def receive: Receive = {
 
@@ -35,7 +37,9 @@ class BarcodeService( redis: Jedis,
       val replyTo = sender()
       Option(redis.hget(redisBarcodeMap, code)) match {
         case Some(hasOil) => replyTo ! BarcodeInfo(hasOil.toBoolean)
-        case None => replyTo ! NoBarcodeInfo()
+        case None =>
+          redis.sadd(redisBarcodeUnkSet,code)
+          replyTo ! NoBarcodeInfo()
       }
 
     case SetBarcodeInfo(code, BarcodeInfo(palmOil)) =>
