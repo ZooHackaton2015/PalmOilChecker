@@ -21,7 +21,7 @@ def parse(ean):
 
     reqdata = urllib.urlencode(data,True).encode('utf-8');
     req = urllib2.Request("http://gepir.gs1.org/v32/xx/gtin.aspx?Lang=en-US",reqdata);
-    resp = urllib2.urlopen(req);
+    resp = urllib2.urlopen(req, timeout = 5);
     respData = resp.read();
 
     tree = etree.fromstring(respData,etree.HTMLParser());
