@@ -2,13 +2,15 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Bar Code Scanner-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Palm_Oil_Spy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Bar Code Scanner" id="vXZ-lx-hvc" customClass="ViewController" customModule="Palm_Oil_Spy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -22,22 +24,36 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEy-2c-anm" customClass="BarCodeView" customModule="Palm_Oil_Spy" customModuleProvider="target">
-                                <rect key="frame" x="40" y="170" width="520" height="200"/>
+                                <rect key="frame" x="16" y="190" width="568" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MpX-hc-bKm" customClass="ResultView" customModule="Palm_Oil_Spy">
+                                        <rect key="frame" x="184" y="0.0" width="200" height="200"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MpX-hc-bKm" secondAttribute="height" multiplier="1:1" id="SPH-C3-clx"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="I0N-Qr-MeG"/>
+                                    <constraint firstAttribute="centerX" secondItem="MpX-hc-bKm" secondAttribute="centerX" id="T8P-hv-wox"/>
+                                    <constraint firstAttribute="bottom" secondItem="MpX-hc-bKm" secondAttribute="bottom" id="byr-Bp-ThI"/>
+                                    <constraint firstItem="MpX-hc-bKm" firstAttribute="top" secondItem="GEy-2c-anm" secondAttribute="top" id="zie-CP-f5F"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place EAN code to view finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTN-U6-7EL">
-                                <rect key="frame" x="183" y="480" width="234" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place EAN barcode inside view finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTN-U6-7EL">
+                                <rect key="frame" x="16" y="480" width="568" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="234" id="Mnh-yD-OiR"/>
                                     <constraint firstAttribute="height" constant="21" id="VxB-I1-BU7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="palm" translatesAutoresizingMaskIntoConstraints="NO" id="Fds-Fi-NkW">
+                                <rect key="frame" x="0.0" y="30" width="600" height="154"/>
+                            </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBl-14-5qt">
                                 <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VsI-TG-9Yl">
@@ -50,17 +66,48 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZA-Vm-VZd">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZA-Vm-VZd" customClass="FlashButton" customModule="Palm_Oil_Spy" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
-                                                        <state key="normal" title="Button">
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="flashButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Uhj-xn-gni"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3em-K4-l3l" customClass="HistoryButton" customModule="Palm_Oil_Spy" customModuleProvider="target">
+                                                        <rect key="frame" x="400" y="0.0" width="200" height="60"/>
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCZ-Nj-Gd6" customClass="InfoButton" customModule="Palm_Oil_Spy" customModuleProvider="target">
+                                                        <rect key="frame" x="200" y="0.0" width="200" height="60"/>
+                                                        <state key="normal">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="3em-K4-l3l" firstAttribute="height" secondItem="dZA-Vm-VZd" secondAttribute="height" id="06X-2T-5K5"/>
+                                                    <constraint firstItem="dZA-Vm-VZd" firstAttribute="leading" secondItem="x9w-R8-alc" secondAttribute="leading" id="1R3-P2-zQr"/>
+                                                    <constraint firstItem="MCZ-Nj-Gd6" firstAttribute="trailing" secondItem="dZA-Vm-VZd" secondAttribute="trailing" constant="-28" id="CEf-Jh-hyP"/>
+                                                    <constraint firstAttribute="bottom" secondItem="MCZ-Nj-Gd6" secondAttribute="bottom" id="GGP-cd-WG8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3em-K4-l3l" secondAttribute="trailing" id="J7u-lV-o9R"/>
+                                                    <constraint firstItem="3em-K4-l3l" firstAttribute="leading" secondItem="MCZ-Nj-Gd6" secondAttribute="trailing" id="Kgd-pm-xE5"/>
+                                                    <constraint firstItem="3em-K4-l3l" firstAttribute="width" secondItem="dZA-Vm-VZd" secondAttribute="width" id="KjN-86-J5T"/>
                                                     <constraint firstItem="dZA-Vm-VZd" firstAttribute="top" secondItem="x9w-R8-alc" secondAttribute="top" id="hWV-7I-zvS"/>
                                                     <constraint firstItem="dZA-Vm-VZd" firstAttribute="leading" secondItem="x9w-R8-alc" secondAttribute="leading" id="jlE-Xy-Vcc"/>
+                                                    <constraint firstItem="MCZ-Nj-Gd6" firstAttribute="width" secondItem="dZA-Vm-VZd" secondAttribute="width" id="pWX-Vh-SwJ"/>
+                                                    <constraint firstItem="MCZ-Nj-Gd6" firstAttribute="height" secondItem="dZA-Vm-VZd" secondAttribute="height" id="rux-rm-oU7"/>
+                                                    <constraint firstAttribute="bottom" secondItem="3em-K4-l3l" secondAttribute="bottom" id="shJ-44-P8f"/>
+                                                    <constraint firstItem="MCZ-Nj-Gd6" firstAttribute="leading" secondItem="dZA-Vm-VZd" secondAttribute="trailing" id="wPJ-EF-9yj"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="CEf-Jh-hyP"/>
+                                                    </mask>
+                                                </variation>
                                             </view>
                                             <constraints>
                                                 <constraint firstItem="dZA-Vm-VZd" firstAttribute="height" secondItem="xvg-Ef-UuH" secondAttribute="height" id="HAT-X0-abQ"/>
@@ -86,24 +133,32 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Fds-Fi-NkW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0eg-yc-LuN"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="EBl-14-5qt" secondAttribute="bottom" id="66q-iv-Nr4"/>
                             <constraint firstItem="Xg7-yr-hhd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="8fh-UY-vGM"/>
                             <constraint firstAttribute="centerX" secondItem="GEy-2c-anm" secondAttribute="centerX" id="B37-eT-hZD"/>
+                            <constraint firstItem="jTN-U6-7EL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="D15-yI-2aQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Fds-Fi-NkW" secondAttribute="trailing" id="FFD-ou-yU8"/>
                             <constraint firstItem="Xg7-yr-hhd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="IHr-sq-j95"/>
                             <constraint firstAttribute="trailing" secondItem="Xg7-yr-hhd" secondAttribute="trailing" id="LpT-gK-XOz"/>
+                            <constraint firstItem="GEy-2c-anm" firstAttribute="top" secondItem="Fds-Fi-NkW" secondAttribute="bottom" constant="6" id="QGD-tl-OEH"/>
                             <constraint firstItem="EBl-14-5qt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="QlA-IY-JhC"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="jTN-U6-7EL" secondAttribute="bottom" constant="99" id="ZBF-Oc-2PG"/>
-                            <constraint firstItem="GEy-2c-anm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="40" id="frp-CT-tox"/>
+                            <constraint firstItem="jTN-U6-7EL" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="afq-14-GVf"/>
+                            <constraint firstItem="GEy-2c-anm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="frp-CT-tox"/>
+                            <constraint firstItem="Fds-Fi-NkW" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="lMB-aG-7e5"/>
                             <constraint firstAttribute="centerX" secondItem="jTN-U6-7EL" secondAttribute="centerX" id="mM7-Dd-4c8"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Xg7-yr-hhd" secondAttribute="bottom" id="pLR-pS-oIq"/>
                             <constraint firstAttribute="trailing" secondItem="EBl-14-5qt" secondAttribute="trailing" id="rpy-d3-6QF"/>
-                            <constraint firstAttribute="centerY" secondItem="GEy-2c-anm" secondAttribute="centerY" constant="30" id="xA0-QD-f9F"/>
-                            <constraint firstAttribute="trailing" secondItem="GEy-2c-anm" secondAttribute="trailing" constant="40" id="yqT-W6-s9t"/>
+                            <constraint firstAttribute="centerY" secondItem="GEy-2c-anm" secondAttribute="centerY" constant="10" id="xA0-QD-f9F"/>
+                            <constraint firstAttribute="trailing" secondItem="GEy-2c-anm" secondAttribute="trailing" constant="16" id="yqT-W6-s9t"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="Xg7-yr-hhd" id="OdM-mG-zud"/>
                         <outlet property="eanCodeLabel" destination="jTN-U6-7EL" id="6GP-mt-qbF"/>
+                        <outlet property="flashButton" destination="dZA-Vm-VZd" id="oFW-Lc-hmG"/>
+                        <outlet property="resultView" destination="MpX-hc-bKm" id="ZbC-dC-Kxv"/>
                         <outlet property="statusView" destination="GEy-2c-anm" id="Tcb-UN-We9"/>
                     </connections>
                 </viewController>
@@ -111,4 +166,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="palm" width="306" height="396"/>
+    </resources>
 </document>
