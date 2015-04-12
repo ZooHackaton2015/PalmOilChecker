@@ -21,23 +21,29 @@ def parse(ean):
 
     reqdata = urllib.urlencode(data,True).encode('utf-8');
     req = urllib2.Request("http://gepir.gs1.org/v32/xx/gtin.aspx?Lang=en-US",reqdata);
-    resp = urllib2.urlopen(req, timeout = 5);
+    resp = urllib2.urlopen(req, timeout = 10);
     respData = resp.read();
 
     tree = etree.fromstring(respData,etree.HTMLParser());
-    table = tree.xpath("//table[@id='resultTable']")[0];
+    tables = tree.xpath("//table[@id='resultTable']");
+
+    if len(tables) <= 0:
+        raise Exception("response does not contain required data (invalid EAN number)");
+
+    table  = tables[0];
     headers = [e.strip().lower() for e in table.xpath(".//th/text()")];
-    
     values = ["\t".join([sub(r"(\s)+",' ',x).strip() for x in e.itertext()]).strip() for e in table.xpath(".//td")];
 
     if(len(values)!=len(headers)):
-        print("{error:true}");
+        raise Exception("response contains invalid data (table have arbitrary number of columns)");
+
 
     dict = {};
-    dict["error"] = "false";
-    if(values[0] == "9500000000006"):#default company
-        dict["error"] = "true";
+    dict["error"] = False;
 
+
+    if(values[0] == "9500000000006"):#default company
+        dict["error"] = True;
 
     for i in range(len(values)):
         dict[headers[i]] = values[i];
@@ -49,6 +55,6 @@ if __name__=='__main__':
     try:
         parse(sys.argv[1])
     except Exception as e:
-        dict = {"error":"true"}
+        dict = {"error":True}
         dict["exception"] = str(e);
         print(json.dumps(dict));
