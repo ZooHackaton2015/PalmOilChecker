@@ -7,7 +7,6 @@ import sys
 
 def parse(ean):
     """parser for http://gepir.gs1.org/v32/xx/gtin.aspx?Lang=en-US"""
-    
     data = {"ctl0_cphMain_LoginPanel_ScriptManager_HiddenField":	";;AjaxControlToolkit:en-US:c5c982cc-4942-4683-9b48-c2c58277700f:865923e8:411fea1c:e7c87f07;AjaxControlToolkit, Version=1.0.20229.20821, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e:en-US:c5c982cc-4942-4683-9b48-c2c58277700f:865923e8:91bd373d:ad1f21ce:596d588c:8e72a662:411fea1c:acd642d2:77c58d20:14b56adc:269a19ae:d7349d0c",
             "__EVENTTARGET":	"",
             "__EVENTARGUMENT":	"",
@@ -47,4 +46,9 @@ def parse(ean):
 
 
 if __name__=='__main__':
-    parse(sys.argv[1])
+    try:
+        parse(sys.argv[1])
+    except Exception as e:
+        dict = {"ERROR":"true"}
+        dict["exception"] = str(e);
+        print(json.dumps(dict));
