@@ -50,6 +50,8 @@ public class MainActivity extends Activity implements OnClickListener {
         if(scanningResult!=null){
             String scanContent = scanningResult.getContents();
             String scanFormat = scanningResult.getFormatName();
+            formatTxt.setText("FORMAT: " + scanFormat);
+            contentTxt.setText("CONTENT: " + scanContent);
         } else {
             Toast toast = Toast.makeText(getApplicationContext(), "No scan data received!", Toast.LENGTH_SHORT);
             toast.show();
