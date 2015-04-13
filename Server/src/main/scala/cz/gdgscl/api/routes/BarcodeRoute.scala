@@ -18,7 +18,7 @@ trait BarcodeRoute extends HttpService with DefaultTimeout {
   import spray.httpx.marshalling.ToResponseMarshallable._
 
   def barcodeAPI(barcodeService: ActorRef)(implicit execContenxt: ExecutionContext) = {
-    pathPrefix("barcodes") {
+    pathPrefix("v1" / "barcodes") {
       path(Segment) { code =>
         get {
           complete(

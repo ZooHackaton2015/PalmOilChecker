@@ -17,7 +17,7 @@ trait CompanyRoute extends HttpService with DefaultTimeout {
   import spray.httpx.marshalling.ToResponseMarshallable._
 
   def companyAPI(companyService: ActorRef)(implicit execContenxt: ExecutionContext) = {
-    pathPrefix("companies") {
+    pathPrefix("v1" / "companies") {
       path("unknown") {
         pathEnd {
           get {
