@@ -100,7 +100,7 @@
 	</ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>26084a58-e6ab-4e4a-a869-1b74b831bf4f</ProjectGuid>
+    <ProjectGuid>1858a3b0-a55b-4b13-82f0-20f98a0f70fe</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
     <DefaultReferenceGroup>Implicit (Multi-Device Apps)</DefaultReferenceGroup>
@@ -146,22 +146,26 @@
     <Content Include="res\icons\ios\icon-57-2x.png" />
     <Content Include="res\icons\ios\icon-60.png" />
     <Content Include="res\icons\ios\icon-60-2x.png" />
+    <Content Include="res\icons\ios\icon-60-3x.png" />
     <Content Include="res\icons\ios\icon-72.png" />
     <Content Include="res\icons\ios\icon-72-2x.png" />
     <Content Include="res\icons\ios\icon-76.png" />
     <Content Include="res\icons\ios\icon-76-2x.png" />
     <Content Include="res\icons\ios\icon-small.png" />
     <Content Include="res\icons\ios\icon-small-2x.png" />
-    <Content Include="res\icons\windows\logo.png" />
-    <Content Include="res\icons\windows\smalllogo.png" />
+    <Content Include="res\icons\windows\Square150x150Logo.scale-100.png" />
+    <Content Include="res\icons\windows\Square30x30Logo.scale-100.png" />
+    <Content Include="res\icons\windows\Square310x310Logo.scale-100.png" />
 	<Content Include="res\icons\windows\Square150x150Logo.scale-240.png" />
 	<Content Include="res\icons\windows\Square44x44Logo.scale-240.png" />
+	<Content Include="res\icons\windows\Square70x70Logo.scale-100.png" />
 	<Content Include="res\icons\windows\Square71x71Logo.scale-240.png" />
-    <Content Include="res\icons\windows\storelogo.png" />
+    <Content Include="res\icons\windows\StoreLogo.scale-100.png" />
 	<Content Include="res\icons\windows\StoreLogo.scale-240.png" />
+	<Content Include="res\icons\windows\Wide310x150Logo.scale-100.png" />
 	<Content Include="res\icons\windows\Wide310x150Logo.scale-240.png" />
-	<Content Include="res\icons\wp8\icon-62-tile.png" />
-    <Content Include="res\icons\wp8\icon-173-tile.png" />
+	<Content Include="res\icons\wp8\ApplicationIcon.png" />
+    <Content Include="res\icons\wp8\Background.png" />
     <Content Include="res\native\android\ant.properties" />
     <Content Include="res\screens\android\screen-hdpi-landscape.png" />
     <Content Include="res\screens\android\screen-hdpi-portrait.png" />
@@ -176,11 +180,15 @@
     <Content Include="res\screens\ios\screen-ipad-portrait.png" />
     <Content Include="res\screens\ios\screen-ipad-portrait-2x.png" />
     <Content Include="res\screens\ios\screen-iphone-568h-2x.png" />
+    <Content Include="res\screens\ios\screen-iphone-landscape-736h.png" />
     <Content Include="res\screens\ios\screen-iphone-portrait.png" />
     <Content Include="res\screens\ios\screen-iphone-portrait-2x.png" />
-    <Content Include="res\screens\windows\splashscreen.png" />
+    <Content Include="res\screens\ios\screen-iphone-portrait-667h.png" />
+    <Content Include="res\screens\ios\screen-iphone-portrait-736h.png" />
+    <Content Include="res\screens\windows\SplashScreen.scale-100.png" />
 	<Content Include="res\screens\windows\SplashScreen.scale-240.png" />
-    <Content Include="res\screens\wp8\screen-portrait.jpg" />
+	<Content Include="res\screens\windows\SplashScreenPhone.scale-240.png" />
+    <Content Include="res\screens\wp8\SplashScreenImage.jpg" />
   </ItemGroup>
   <PropertyGroup>
     <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
