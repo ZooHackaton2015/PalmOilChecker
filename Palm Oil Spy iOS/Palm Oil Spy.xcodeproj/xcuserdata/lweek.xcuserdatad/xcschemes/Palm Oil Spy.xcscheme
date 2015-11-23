@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7B81BC0F1AD96323006F1CB7"
-               BuildableName = "Palm Oil Spy.app"
-               BlueprintName = "Palm Oil Spy"
+               BuildableName = "Palm Oil.app"
+               BlueprintName = "Palm Oil"
                ReferencedContainer = "container:Palm Oil Spy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7B81BC241AD96323006F1CB7"
-               BuildableName = "Palm Oil SpyTests.xctest"
-               BlueprintName = "Palm Oil SpyTests"
+               BuildableName = "Palm OilTests.xctest"
+               BlueprintName = "Palm OilTests"
                ReferencedContainer = "container:Palm Oil Spy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,8 +47,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7B81BC241AD96323006F1CB7"
-               BuildableName = "Palm Oil SpyTests.xctest"
-               BlueprintName = "Palm Oil SpyTests"
+               BuildableName = "Palm OilTests.xctest"
+               BlueprintName = "Palm OilTests"
                ReferencedContainer = "container:Palm Oil Spy.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7B81BC0F1AD96323006F1CB7"
-            BuildableName = "Palm Oil Spy.app"
-            BlueprintName = "Palm Oil Spy"
+            BuildableName = "Palm Oil.app"
+            BlueprintName = "Palm Oil"
             ReferencedContainer = "container:Palm Oil Spy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -80,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7B81BC0F1AD96323006F1CB7"
-            BuildableName = "Palm Oil Spy.app"
-            BlueprintName = "Palm Oil Spy"
+            BuildableName = "Palm Oil.app"
+            BlueprintName = "Palm Oil"
             ReferencedContainer = "container:Palm Oil Spy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -99,8 +99,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7B81BC0F1AD96323006F1CB7"
-            BuildableName = "Palm Oil Spy.app"
-            BlueprintName = "Palm Oil Spy"
+            BuildableName = "Palm Oil.app"
+            BlueprintName = "Palm Oil"
             ReferencedContainer = "container:Palm Oil Spy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -1,0 +1,6 @@
+framework module Pods_Palm_Oil {
+  umbrella header "Pods-Palm Oil-umbrella.h"
+
+  export *
+  module * { export * }
+}

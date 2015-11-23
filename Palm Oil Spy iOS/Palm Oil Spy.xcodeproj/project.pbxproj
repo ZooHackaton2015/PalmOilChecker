@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		621EEE280311EEA196408C67 /* Pods_Palm_Oil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68E370DBA43C3E36F638080 /* Pods_Palm_Oil.framework */; };
 		7B427B4A1AEA8FB9006E8AD6 /* PalmOilLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B427B491AEA8FB9006E8AD6 /* PalmOilLogoView.swift */; };
 		7B427B4C1AEA9A55006E8AD6 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B427B4B1AEA9A55006E8AD6 /* SwitchButton.swift */; };
 		7B81BC161AD96323006F1CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81BC151AD96323006F1CB7 /* AppDelegate.swift */; };
@@ -41,14 +42,14 @@
 /* Begin PBXFileReference section */
 		7B427B491AEA8FB9006E8AD6 /* PalmOilLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalmOilLogoView.swift; sourceTree = "<group>"; };
 		7B427B4B1AEA9A55006E8AD6 /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
-		7B81BC101AD96323006F1CB7 /* Palm Oil Spy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Palm Oil Spy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B81BC101AD96323006F1CB7 /* Palm Oil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Palm Oil.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B81BC141AD96323006F1CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B81BC151AD96323006F1CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B81BC171AD96323006F1CB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7B81BC1A1AD96323006F1CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B81BC1C1AD96323006F1CB7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7B81BC1F1AD96323006F1CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		7B81BC251AD96323006F1CB7 /* Palm Oil SpyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Palm Oil SpyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B81BC251AD96323006F1CB7 /* Palm OilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Palm OilTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B81BC2A1AD96323006F1CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B81BC2B1AD96323006F1CB7 /* Palm_Oil_SpyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palm_Oil_SpyTests.swift; sourceTree = "<group>"; };
 		7BA1D9671ADA6AE400CFF373 /* InfoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoButton.swift; sourceTree = "<group>"; };
@@ -62,6 +63,9 @@
 		7BD5D6A41AD97B6400627117 /* PalmOilGlyphs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalmOilGlyphs.swift; sourceTree = "<group>"; };
 		7BD5D6A71AD97B8300627117 /* BarCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarCodeView.swift; sourceTree = "<group>"; };
 		7BDC61781ADA627900D2E23F /* ResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		80173F398C1A3932A77DB8DD /* Pods-Palm Oil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palm Oil.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Palm Oil/Pods-Palm Oil.debug.xcconfig"; sourceTree = "<group>"; };
+		C68E370DBA43C3E36F638080 /* Pods_Palm_Oil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Palm_Oil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F737899666C6419F1B035ACF /* Pods-Palm Oil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palm Oil.release.xcconfig"; path = "Pods/Target Support Files/Pods-Palm Oil/Pods-Palm Oil.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 				7BD5D6A11AD9722700627117 /* Foundation.framework in Frameworks */,
 				7BD5D69F1AD971FF00627117 /* AVFoundation.framework in Frameworks */,
 				7BD5D69D1AD971FA00627117 /* CoreGraphics.framework in Frameworks */,
+				621EEE280311EEA196408C67 /* Pods_Palm_Oil.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		014FC0125E431F7743FAAB3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C68E370DBA43C3E36F638080 /* Pods_Palm_Oil.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D4B180F400E068D43902A0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80173F398C1A3932A77DB8DD /* Pods-Palm Oil.debug.xcconfig */,
+				F737899666C6419F1B035ACF /* Pods-Palm Oil.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7B81BC071AD96323006F1CB7 = {
 			isa = PBXGroup;
 			children = (
@@ -96,14 +118,16 @@
 				7B81BC121AD96323006F1CB7 /* Palm Oil Spy */,
 				7B81BC281AD96323006F1CB7 /* Palm Oil SpyTests */,
 				7B81BC111AD96323006F1CB7 /* Products */,
+				0D4B180F400E068D43902A0D /* Pods */,
+				014FC0125E431F7743FAAB3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		7B81BC111AD96323006F1CB7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B81BC101AD96323006F1CB7 /* Palm Oil Spy.app */,
-				7B81BC251AD96323006F1CB7 /* Palm Oil SpyTests.xctest */,
+				7B81BC101AD96323006F1CB7 /* Palm Oil.app */,
+				7B81BC251AD96323006F1CB7 /* Palm OilTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,26 +206,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7B81BC0F1AD96323006F1CB7 /* Palm Oil Spy */ = {
+		7B81BC0F1AD96323006F1CB7 /* Palm Oil */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B81BC2F1AD96323006F1CB7 /* Build configuration list for PBXNativeTarget "Palm Oil Spy" */;
+			buildConfigurationList = 7B81BC2F1AD96323006F1CB7 /* Build configuration list for PBXNativeTarget "Palm Oil" */;
 			buildPhases = (
+				E9926CE8B7508D85475FB3B8 /* Check Pods Manifest.lock */,
 				7B81BC0C1AD96323006F1CB7 /* Sources */,
 				7B81BC0D1AD96323006F1CB7 /* Frameworks */,
 				7B81BC0E1AD96323006F1CB7 /* Resources */,
+				EA132CC3E710241DDF16F15D /* Embed Pods Frameworks */,
+				644BEE1CC655E0651135643A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Palm Oil Spy";
+			name = "Palm Oil";
 			productName = "Palm Oil Spy";
-			productReference = 7B81BC101AD96323006F1CB7 /* Palm Oil Spy.app */;
+			productReference = 7B81BC101AD96323006F1CB7 /* Palm Oil.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7B81BC241AD96323006F1CB7 /* Palm Oil SpyTests */ = {
+		7B81BC241AD96323006F1CB7 /* Palm OilTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B81BC321AD96323006F1CB7 /* Build configuration list for PBXNativeTarget "Palm Oil SpyTests" */;
+			buildConfigurationList = 7B81BC321AD96323006F1CB7 /* Build configuration list for PBXNativeTarget "Palm OilTests" */;
 			buildPhases = (
 				7B81BC211AD96323006F1CB7 /* Sources */,
 				7B81BC221AD96323006F1CB7 /* Frameworks */,
@@ -212,9 +239,9 @@
 			dependencies = (
 				7B81BC271AD96323006F1CB7 /* PBXTargetDependency */,
 			);
-			name = "Palm Oil SpyTests";
+			name = "Palm OilTests";
 			productName = "Palm Oil SpyTests";
-			productReference = 7B81BC251AD96323006F1CB7 /* Palm Oil SpyTests.xctest */;
+			productReference = 7B81BC251AD96323006F1CB7 /* Palm OilTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -251,8 +278,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7B81BC0F1AD96323006F1CB7 /* Palm Oil Spy */,
-				7B81BC241AD96323006F1CB7 /* Palm Oil SpyTests */,
+				7B81BC0F1AD96323006F1CB7 /* Palm Oil */,
+				7B81BC241AD96323006F1CB7 /* Palm OilTests */,
 			);
 		};
 /* End PBXProject section */
@@ -276,6 +303,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		644BEE1CC655E0651135643A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Palm Oil/Pods-Palm Oil-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9926CE8B7508D85475FB3B8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA132CC3E710241DDF16F15D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Palm Oil/Pods-Palm Oil-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B81BC0C1AD96323006F1CB7 /* Sources */ = {
@@ -309,7 +384,7 @@
 /* Begin PBXTargetDependency section */
 		7B81BC271AD96323006F1CB7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B81BC0F1AD96323006F1CB7 /* Palm Oil Spy */;
+			target = 7B81BC0F1AD96323006F1CB7 /* Palm Oil */;
 			targetProxy = 7B81BC261AD96323006F1CB7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -418,6 +493,7 @@
 		};
 		7B81BC301AD96323006F1CB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80173F398C1A3932A77DB8DD /* Pods-Palm Oil.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -425,11 +501,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.gdgscl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "83022b9c-a627-4ca3-b541-a0aef3e77b4f";
 			};
 			name = Debug;
 		};
 		7B81BC311AD96323006F1CB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F737899666C6419F1B035ACF /* Pods-Palm Oil.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -437,6 +515,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.gdgscl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "83022b9c-a627-4ca3-b541-a0aef3e77b4f";
 			};
 			name = Release;
 		};
@@ -488,7 +567,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B81BC2F1AD96323006F1CB7 /* Build configuration list for PBXNativeTarget "Palm Oil Spy" */ = {
+		7B81BC2F1AD96323006F1CB7 /* Build configuration list for PBXNativeTarget "Palm Oil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B81BC301AD96323006F1CB7 /* Debug */,
@@ -497,7 +576,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B81BC321AD96323006F1CB7 /* Build configuration list for PBXNativeTarget "Palm Oil SpyTests" */ = {
+		7B81BC321AD96323006F1CB7 /* Build configuration list for PBXNativeTarget "Palm OilTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B81BC331AD96323006F1CB7 /* Debug */,
