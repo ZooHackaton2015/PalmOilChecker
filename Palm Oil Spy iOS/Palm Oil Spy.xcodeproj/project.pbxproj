@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B427B4A1AEA8FB9006E8AD6 /* PalmOilLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B427B491AEA8FB9006E8AD6 /* PalmOilLogoView.swift */; };
+		7B427B4C1AEA9A55006E8AD6 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B427B4B1AEA9A55006E8AD6 /* SwitchButton.swift */; };
 		7B81BC161AD96323006F1CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81BC151AD96323006F1CB7 /* AppDelegate.swift */; };
 		7B81BC181AD96323006F1CB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81BC171AD96323006F1CB7 /* ViewController.swift */; };
 		7B81BC1B1AD96323006F1CB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B81BC191AD96323006F1CB7 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B427B491AEA8FB9006E8AD6 /* PalmOilLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalmOilLogoView.swift; sourceTree = "<group>"; };
+		7B427B4B1AEA9A55006E8AD6 /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
 		7B81BC101AD96323006F1CB7 /* Palm Oil Spy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Palm Oil Spy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B81BC141AD96323006F1CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B81BC151AD96323006F1CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				7BA1D9671ADA6AE400CFF373 /* InfoButton.swift */,
 				7BA1D9691ADA6E7D00CFF373 /* FlashButton.swift */,
 				7BA1D96B1ADA6E8B00CFF373 /* HistoryButton.swift */,
+				7B427B491AEA8FB9006E8AD6 /* PalmOilLogoView.swift */,
+				7B427B4B1AEA9A55006E8AD6 /* SwitchButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -217,7 +223,9 @@
 		7B81BC081AD96323006F1CB7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = GDGSCL;
 				TargetAttributes = {
 					7B81BC0F1AD96323006F1CB7 = {
@@ -274,9 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B427B4A1AEA8FB9006E8AD6 /* PalmOilLogoView.swift in Sources */,
 				7B81BC181AD96323006F1CB7 /* ViewController.swift in Sources */,
 				7BA1D96A1ADA6E7D00CFF373 /* FlashButton.swift in Sources */,
 				7B81BC161AD96323006F1CB7 /* AppDelegate.swift in Sources */,
+				7B427B4C1AEA9A55006E8AD6 /* SwitchButton.swift in Sources */,
 				7BDC61791ADA627900D2E23F /* ResultView.swift in Sources */,
 				7BA1D96C1ADA6E8B00CFF373 /* HistoryButton.swift in Sources */,
 				7BD5D6A51AD97B6400627117 /* PalmOilGlyphs.swift in Sources */,
@@ -345,6 +355,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -360,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -398,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -412,6 +423,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Palm Oil Spy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.gdgscl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -423,6 +435,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Palm Oil Spy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.gdgscl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -441,6 +454,7 @@
 				);
 				INFOPLIST_FILE = "Palm Oil SpyTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.gdgscl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Palm Oil Spy.app/Palm Oil Spy";
 			};
@@ -456,6 +470,7 @@
 				);
 				INFOPLIST_FILE = "Palm Oil SpyTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.gdgscl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Palm Oil Spy.app/Palm Oil Spy";
 			};

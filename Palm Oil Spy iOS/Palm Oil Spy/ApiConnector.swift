@@ -23,7 +23,7 @@ class ApiConnector: NSObject, NSURLSessionDataDelegate {
     // MARK: api
     
     func eanCodeIdentify(code: String) {
-        var url = self.urlAddress(code)
+        let url = self.urlAddress(code)
         if let dataTask = session?.dataTaskWithURL(url!, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             
             if let response = response as? NSHTTPURLResponse {
@@ -32,7 +32,7 @@ class ApiConnector: NSObject, NSURLSessionDataDelegate {
                 }
                 else if response.statusCode == 200 {
                     
-                    var responseData = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.allZeros, error: nil) as! [String:Bool]
+                    var responseData = (try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions())) as! [String:Bool]
                     
                     if responseData["palmOil"] == true {
                         self.delegate?.didRecieveAnswer(OilResults.Bad)

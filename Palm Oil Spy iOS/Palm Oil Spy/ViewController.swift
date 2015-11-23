@@ -53,20 +53,21 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
     func initCamera() {
         captureSession = AVCaptureSession()
         device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
-        var error: NSError?
-        if let input = AVCaptureDeviceInput.deviceInputWithDevice(device!, error: &error) as? AVCaptureDeviceInput {
+
+        do {
+            let input = try AVCaptureDeviceInput(device: device)
             
             captureSession?.addInput(input)
-            var captureMetadataOutput = AVCaptureMetadataOutput()
+            let captureMetadataOutput = AVCaptureMetadataOutput()
             captureSession?.addOutput(captureMetadataOutput)
-            var camQueue: dispatch_queue_t = dispatch_queue_create("palmOilCam", nil)
+            let camQueue: dispatch_queue_t = dispatch_queue_create("palmOilCam", nil)
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: camQueue)
             captureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeQRCode]
             
             connectCameraView()
         }
-        else {
-            println("Camera init problem: \(error?.localizedDescription)")
+        catch {
+            print("Camera init problem")
         }
     }
     
@@ -74,25 +75,24 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
         videoPreviewLayer?.frame = cameraView.layer.bounds
-        cameraView.layer.addSublayer(videoPreviewLayer)
+        cameraView.layer.addSublayer(videoPreviewLayer!)
         captureSession?.startRunning()
     }
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
         if let metadata = metadataObjects where metadataObjects.count > 0 {
             
-            var code = metadata[0] as? AVMetadataMachineReadableCodeObject
+            let code = metadata[0] as? AVMetadataMachineReadableCodeObject
 
             if code?.type == AVMetadataObjectTypeQRCode {
-                println("Code is! : \(code)")
+                print("Code is! : \(code)")
             }
             
             if code?.type == AVMetadataObjectTypeEAN13Code {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     if self.lastEANcode != code?.stringValue {
-//                        self.eanCodeLabel.text = code?.stringValue
                         self.lastEANcode = code?.stringValue
-                        println("EAN13 code detected! : \(self.lastEANcode)")
+                        print("EAN13 code detected! : \(self.lastEANcode)")
                         self.identifyCode(code!.stringValue)
                     }
                 })
@@ -101,9 +101,8 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
             if code?.type == AVMetadataObjectTypeEAN8Code {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     if self.lastEANcode != code?.stringValue {
-//                        self.eanCodeLabel.text = code?.stringValue
                         self.lastEANcode = code?.stringValue
-                        println("EAN8 code detected! : \(self.lastEANcode)")
+                        print("EAN8 code detected! : \(self.lastEANcode)")
                         self.identifyCode(code!.stringValue)
                     }
                 })
@@ -116,6 +115,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
         connector.delegate = self
         connector.eanCodeIdentify(code)
         
+        // FIXME: Demo hack
 //        dispatch_async(dispatch_get_main_queue(), { () -> Void in
 //
 //            if code == "50112128" {
@@ -130,12 +130,16 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
     // MARK: buttons
     
     
-    @IBAction func flashButtonPressed(sender: AnyObject) {
-        
+    @IBAction func flashButtonPressed(sender: FlashButton) {
+
         if let device = self.device where device.hasTorch {
-            device.lockForConfiguration(nil)
+            do {
+                try device.lockForConfiguration()
+            } catch _ {
+            }
             device.torchMode = device.torchActive ? .Off : .On
-            device.unlockForConfiguration()
+            device.unlockForConfiguration()            
+            sender.pressed = device.torchActive
         }
     }
     

@@ -8,12 +8,12 @@
 
 import UIKit
 
-class InfoButton: UIButton {
-   
-    
+class InfoButton: SwitchButton {
+       
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         
         PalmOilGlyphs.drawButtonInfo(frame: self.bounds, buttonColor: UIColor.whiteColor())
     }
+
 }

@@ -8,10 +8,11 @@
 
 import UIKit
 
-class HistoryButton: UIButton {
+class HistoryButton: SwitchButton {
+
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
-        
         PalmOilGlyphs.drawButtonHistory(frame: self.bounds, buttonColor: UIColor.whiteColor())
     }
+
 }

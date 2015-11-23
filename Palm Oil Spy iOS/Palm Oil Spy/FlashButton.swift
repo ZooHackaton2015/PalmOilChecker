@@ -8,10 +8,15 @@
 
 import UIKit
 
-class FlashButton: UIButton {
+class FlashButton: SwitchButton {
+
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
+        print("Button Color: \(self.buttonColor)")
+        PalmOilGlyphs.drawButtonFlash(frame: self.bounds, buttonColor: buttonColor)
         
-        PalmOilGlyphs.drawButtonFlash(frame: self.bounds, buttonColor: UIColor.whiteColor())
+        self.layer.shadowRadius = 10.0
+        self.layer.shadowColor = self.pressed ? UIColor.redColor().CGColor : nil
     }
+
 }

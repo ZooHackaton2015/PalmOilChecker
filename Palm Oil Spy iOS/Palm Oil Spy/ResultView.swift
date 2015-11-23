@@ -17,30 +17,27 @@ enum OilResults {
 
 class ResultView: UIView {
 
-    var oilStatus: OilResults = .None
-        {
+    var oilStatus: OilResults = .None {
         didSet {
             self.setNeedsDisplay()
             animateStatusChange()
         }
     }
     
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
+    
     override func drawRect(rect: CGRect) {
-        
         switch oilStatus {
         case .Good:
             PalmOilGlyphs.drawThumbOK(frame: self.bounds, thumbColor: UIColor.greenColor())
         case .Bad:
             PalmOilGlyphs.drawThumbKO(frame: self.bounds, thumbColor: UIColor.redColor())
         default:
-            println("Something wrong happened with oil result status")
+            print("Something wrong happened with oil result status")
         }
     }
 
+    
     func animateStatusChange() {
-        
         UIView.animateWithDuration(0.2, animations: { () -> Void in
             self.alpha = 0.0
         }) { (success) -> Void in
@@ -51,4 +48,5 @@ class ResultView: UIView {
             }
         }
     }
+
 }

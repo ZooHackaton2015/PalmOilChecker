@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -51,23 +51,26 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="palm" translatesAutoresizingMaskIntoConstraints="NO" id="Fds-Fi-NkW">
-                                <rect key="frame" x="0.0" y="30" width="600" height="154"/>
-                            </imageView>
+                            <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fds-Fi-NkW" customClass="PalmOilLogoView" customModule="Palm_Oil_Spy" customModuleProvider="target">
+                                <rect key="frame" x="246" y="30" width="108" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fds-Fi-NkW" secondAttribute="height" multiplier="54:77" id="cyE-ng-Reh"/>
+                                </constraints>
+                            </view>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBl-14-5qt">
-                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <rect key="frame" x="0.0" y="548" width="600" height="52"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VsI-TG-9Yl">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvg-Ef-UuH">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="x9w-R8-alc">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZA-Vm-VZd" customClass="FlashButton" customModule="Palm_Oil_Spy" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="52"/>
                                                         <state key="normal">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -76,13 +79,13 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3em-K4-l3l" customClass="HistoryButton" customModule="Palm_Oil_Spy" customModuleProvider="target">
-                                                        <rect key="frame" x="400" y="0.0" width="200" height="60"/>
+                                                        <rect key="frame" x="400" y="0.0" width="200" height="52"/>
                                                         <state key="normal">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCZ-Nj-Gd6" customClass="InfoButton" customModule="Palm_Oil_Spy" customModuleProvider="target">
-                                                        <rect key="frame" x="200" y="0.0" width="200" height="60"/>
+                                                        <rect key="frame" x="200" y="0.0" width="200" height="52"/>
                                                         <state key="normal">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -114,7 +117,7 @@
                                                 <constraint firstItem="dZA-Vm-VZd" firstAttribute="width" secondItem="xvg-Ef-UuH" secondAttribute="width" multiplier="1:3" id="gt8-Gv-iMn"/>
                                             </constraints>
                                             <vibrancyEffect>
-                                                <blurEffect style="light"/>
+                                                <blurEffect style="dark"/>
                                             </vibrancyEffect>
                                         </visualEffectView>
                                     </subviews>
@@ -126,23 +129,22 @@
                                     </constraints>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="6NA-3w-4TB"/>
+                                    <constraint firstAttribute="height" constant="52" id="6NA-3w-4TB"/>
                                 </constraints>
-                                <blurEffect style="light"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Fds-Fi-NkW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0eg-yc-LuN"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="EBl-14-5qt" secondAttribute="bottom" id="66q-iv-Nr4"/>
                             <constraint firstItem="Xg7-yr-hhd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="8fh-UY-vGM"/>
                             <constraint firstAttribute="centerX" secondItem="GEy-2c-anm" secondAttribute="centerX" id="B37-eT-hZD"/>
                             <constraint firstItem="jTN-U6-7EL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="D15-yI-2aQ"/>
-                            <constraint firstAttribute="trailing" secondItem="Fds-Fi-NkW" secondAttribute="trailing" id="FFD-ou-yU8"/>
                             <constraint firstItem="Xg7-yr-hhd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="IHr-sq-j95"/>
                             <constraint firstAttribute="trailing" secondItem="Xg7-yr-hhd" secondAttribute="trailing" id="LpT-gK-XOz"/>
                             <constraint firstItem="GEy-2c-anm" firstAttribute="top" secondItem="Fds-Fi-NkW" secondAttribute="bottom" constant="6" id="QGD-tl-OEH"/>
                             <constraint firstItem="EBl-14-5qt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="QlA-IY-JhC"/>
+                            <constraint firstItem="Xg7-yr-hhd" firstAttribute="centerX" secondItem="Fds-Fi-NkW" secondAttribute="centerX" id="TGo-W6-eiQ"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="jTN-U6-7EL" secondAttribute="bottom" constant="99" id="ZBF-Oc-2PG"/>
                             <constraint firstItem="jTN-U6-7EL" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="afq-14-GVf"/>
                             <constraint firstItem="GEy-2c-anm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="frp-CT-tox"/>
@@ -166,7 +168,4 @@
             </objects>
         </scene>
     </scenes>
-    <resources>
-        <image name="palm" width="306" height="396"/>
-    </resources>
 </document>
