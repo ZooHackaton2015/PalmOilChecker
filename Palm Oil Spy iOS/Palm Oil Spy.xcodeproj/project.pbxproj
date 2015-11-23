@@ -94,6 +94,10 @@
 		014FC0125E431F7743FAAB3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7BD5D6A21AD9722D00627117 /* UIKit.framework */,
+				7BD5D6A01AD9722700627117 /* Foundation.framework */,
+				7BD5D69E1AD971FF00627117 /* AVFoundation.framework */,
+				7BD5D69C1AD971FA00627117 /* CoreGraphics.framework */,
 				C68E370DBA43C3E36F638080 /* Pods_Palm_Oil.framework */,
 			);
 			name = Frameworks;
@@ -111,10 +115,6 @@
 		7B81BC071AD96323006F1CB7 = {
 			isa = PBXGroup;
 			children = (
-				7BD5D6A21AD9722D00627117 /* UIKit.framework */,
-				7BD5D6A01AD9722700627117 /* Foundation.framework */,
-				7BD5D69E1AD971FF00627117 /* AVFoundation.framework */,
-				7BD5D69C1AD971FA00627117 /* CoreGraphics.framework */,
 				7B81BC121AD96323006F1CB7 /* Palm Oil Spy */,
 				7B81BC281AD96323006F1CB7 /* Palm Oil SpyTests */,
 				7B81BC111AD96323006F1CB7 /* Products */,
@@ -216,6 +216,7 @@
 				7B81BC0E1AD96323006F1CB7 /* Resources */,
 				EA132CC3E710241DDF16F15D /* Embed Pods Frameworks */,
 				644BEE1CC655E0651135643A /* Copy Pods Resources */,
+				7BC36A471C03D80C003AB866 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -319,6 +320,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Palm Oil/Pods-Palm Oil-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		7BC36A471C03D80C003AB866 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 73a6654e62ea44dd6a6d80bde1f7b5e87ce0e0a5 1d610f2e18d16973ecff47efd2c760b37e4942e2cb4f96a1e2afe9695bdab9b6";
 		};
 		E9926CE8B7508D85475FB3B8 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -535,7 +549,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.gdgscl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Palm Oil Spy.app/Palm Oil Spy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Palm Oil.app/Palm Oil";
 			};
 			name = Debug;
 		};
@@ -551,7 +565,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.gdgscl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Palm Oil Spy.app/Palm Oil Spy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Palm Oil.app/Palm Oil";
 			};
 			name = Release;
 		};
