@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Bar Code Scanner-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="Bar Code Scanner" id="vXZ-lx-hvc" customClass="ViewController" customModule="Palm_Oil_Spy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Palm_Oil" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -23,27 +23,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEy-2c-anm" customClass="BarCodeView" customModule="Palm_Oil_Spy" customModuleProvider="target">
-                                <rect key="frame" x="16" y="190" width="568" height="200"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MpX-hc-bKm" customClass="ResultView" customModule="Palm_Oil_Spy">
-                                        <rect key="frame" x="184" y="0.0" width="200" height="200"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="MpX-hc-bKm" secondAttribute="height" multiplier="1:1" id="SPH-C3-clx"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEy-2c-anm" customClass="BarCodeView" customModule="Palm_Oil" customModuleProvider="target">
+                                <rect key="frame" x="16" y="200" width="568" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="I0N-Qr-MeG"/>
-                                    <constraint firstAttribute="centerX" secondItem="MpX-hc-bKm" secondAttribute="centerX" id="T8P-hv-wox"/>
-                                    <constraint firstAttribute="bottom" secondItem="MpX-hc-bKm" secondAttribute="bottom" id="byr-Bp-ThI"/>
-                                    <constraint firstItem="MpX-hc-bKm" firstAttribute="top" secondItem="GEy-2c-anm" secondAttribute="top" id="zie-CP-f5F"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place EAN barcode inside view finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTN-U6-7EL">
-                                <rect key="frame" x="16" y="480" width="568" height="21"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MpX-hc-bKm" customClass="ResultView" customModule="Palm_Oil" customModuleProvider="target">
+                                <rect key="frame" x="50" y="51" width="499" height="499"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MpX-hc-bKm" secondAttribute="height" multiplier="1:1" id="SPH-C3-clx"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place barcode inside marked area" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTN-U6-7EL">
+                                <rect key="frame" x="20" y="420" width="560" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="VxB-I1-BU7"/>
                                 </constraints>
@@ -51,121 +46,139 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fds-Fi-NkW" customClass="PalmOilLogoView" customModule="Palm_Oil_Spy" customModuleProvider="target">
-                                <rect key="frame" x="246" y="30" width="108" height="154"/>
+                            <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fds-Fi-NkW" customClass="PalmOilLogoView" customModule="Palm_Oil" customModuleProvider="target">
+                                <rect key="frame" x="242.5" y="30" width="115" height="164"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Fds-Fi-NkW" secondAttribute="height" multiplier="54:77" id="cyE-ng-Reh"/>
                                 </constraints>
                             </view>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBl-14-5qt">
-                                <rect key="frame" x="0.0" y="548" width="600" height="52"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VsI-TG-9Yl">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvg-Ef-UuH">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="x9w-R8-alc">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZA-Vm-VZd" customClass="FlashButton" customModule="Palm_Oil_Spy" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="52"/>
-                                                        <state key="normal">
-                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="flashButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Uhj-xn-gni"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3em-K4-l3l" customClass="HistoryButton" customModule="Palm_Oil_Spy" customModuleProvider="target">
-                                                        <rect key="frame" x="400" y="0.0" width="200" height="52"/>
-                                                        <state key="normal">
-                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCZ-Nj-Gd6" customClass="InfoButton" customModule="Palm_Oil_Spy" customModuleProvider="target">
-                                                        <rect key="frame" x="200" y="0.0" width="200" height="52"/>
-                                                        <state key="normal">
-                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="3em-K4-l3l" firstAttribute="height" secondItem="dZA-Vm-VZd" secondAttribute="height" id="06X-2T-5K5"/>
-                                                    <constraint firstItem="dZA-Vm-VZd" firstAttribute="leading" secondItem="x9w-R8-alc" secondAttribute="leading" id="1R3-P2-zQr"/>
-                                                    <constraint firstItem="MCZ-Nj-Gd6" firstAttribute="trailing" secondItem="dZA-Vm-VZd" secondAttribute="trailing" constant="-28" id="CEf-Jh-hyP"/>
-                                                    <constraint firstAttribute="bottom" secondItem="MCZ-Nj-Gd6" secondAttribute="bottom" id="GGP-cd-WG8"/>
-                                                    <constraint firstAttribute="trailing" secondItem="3em-K4-l3l" secondAttribute="trailing" id="J7u-lV-o9R"/>
-                                                    <constraint firstItem="3em-K4-l3l" firstAttribute="leading" secondItem="MCZ-Nj-Gd6" secondAttribute="trailing" id="Kgd-pm-xE5"/>
-                                                    <constraint firstItem="3em-K4-l3l" firstAttribute="width" secondItem="dZA-Vm-VZd" secondAttribute="width" id="KjN-86-J5T"/>
-                                                    <constraint firstItem="dZA-Vm-VZd" firstAttribute="top" secondItem="x9w-R8-alc" secondAttribute="top" id="hWV-7I-zvS"/>
-                                                    <constraint firstItem="dZA-Vm-VZd" firstAttribute="leading" secondItem="x9w-R8-alc" secondAttribute="leading" id="jlE-Xy-Vcc"/>
-                                                    <constraint firstItem="MCZ-Nj-Gd6" firstAttribute="width" secondItem="dZA-Vm-VZd" secondAttribute="width" id="pWX-Vh-SwJ"/>
-                                                    <constraint firstItem="MCZ-Nj-Gd6" firstAttribute="height" secondItem="dZA-Vm-VZd" secondAttribute="height" id="rux-rm-oU7"/>
-                                                    <constraint firstAttribute="bottom" secondItem="3em-K4-l3l" secondAttribute="bottom" id="shJ-44-P8f"/>
-                                                    <constraint firstItem="MCZ-Nj-Gd6" firstAttribute="leading" secondItem="dZA-Vm-VZd" secondAttribute="trailing" id="wPJ-EF-9yj"/>
-                                                </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="CEf-Jh-hyP"/>
-                                                    </mask>
-                                                </variation>
-                                            </view>
-                                            <constraints>
-                                                <constraint firstItem="dZA-Vm-VZd" firstAttribute="height" secondItem="xvg-Ef-UuH" secondAttribute="height" id="HAT-X0-abQ"/>
-                                                <constraint firstItem="dZA-Vm-VZd" firstAttribute="width" secondItem="xvg-Ef-UuH" secondAttribute="width" multiplier="1:3" id="gt8-Gv-iMn"/>
-                                            </constraints>
-                                            <vibrancyEffect>
-                                                <blurEffect style="dark"/>
-                                            </vibrancyEffect>
-                                        </visualEffectView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="xvg-Ef-UuH" secondAttribute="bottom" id="5Hs-ZX-h9A"/>
-                                        <constraint firstItem="xvg-Ef-UuH" firstAttribute="top" secondItem="VsI-TG-9Yl" secondAttribute="top" id="CFf-SF-8Lu"/>
-                                        <constraint firstItem="xvg-Ef-UuH" firstAttribute="leading" secondItem="VsI-TG-9Yl" secondAttribute="leading" id="O9W-Ag-h47"/>
-                                        <constraint firstAttribute="trailing" secondItem="xvg-Ef-UuH" secondAttribute="trailing" id="um7-5n-omE"/>
-                                    </constraints>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="6NA-3w-4TB"/>
-                                </constraints>
-                                <blurEffect style="dark"/>
-                            </visualEffectView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Zad-bI-BKc">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="K88-xz-8TI"/>
+                                    <barButtonItem image="icon-flash" id="xff-ha-3OP">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="flashButtonPressed:" destination="vXZ-lx-hvc" id="bb1-xU-OQm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pWg-ZF-6YB"/>
+                                    <barButtonItem image="icon-home" id="RTN-VV-etR">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="homeButtonPressed:" destination="vXZ-lx-hvc" id="fzz-AI-IQ4"/>
+                                            <segue destination="GZ6-6N-Rck" kind="presentation" identifier="segueToInfo" customClass="InfoStoryboardSegue" customModule="Palm_Oil" customModuleProvider="target" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="7u4-mt-wHw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XGc-1j-fJL"/>
+                                    <barButtonItem image="icon-sound" id="gxJ-it-WO2">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="soundButtonPressed:" destination="vXZ-lx-hvc" id="EKD-9H-AbD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jSa-2m-DC6"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="EBl-14-5qt" secondAttribute="bottom" id="66q-iv-Nr4"/>
+                            <constraint firstItem="MpX-hc-bKm" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="3RA-Qp-UWG"/>
                             <constraint firstItem="Xg7-yr-hhd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="8fh-UY-vGM"/>
                             <constraint firstAttribute="centerX" secondItem="GEy-2c-anm" secondAttribute="centerX" id="B37-eT-hZD"/>
                             <constraint firstItem="jTN-U6-7EL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="D15-yI-2aQ"/>
+                            <constraint firstItem="Zad-bI-BKc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="Dzh-7w-nZH"/>
                             <constraint firstItem="Xg7-yr-hhd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="IHr-sq-j95"/>
+                            <constraint firstItem="jTN-U6-7EL" firstAttribute="top" secondItem="GEy-2c-anm" secondAttribute="bottom" constant="20" id="KDk-hF-wsi"/>
                             <constraint firstAttribute="trailing" secondItem="Xg7-yr-hhd" secondAttribute="trailing" id="LpT-gK-XOz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MpX-hc-bKm" secondAttribute="trailing" constant="31" id="NyQ-wH-Lwi"/>
                             <constraint firstItem="GEy-2c-anm" firstAttribute="top" secondItem="Fds-Fi-NkW" secondAttribute="bottom" constant="6" id="QGD-tl-OEH"/>
-                            <constraint firstItem="EBl-14-5qt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="QlA-IY-JhC"/>
                             <constraint firstItem="Xg7-yr-hhd" firstAttribute="centerX" secondItem="Fds-Fi-NkW" secondAttribute="centerX" id="TGo-W6-eiQ"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="jTN-U6-7EL" secondAttribute="bottom" constant="99" id="ZBF-Oc-2PG"/>
+                            <constraint firstItem="MpX-hc-bKm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="VoR-vR-2Lu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zad-bI-BKc" secondAttribute="trailing" constant="-20" id="Yzi-8a-tR7"/>
                             <constraint firstItem="jTN-U6-7EL" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="afq-14-GVf"/>
                             <constraint firstItem="GEy-2c-anm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="frp-CT-tox"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Zad-bI-BKc" secondAttribute="bottom" id="g8k-3O-XSH"/>
                             <constraint firstItem="Fds-Fi-NkW" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="lMB-aG-7e5"/>
                             <constraint firstAttribute="centerX" secondItem="jTN-U6-7EL" secondAttribute="centerX" id="mM7-Dd-4c8"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Xg7-yr-hhd" secondAttribute="bottom" id="pLR-pS-oIq"/>
-                            <constraint firstAttribute="trailing" secondItem="EBl-14-5qt" secondAttribute="trailing" id="rpy-d3-6QF"/>
-                            <constraint firstAttribute="centerY" secondItem="GEy-2c-anm" secondAttribute="centerY" constant="10" id="xA0-QD-f9F"/>
+                            <constraint firstAttribute="centerY" secondItem="GEy-2c-anm" secondAttribute="centerY" id="xA0-QD-f9F"/>
                             <constraint firstAttribute="trailing" secondItem="GEy-2c-anm" secondAttribute="trailing" constant="16" id="yqT-W6-s9t"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="Xg7-yr-hhd" id="OdM-mG-zud"/>
                         <outlet property="eanCodeLabel" destination="jTN-U6-7EL" id="6GP-mt-qbF"/>
-                        <outlet property="flashButton" destination="dZA-Vm-VZd" id="oFW-Lc-hmG"/>
                         <outlet property="resultView" destination="MpX-hc-bKm" id="ZbC-dC-Kxv"/>
                         <outlet property="statusView" destination="GEy-2c-anm" id="Tcb-UN-We9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="600" y="367"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="Yvg-7P-whR">
+            <objects>
+                <viewController id="GZ6-6N-Rck" customClass="InfoViewController" customModule="Palm_Oil" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Iii-i0-eiR"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Yv-bs-Y9Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ygs-ZQ-Cmn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" suppressesIncrementalRendering="YES" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2N5-6I-2n3">
+                                <rect key="frame" x="20" y="20" width="560" height="516"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GZ6-6N-Rck" id="Uzn-ql-YH5"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiB-P6-HF1">
+                                <rect key="frame" x="0.0" y="536" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.44705882349999998" green="0.75294117650000003" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7I8-Jd-rdz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="GZ6-6N-Rck" eventType="touchUpInside" id="Yg5-3a-Sbw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2N5-6I-2n3" firstAttribute="top" secondItem="Iii-i0-eiR" secondAttribute="bottom" constant="20" id="F2Q-U8-nRC"/>
+                            <constraint firstItem="2Yv-bs-Y9Q" firstAttribute="top" secondItem="WiB-P6-HF1" secondAttribute="bottom" constant="20" id="LqH-zc-agP"/>
+                            <constraint firstItem="2N5-6I-2n3" firstAttribute="leading" secondItem="ygs-ZQ-Cmn" secondAttribute="leadingMargin" id="RXD-Yt-8f3"/>
+                            <constraint firstItem="WiB-P6-HF1" firstAttribute="leading" secondItem="ygs-ZQ-Cmn" secondAttribute="leading" id="fd9-V7-Eyj"/>
+                            <constraint firstItem="2N5-6I-2n3" firstAttribute="trailing" secondItem="ygs-ZQ-Cmn" secondAttribute="trailingMargin" id="jKU-Km-vPb"/>
+                            <constraint firstAttribute="trailing" secondItem="WiB-P6-HF1" secondAttribute="trailing" id="nBi-gj-2X8"/>
+                            <constraint firstItem="2Yv-bs-Y9Q" firstAttribute="top" secondItem="2N5-6I-2n3" secondAttribute="bottom" constant="64" id="sYc-9o-Mh5"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="2N5-6I-2n3" id="jRE-yF-dms"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzv-F3-FBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1328" y="367"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-flash" width="32" height="32"/>
+        <image name="icon-home" width="32" height="32"/>
+        <image name="icon-sound" width="32" height="32"/>
+    </resources>
 </document>

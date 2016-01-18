@@ -16,36 +16,63 @@ enum OilResults {
 }
 
 class ResultView: UIView {
-
+    
+    let sound = Sounds()
+    var timer: NSTimer?
+    var settings: Settings?
+    
     var oilStatus: OilResults = .None {
         didSet {
-            self.setNeedsDisplay()
+            setNeedsDisplay()
             animateStatusChange()
         }
     }
     
     
     override func drawRect(rect: CGRect) {
+        
         switch oilStatus {
         case .Good:
+            if settings!.soundsEnabled {
+                sound.playSound(.Good)
+            }
             PalmOilGlyphs.drawThumbOK(frame: self.bounds, thumbColor: UIColor.greenColor())
+            runCleaningTimer()
         case .Bad:
+            if settings!.soundsEnabled {
+                sound.playSound(.Bad)
+            }
             PalmOilGlyphs.drawThumbKO(frame: self.bounds, thumbColor: UIColor.redColor())
-        default:
+            runCleaningTimer()
+        case .None:
+            print("Ready to go")
+        case .Dunno:
             print("Something wrong happened with oil result status")
         }
     }
+    
+    func runCleaningTimer() {
+        timer?.invalidate()
+        timer = NSTimer.scheduledTimerWithTimeInterval(3.0,
+            target: self,
+            selector: "cleanStatus",
+            userInfo: nil,
+            repeats: false)
+    }
 
     
+    func cleanStatus() {
+        oilStatus = .None
+    }
+    
+    
     func animateStatusChange() {
-        UIView.animateWithDuration(0.2, animations: { () -> Void in
+        UIView.animateWithDuration(0.2, animations: {
             self.alpha = 0.0
         }) { (success) -> Void in
-            UIView.animateWithDuration(0.4, animations: { () -> Void in
+            UIView.animateWithDuration(0.4, animations: {
                 self.alpha = 0.8
-                }) { (success) -> Void in
-                    
-            }
+            })
         }
     }
 

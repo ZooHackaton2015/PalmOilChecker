@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  Palm Oil Spy
+
+  Created by Vladimír Bělohradský on 18/01/16.
+  Copyright © 2016 GDGSCL. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Palmový olej";
+"CFBundleName" = "Palmový olej";

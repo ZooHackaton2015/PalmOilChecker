@@ -15,28 +15,34 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var eanCodeLabel: UILabel!
     @IBOutlet weak var resultView: ResultView!
-    @IBOutlet weak var flashButton: FlashButton!
     
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var device: AVCaptureDevice?
-    
+    var flashlight: Flashlight?
     var lastEANcode: String? = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        resultView.settings = appDelegate.settings
+        
+        performSegueWithIdentifier("segueToInfo", sender: self)
     }
+    
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
+    
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         initCamera()
     }
+    
     
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
@@ -47,23 +53,25 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
     }
 
 
-    // MARK: camera stuff
+// MARK: camera stuff
     
     
     func initCamera() {
         captureSession = AVCaptureSession()
         device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        
+        if let device = device {
+            flashlight = Flashlight(device: device)
+        }
 
         do {
             let input = try AVCaptureDeviceInput(device: device)
-            
             captureSession?.addInput(input)
             let captureMetadataOutput = AVCaptureMetadataOutput()
             captureSession?.addOutput(captureMetadataOutput)
             let camQueue: dispatch_queue_t = dispatch_queue_create("palmOilCam", nil)
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: camQueue)
             captureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeQRCode]
-            
             connectCameraView()
         }
         catch {
@@ -71,84 +79,104 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
         }
     }
     
+    
     func connectCameraView() {
-        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
-        videoPreviewLayer?.frame = cameraView.layer.bounds
-        cameraView.layer.addSublayer(videoPreviewLayer!)
+        guard let videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession) else { return }
+        videoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        videoPreviewLayer.frame = cameraView.layer.bounds
+        cameraView.layer.addSublayer(videoPreviewLayer)
         captureSession?.startRunning()
     }
+
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
-        if let metadata = metadataObjects where metadataObjects.count > 0 {
-            
-            let code = metadata[0] as? AVMetadataMachineReadableCodeObject
-
-            if code?.type == AVMetadataObjectTypeQRCode {
-                print("Code is! : \(code)")
-            }
-            
-            if code?.type == AVMetadataObjectTypeEAN13Code {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    if self.lastEANcode != code?.stringValue {
-                        self.lastEANcode = code?.stringValue
-                        print("EAN13 code detected! : \(self.lastEANcode)")
-                        self.identifyCode(code!.stringValue)
-                    }
-                })
-            }
-            
-            if code?.type == AVMetadataObjectTypeEAN8Code {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    if self.lastEANcode != code?.stringValue {
-                        self.lastEANcode = code?.stringValue
-                        print("EAN8 code detected! : \(self.lastEANcode)")
-                        self.identifyCode(code!.stringValue)
-                    }
-                })
-            }
+        guard let metadata = metadataObjects where metadataObjects.count > 0 else { return }
+        guard let code = metadata[0] as? AVMetadataMachineReadableCodeObject else { return }
+        
+        switch code.type {
+        case AVMetadataObjectTypeQRCode:
+            print("Code is! : \(code)")
+        case AVMetadataObjectTypeEAN13Code:
+            dispatch_async(dispatch_get_main_queue(), {
+                if self.lastEANcode != code.stringValue || self.resultView.oilStatus == .None {
+                    self.lastEANcode = code.stringValue
+                    print("EAN13 code detected : \(self.lastEANcode!)")
+                    self.identifyCode(code.stringValue)
+                }
+            })
+        case AVMetadataObjectTypeEAN8Code:
+            dispatch_async(dispatch_get_main_queue(), {
+                if self.lastEANcode != code.stringValue || self.resultView.oilStatus == .None  {
+                    self.lastEANcode = code.stringValue
+                    print("EAN8 code detected : \(self.lastEANcode!)")
+                    self.identifyCode(code.stringValue)
+                }
+            })
+        default:
+            break;
         }
     }
     
+    
     func identifyCode(code: String) {
-        let connector = ApiConnector()
-        connector.delegate = self
-        connector.eanCodeIdentify(code)
+//        let connector = ApiConnector()
+//        connector.delegate = self
+//        connector.eanCodeIdentify(code)
         
-        // FIXME: Demo hack
-//        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//
-//            if code == "50112128" {
-//                self.resultView.oilStatus = OilResults.Good
-//            }
-//            else {
-//                self.resultView.oilStatus = OilResults.Bad
-//            }
-//        })
+//         FIXME: Demo hack
+        dispatch_async(dispatch_get_main_queue(), {
+            if code == "3045140105502" {
+                self.resultView.oilStatus = .Bad
+            }
+            else {
+                self.resultView.oilStatus = .Good
+            }
+        })
     }
+    
     
     // MARK: buttons
     
     
-    @IBAction func flashButtonPressed(sender: FlashButton) {
-
-        if let device = self.device where device.hasTorch {
-            do {
-                try device.lockForConfiguration()
-            } catch _ {
-            }
-            device.torchMode = device.torchActive ? .Off : .On
-            device.unlockForConfiguration()            
-            sender.pressed = device.torchActive
+    @IBAction func flashButtonPressed(sender: UIBarButtonItem) {
+        guard let flashlight = flashlight else {return}
+        
+        switch flashlight.device.torchActive {
+        case false:
+            flashlight.turnOn()
+            sender.image = UIImage(named: "icon-flash-selected")
+        case true:
+            flashlight.turnOff()
+            sender.image = UIImage(named: "icon-flash")
         }
     }
     
-    // MARK: ApiConnectorDelegate
+    
+    @IBAction func homeButtonPressed(sender: UIBarButtonItem) {
+    }
+    
+    
+    @IBAction func soundButtonPressed(sender: UIBarButtonItem) {
+        guard let settings = appDelegate.settings else {return}
+        
+        settings.soundsEnabled = !settings.soundsEnabled
+        switch settings.soundsEnabled {
+        case true:
+            sender.image = UIImage(named: "icon-sound")
+        case false:
+            sender.image = UIImage(named: "icon-sound-selected")
+        }
+    }
+
+    
+// MARK: ApiConnectorDelegate
+    
     
     func didRecieveAnswer(answer: OilResults) {
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        dispatch_async(dispatch_get_main_queue(), {
             self.resultView.oilStatus = answer
         })
     }
+    
 }
 

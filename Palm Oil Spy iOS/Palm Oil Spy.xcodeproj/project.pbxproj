@@ -8,17 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		621EEE280311EEA196408C67 /* Pods_Palm_Oil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68E370DBA43C3E36F638080 /* Pods_Palm_Oil.framework */; };
+		7B269D191C4CE752002E0B37 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B269D181C4CE752002E0B37 /* InfoViewController.swift */; };
+		7B269D1B1C4CEDAF002E0B37 /* InfoStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B269D1A1C4CEDAF002E0B37 /* InfoStoryboardSegue.swift */; };
 		7B427B4A1AEA8FB9006E8AD6 /* PalmOilLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B427B491AEA8FB9006E8AD6 /* PalmOilLogoView.swift */; };
-		7B427B4C1AEA9A55006E8AD6 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B427B4B1AEA9A55006E8AD6 /* SwitchButton.swift */; };
+		7B7D1E8A1C4CEE9C00D7BEBA /* InfoPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7D1E891C4CEE9C00D7BEBA /* InfoPresentationController.swift */; };
+		7B7D1E8C1C4CF70B00D7BEBA /* home.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B7D1E8B1C4CF70B00D7BEBA /* home.html */; };
+		7B7D1E901C4CFF6300D7BEBA /* lestari.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7D1E8F1C4CFF6300D7BEBA /* lestari.png */; };
+		7B7D1E921C4D189C00D7BEBA /* heureka.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7D1E911C4D189C00D7BEBA /* heureka.png */; };
+		7B7D1E951C4D26CB00D7BEBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B7D1E971C4D26CB00D7BEBA /* InfoPlist.strings */; };
 		7B81BC161AD96323006F1CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81BC151AD96323006F1CB7 /* AppDelegate.swift */; };
 		7B81BC181AD96323006F1CB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81BC171AD96323006F1CB7 /* ViewController.swift */; };
 		7B81BC1B1AD96323006F1CB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B81BC191AD96323006F1CB7 /* Main.storyboard */; };
 		7B81BC1D1AD96323006F1CB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B81BC1C1AD96323006F1CB7 /* Images.xcassets */; };
 		7B81BC201AD96323006F1CB7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B81BC1E1AD96323006F1CB7 /* LaunchScreen.xib */; };
 		7B81BC2C1AD96323006F1CB7 /* Palm_Oil_SpyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81BC2B1AD96323006F1CB7 /* Palm_Oil_SpyTests.swift */; };
-		7BA1D9681ADA6AE400CFF373 /* InfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA1D9671ADA6AE400CFF373 /* InfoButton.swift */; };
-		7BA1D96A1ADA6E7D00CFF373 /* FlashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA1D9691ADA6E7D00CFF373 /* FlashButton.swift */; };
-		7BA1D96C1ADA6E8B00CFF373 /* HistoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA1D96B1ADA6E8B00CFF373 /* HistoryButton.swift */; };
+		7B8AD1691C4BA2370051F015 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8AD1681C4BA2370051F015 /* Sounds.swift */; };
+		7B8AD16D1C4BA7FF0051F015 /* bad.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7B8AD16B1C4BA7FF0051F015 /* bad.wav */; };
+		7B8AD16E1C4BA7FF0051F015 /* good.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7B8AD16C1C4BA7FF0051F015 /* good.wav */; };
+		7B8AD1701C4CBE3D0051F015 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8AD16F1C4CBE3D0051F015 /* Settings.swift */; };
+		7B8AD1721C4CC00F0051F015 /* ViewController+Hacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8AD1711C4CC00F0051F015 /* ViewController+Hacks.swift */; };
+		7B8AD1741C4CC0E90051F015 /* Flashlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8AD1731C4CC0E90051F015 /* Flashlight.swift */; };
 		7BA1D96F1ADA732600CFF373 /* ApiConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA1D96E1ADA732600CFF373 /* ApiConnector.swift */; };
 		7BD5D69D1AD971FA00627117 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD5D69C1AD971FA00627117 /* CoreGraphics.framework */; };
 		7BD5D69F1AD971FF00627117 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD5D69E1AD971FF00627117 /* AVFoundation.framework */; };
@@ -40,8 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B269D181C4CE752002E0B37 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		7B269D1A1C4CEDAF002E0B37 /* InfoStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoStoryboardSegue.swift; sourceTree = "<group>"; };
 		7B427B491AEA8FB9006E8AD6 /* PalmOilLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalmOilLogoView.swift; sourceTree = "<group>"; };
-		7B427B4B1AEA9A55006E8AD6 /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
+		7B7D1E891C4CEE9C00D7BEBA /* InfoPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPresentationController.swift; sourceTree = "<group>"; };
+		7B7D1E8B1C4CF70B00D7BEBA /* home.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = home.html; sourceTree = "<group>"; };
+		7B7D1E8F1C4CFF6300D7BEBA /* lestari.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lestari.png; sourceTree = "<group>"; };
+		7B7D1E911C4D189C00D7BEBA /* heureka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heureka.png; sourceTree = "<group>"; };
+		7B7D1E961C4D26CB00D7BEBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B7D1E981C4D26CE00D7BEBA /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B81BC101AD96323006F1CB7 /* Palm Oil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Palm Oil.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B81BC141AD96323006F1CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B81BC151AD96323006F1CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,9 +68,14 @@
 		7B81BC251AD96323006F1CB7 /* Palm OilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Palm OilTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B81BC2A1AD96323006F1CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B81BC2B1AD96323006F1CB7 /* Palm_Oil_SpyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palm_Oil_SpyTests.swift; sourceTree = "<group>"; };
-		7BA1D9671ADA6AE400CFF373 /* InfoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoButton.swift; sourceTree = "<group>"; };
-		7BA1D9691ADA6E7D00CFF373 /* FlashButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashButton.swift; sourceTree = "<group>"; };
-		7BA1D96B1ADA6E8B00CFF373 /* HistoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryButton.swift; sourceTree = "<group>"; };
+		7B8AD1681C4BA2370051F015 /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sounds.swift; path = model/Sounds.swift; sourceTree = "<group>"; };
+		7B8AD16B1C4BA7FF0051F015 /* bad.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bad.wav; sourceTree = "<group>"; };
+		7B8AD16C1C4BA7FF0051F015 /* good.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = good.wav; sourceTree = "<group>"; };
+		7B8AD16F1C4CBE3D0051F015 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = model/Settings.swift; sourceTree = "<group>"; };
+		7B8AD1711C4CC00F0051F015 /* ViewController+Hacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Hacks.swift"; sourceTree = "<group>"; };
+		7B8AD1731C4CC0E90051F015 /* Flashlight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flashlight.swift; path = model/Flashlight.swift; sourceTree = "<group>"; };
+		7B8AD1751C4CDF0E0051F015 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Main.strings; sourceTree = "<group>"; };
+		7B8AD1761C4CDF0E0051F015 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		7BA1D96E1ADA732600CFF373 /* ApiConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConnector.swift; sourceTree = "<group>"; };
 		7BD5D69C1AD971FA00627117 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7BD5D69E1AD971FF00627117 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -135,6 +156,7 @@
 		7B81BC121AD96323006F1CB7 /* Palm Oil Spy */ = {
 			isa = PBXGroup;
 			children = (
+				7B8AD16A1C4BA7E80051F015 /* Data */,
 				7BA1D96D1ADA731500CFF373 /* Models */,
 				7BD5D6A91AD97EFD00627117 /* Controllers */,
 				7BD5D6A61AD97B6900627117 /* Views */,
@@ -151,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				7B81BC141AD96323006F1CB7 /* Info.plist */,
+				7B7D1E971C4D26CB00D7BEBA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -172,10 +195,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7B8AD16A1C4BA7E80051F015 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7B7D1E8F1C4CFF6300D7BEBA /* lestari.png */,
+				7B8AD16B1C4BA7FF0051F015 /* bad.wav */,
+				7B8AD16C1C4BA7FF0051F015 /* good.wav */,
+				7B7D1E911C4D189C00D7BEBA /* heureka.png */,
+				7B7D1E8B1C4CF70B00D7BEBA /* home.html */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		7BA1D96D1ADA731500CFF373 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				7BA1D96E1ADA732600CFF373 /* ApiConnector.swift */,
+				7B8AD1681C4BA2370051F015 /* Sounds.swift */,
+				7B8AD16F1C4CBE3D0051F015 /* Settings.swift */,
+				7B8AD1731C4CC0E90051F015 /* Flashlight.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -186,11 +224,9 @@
 				7BD5D6A41AD97B6400627117 /* PalmOilGlyphs.swift */,
 				7BD5D6A71AD97B8300627117 /* BarCodeView.swift */,
 				7BDC61781ADA627900D2E23F /* ResultView.swift */,
-				7BA1D9671ADA6AE400CFF373 /* InfoButton.swift */,
-				7BA1D9691ADA6E7D00CFF373 /* FlashButton.swift */,
-				7BA1D96B1ADA6E8B00CFF373 /* HistoryButton.swift */,
 				7B427B491AEA8FB9006E8AD6 /* PalmOilLogoView.swift */,
-				7B427B4B1AEA9A55006E8AD6 /* SwitchButton.swift */,
+				7B269D1A1C4CEDAF002E0B37 /* InfoStoryboardSegue.swift */,
+				7B7D1E891C4CEE9C00D7BEBA /* InfoPresentationController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -199,6 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				7B81BC171AD96323006F1CB7 /* ViewController.swift */,
+				7B8AD1711C4CC00F0051F015 /* ViewController+Hacks.swift */,
+				7B269D181C4CE752002E0B37 /* InfoViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -273,6 +311,7 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
 			);
 			mainGroup = 7B81BC071AD96323006F1CB7;
 			productRefGroup = 7B81BC111AD96323006F1CB7 /* Products */;
@@ -290,8 +329,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B8AD16E1C4BA7FF0051F015 /* good.wav in Resources */,
+				7B7D1E8C1C4CF70B00D7BEBA /* home.html in Resources */,
+				7B7D1E901C4CFF6300D7BEBA /* lestari.png in Resources */,
+				7B7D1E921C4D189C00D7BEBA /* heureka.png in Resources */,
 				7B81BC1B1AD96323006F1CB7 /* Main.storyboard in Resources */,
 				7B81BC201AD96323006F1CB7 /* LaunchScreen.xib in Resources */,
+				7B8AD16D1C4BA7FF0051F015 /* bad.wav in Resources */,
+				7B7D1E951C4D26CB00D7BEBA /* InfoPlist.strings in Resources */,
 				7B81BC1D1AD96323006F1CB7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,15 +418,18 @@
 			files = (
 				7B427B4A1AEA8FB9006E8AD6 /* PalmOilLogoView.swift in Sources */,
 				7B81BC181AD96323006F1CB7 /* ViewController.swift in Sources */,
-				7BA1D96A1ADA6E7D00CFF373 /* FlashButton.swift in Sources */,
+				7B7D1E8A1C4CEE9C00D7BEBA /* InfoPresentationController.swift in Sources */,
 				7B81BC161AD96323006F1CB7 /* AppDelegate.swift in Sources */,
-				7B427B4C1AEA9A55006E8AD6 /* SwitchButton.swift in Sources */,
+				7B8AD1691C4BA2370051F015 /* Sounds.swift in Sources */,
 				7BDC61791ADA627900D2E23F /* ResultView.swift in Sources */,
-				7BA1D96C1ADA6E8B00CFF373 /* HistoryButton.swift in Sources */,
+				7B8AD1721C4CC00F0051F015 /* ViewController+Hacks.swift in Sources */,
 				7BD5D6A51AD97B6400627117 /* PalmOilGlyphs.swift in Sources */,
+				7B8AD1701C4CBE3D0051F015 /* Settings.swift in Sources */,
+				7B8AD1741C4CC0E90051F015 /* Flashlight.swift in Sources */,
+				7B269D1B1C4CEDAF002E0B37 /* InfoStoryboardSegue.swift in Sources */,
 				7BD5D6A81AD97B8300627117 /* BarCodeView.swift in Sources */,
+				7B269D191C4CE752002E0B37 /* InfoViewController.swift in Sources */,
 				7BA1D96F1ADA732600CFF373 /* ApiConnector.swift in Sources */,
-				7BA1D9681ADA6AE400CFF373 /* InfoButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,10 +452,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7B7D1E971C4D26CB00D7BEBA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B7D1E961C4D26CB00D7BEBA /* Base */,
+				7B7D1E981C4D26CE00D7BEBA /* cs */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		7B81BC191AD96323006F1CB7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7B81BC1A1AD96323006F1CB7 /* Base */,
+				7B8AD1751C4CDF0E0051F015 /* cs */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -416,6 +474,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7B81BC1F1AD96323006F1CB7 /* Base */,
+				7B8AD1761C4CDF0E0051F015 /* cs */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -440,6 +499,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -485,6 +545,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -515,7 +576,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.gdgscl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "83022b9c-a627-4ca3-b541-a0aef3e77b4f";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -529,7 +591,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.gdgscl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "83022b9c-a627-4ca3-b541-a0aef3e77b4f";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

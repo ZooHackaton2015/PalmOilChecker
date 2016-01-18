@@ -1,0 +1,10 @@
+
+/* Class = "UILabel"; text = "Place EAN barcode inside view finder"; ObjectID = "jTN-U6-7EL"; */
+"jTN-U6-7EL.text" = "Vložte čárový kód do vyznačené oblasti";
+
+/* Class = "UIViewController"; title = "Bar Code Scanner"; ObjectID = "vXZ-lx-hvc"; */
+"vXZ-lx-hvc.title" = "Palmový olej";
+
+
+/* Class = "UIButton"; title = "Close"; ObjectID = "WiB-P6-HF1"; */
+"WiB-P6-HF1.normalTitle" = "Zavřít";
