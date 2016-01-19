@@ -113,6 +113,7 @@
                         <outlet property="cameraView" destination="Xg7-yr-hhd" id="OdM-mG-zud"/>
                         <outlet property="eanCodeLabel" destination="jTN-U6-7EL" id="6GP-mt-qbF"/>
                         <outlet property="resultView" destination="MpX-hc-bKm" id="ZbC-dC-Kxv"/>
+                        <outlet property="soundButton" destination="gxJ-it-WO2" id="Zl1-so-fus"/>
                         <outlet property="statusView" destination="GEy-2c-anm" id="Tcb-UN-We9"/>
                     </connections>
                 </viewController>
@@ -141,25 +142,34 @@
                                 </connections>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiB-P6-HF1">
-                                <rect key="frame" x="0.0" y="536" width="600" height="44"/>
-                                <color key="backgroundColor" red="0.44705882349999998" green="0.75294117650000003" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="546" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="7I8-Jd-rdz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Close">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.44705882349999998" green="0.75294117650000003" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="GZ6-6N-Rck" eventType="touchUpInside" id="Yg5-3a-Sbw"/>
                                 </connections>
                             </button>
+                            <view clipsSubviews="YES" alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Grs-rN-YCd" customClass="ShadowView" customModule="Palm_Oil" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="526" width="600" height="10"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="aMx-bs-JMq"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Grs-rN-YCd" firstAttribute="bottom" secondItem="2N5-6I-2n3" secondAttribute="bottom" id="8z9-HL-2Wd"/>
                             <constraint firstItem="2N5-6I-2n3" firstAttribute="top" secondItem="Iii-i0-eiR" secondAttribute="bottom" constant="20" id="F2Q-U8-nRC"/>
-                            <constraint firstItem="2Yv-bs-Y9Q" firstAttribute="top" secondItem="WiB-P6-HF1" secondAttribute="bottom" constant="20" id="LqH-zc-agP"/>
+                            <constraint firstItem="2Yv-bs-Y9Q" firstAttribute="top" secondItem="WiB-P6-HF1" secondAttribute="bottom" constant="10" id="LqH-zc-agP"/>
+                            <constraint firstItem="Grs-rN-YCd" firstAttribute="leading" secondItem="ygs-ZQ-Cmn" secondAttribute="leading" id="Qcp-FD-mHM"/>
                             <constraint firstItem="2N5-6I-2n3" firstAttribute="leading" secondItem="ygs-ZQ-Cmn" secondAttribute="leadingMargin" id="RXD-Yt-8f3"/>
+                            <constraint firstAttribute="trailing" secondItem="Grs-rN-YCd" secondAttribute="trailing" id="S4X-oZ-sAG"/>
                             <constraint firstItem="WiB-P6-HF1" firstAttribute="leading" secondItem="ygs-ZQ-Cmn" secondAttribute="leading" id="fd9-V7-Eyj"/>
                             <constraint firstItem="2N5-6I-2n3" firstAttribute="trailing" secondItem="ygs-ZQ-Cmn" secondAttribute="trailingMargin" id="jKU-Km-vPb"/>
                             <constraint firstAttribute="trailing" secondItem="WiB-P6-HF1" secondAttribute="trailing" id="nBi-gj-2X8"/>

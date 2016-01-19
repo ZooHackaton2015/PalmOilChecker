@@ -14,11 +14,10 @@ class Settings {
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
     /// System sounds
-    var soundsEnabled: Bool = true {
-        didSet {
-            saveSettings()
-        }
-    }
+    var soundsEnabled: Bool = true
+    
+    /// First run indicator
+    var firstRun: Bool = true
     
     
     init() {
@@ -29,9 +28,11 @@ class Settings {
     /**
         Persist settings
     */
-    private func saveSettings() {
+    func saveSettings() {
         userDefaults.setBool(soundsEnabled, forKey: "sounds")
+        userDefaults.setBool(firstRun, forKey: "firstrun")
         userDefaults.synchronize()
+        print("Settings saved: firstRun: \(firstRun), sounds: \(soundsEnabled)")
     }
     
     
@@ -39,6 +40,8 @@ class Settings {
         Restore settings from persist storage
     */
     private func loadSettings() {
+        firstRun = userDefaults.boolForKey("firstrun") ?? true
         soundsEnabled = userDefaults.boolForKey("sounds") ?? true
+        print("Settings loaded: firstRun: \(firstRun), sounds: \(soundsEnabled)")
     }
 }

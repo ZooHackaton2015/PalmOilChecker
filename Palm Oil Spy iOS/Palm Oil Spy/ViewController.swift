@@ -15,6 +15,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var eanCodeLabel: UILabel!
     @IBOutlet weak var resultView: ResultView!
+    @IBOutlet weak var soundButton: UIBarButtonItem!
     
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
@@ -26,9 +27,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        resultView.settings = appDelegate.settings
-        
-        performSegueWithIdentifier("segueToInfo", sender: self)
+        loadSettings()
     }
     
     
@@ -50,6 +49,26 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
         captureSession?.stopRunning()
         captureSession = nil
         videoPreviewLayer?.removeFromSuperlayer()
+    }
+    
+    
+    func loadSettings() {
+        guard let settings = appDelegate.settings else {return}
+        
+        resultView.settings = settings
+        
+        switch settings.soundsEnabled {
+        case true:
+            soundButton.image = UIImage(named: "icon-sound")
+        case false:
+            soundButton.image = UIImage(named: "icon-sound-selected")
+        }
+        
+        if settings.firstRun {
+            settings.firstRun = false
+            settings.saveSettings()
+            performSegueWithIdentifier("segueToInfo", sender: self)
+        }
     }
 
 
@@ -160,6 +179,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
         guard let settings = appDelegate.settings else {return}
         
         settings.soundsEnabled = !settings.soundsEnabled
+        settings.saveSettings()
         switch settings.soundsEnabled {
         case true:
             sender.image = UIImage(named: "icon-sound")

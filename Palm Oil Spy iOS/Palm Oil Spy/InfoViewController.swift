@@ -18,6 +18,7 @@ class InfoViewController: UIViewController, UIWebViewDelegate {
 
         webView.scrollView.showsHorizontalScrollIndicator = false
         webView.scrollView.showsVerticalScrollIndicator = false
+        webView.alpha = 0
         
         if let url = NSBundle.mainBundle().URLForResource("home", withExtension: "html") {
             let request = NSURLRequest(URL: url)
@@ -51,6 +52,13 @@ class InfoViewController: UIViewController, UIWebViewDelegate {
             return false
         }
         return true
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        UIView.beginAnimations(nil, context: nil)
+        UIView.setAnimationDuration(0.3)
+        webView.alpha = 1
+        UIView.commitAnimations()
     }
 
 }

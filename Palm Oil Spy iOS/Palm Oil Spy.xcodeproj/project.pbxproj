@@ -10,6 +10,7 @@
 		621EEE280311EEA196408C67 /* Pods_Palm_Oil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68E370DBA43C3E36F638080 /* Pods_Palm_Oil.framework */; };
 		7B269D191C4CE752002E0B37 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B269D181C4CE752002E0B37 /* InfoViewController.swift */; };
 		7B269D1B1C4CEDAF002E0B37 /* InfoStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B269D1A1C4CEDAF002E0B37 /* InfoStoryboardSegue.swift */; };
+		7B3669621C4E3C25007D5740 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3669611C4E3C25007D5740 /* ShadowView.swift */; };
 		7B427B4A1AEA8FB9006E8AD6 /* PalmOilLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B427B491AEA8FB9006E8AD6 /* PalmOilLogoView.swift */; };
 		7B7D1E8A1C4CEE9C00D7BEBA /* InfoPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7D1E891C4CEE9C00D7BEBA /* InfoPresentationController.swift */; };
 		7B7D1E8C1C4CF70B00D7BEBA /* home.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B7D1E8B1C4CF70B00D7BEBA /* home.html */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		7B269D181C4CE752002E0B37 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		7B269D1A1C4CEDAF002E0B37 /* InfoStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoStoryboardSegue.swift; sourceTree = "<group>"; };
+		7B3669611C4E3C25007D5740 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		7B427B491AEA8FB9006E8AD6 /* PalmOilLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalmOilLogoView.swift; sourceTree = "<group>"; };
 		7B7D1E891C4CEE9C00D7BEBA /* InfoPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPresentationController.swift; sourceTree = "<group>"; };
 		7B7D1E8B1C4CF70B00D7BEBA /* home.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = home.html; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				7B427B491AEA8FB9006E8AD6 /* PalmOilLogoView.swift */,
 				7B269D1A1C4CEDAF002E0B37 /* InfoStoryboardSegue.swift */,
 				7B7D1E891C4CEE9C00D7BEBA /* InfoPresentationController.swift */,
+				7B3669611C4E3C25007D5740 /* ShadowView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				7B8AD1721C4CC00F0051F015 /* ViewController+Hacks.swift in Sources */,
 				7BD5D6A51AD97B6400627117 /* PalmOilGlyphs.swift in Sources */,
 				7B8AD1701C4CBE3D0051F015 /* Settings.swift in Sources */,
+				7B3669621C4E3C25007D5740 /* ShadowView.swift in Sources */,
 				7B8AD1741C4CC0E90051F015 /* Flashlight.swift in Sources */,
 				7B269D1B1C4CEDAF002E0B37 /* InfoStoryboardSegue.swift in Sources */,
 				7BD5D6A81AD97B8300627117 /* BarCodeView.swift in Sources */,
@@ -572,11 +576,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Palm Oil Spy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.gdgscl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "95ae1817-7ce9-4ba9-834b-c6a9cd6b7f6c";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -587,11 +592,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Palm Oil Spy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.gdgscl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "95ae1817-7ce9-4ba9-834b-c6a9cd6b7f6c";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
