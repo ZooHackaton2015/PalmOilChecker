@@ -70,7 +70,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="homeButtonPressed:" destination="vXZ-lx-hvc" id="fzz-AI-IQ4"/>
-                                            <segue destination="GZ6-6N-Rck" kind="presentation" identifier="segueToInfo" customClass="InfoStoryboardSegue" customModule="Palm_Oil" customModuleProvider="target" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="7u4-mt-wHw"/>
+                                            <segue destination="GZ6-6N-Rck" kind="presentation" identifier="segueToInfo" modalTransitionStyle="crossDissolve" id="7u4-mt-wHw"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="XGc-1j-fJL"/>

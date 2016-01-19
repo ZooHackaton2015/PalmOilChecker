@@ -198,5 +198,10 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
         })
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        segue.destinationViewController.modalPresentationStyle = .Custom
+        segue.destinationViewController.transitioningDelegate = segue.destinationViewController as? UIViewControllerTransitioningDelegate
+    }
 }
 

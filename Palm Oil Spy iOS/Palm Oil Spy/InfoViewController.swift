@@ -8,13 +8,15 @@
 
 import UIKit
 
-class InfoViewController: UIViewController, UIWebViewDelegate {
+class InfoViewController: UIViewController, UIWebViewDelegate, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var webView: UIWebView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.transitioningDelegate = self
 
         webView.scrollView.showsHorizontalScrollIndicator = false
         webView.scrollView.showsVerticalScrollIndicator = false
@@ -59,6 +61,15 @@ class InfoViewController: UIViewController, UIWebViewDelegate {
         UIView.setAnimationDuration(0.3)
         webView.alpha = 1
         UIView.commitAnimations()
+    }
+    
+    
+// MARK: - Transition delegate
+    
+    
+    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
+        return InfoPresentationController(presentedViewController: presented,
+            presentingViewController: presenting)
     }
 
 }
