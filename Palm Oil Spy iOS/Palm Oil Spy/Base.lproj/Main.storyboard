@@ -146,7 +146,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Close">
-                                    <color key="titleColor" red="0.44705882349999998" green="0.75294117650000003" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.29019607843137257" green="0.27450980392156865" blue="0.12941176470588237" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="GZ6-6N-Rck" eventType="touchUpInside" id="Yg5-3a-Sbw"/>
