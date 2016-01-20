@@ -16,6 +16,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
     @IBOutlet weak var eanCodeLabel: UILabel!
     @IBOutlet weak var resultView: ResultView!
     @IBOutlet weak var soundButton: UIBarButtonItem!
+    @IBOutlet weak var flashlightButton: UIBarButtonItem!
     
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
@@ -28,6 +29,16 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
         super.viewDidLoad()
         
         loadSettings()
+
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "setFlashlightButtonIcon",
+            name: UIApplicationDidBecomeActiveNotification,
+            object: nil)
+    }
+    
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     
@@ -163,10 +174,24 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
         switch flashlight.device.torchActive {
         case false:
             flashlight.turnOn()
-            sender.image = UIImage(named: "icon-flash-selected")
         case true:
             flashlight.turnOff()
-            sender.image = UIImage(named: "icon-flash")
+        }
+        
+        setFlashlightButtonIcon()
+    }
+    
+    
+    func setFlashlightButtonIcon() {
+        guard let flashlight = flashlight else {return}
+        
+        switch flashlight.device.torchMode {
+        case .On:
+            flashlightButton.image = UIImage(named: "icon-flash-selected")
+        case .Off:
+            flashlightButton.image = UIImage(named: "icon-flash")
+        case .Auto:
+            flashlightButton.image = UIImage(named: "icon-flash")
         }
     }
     

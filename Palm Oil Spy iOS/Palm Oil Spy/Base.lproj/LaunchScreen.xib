@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,36 +12,37 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With love GDGSCL 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="439" width="441" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Palm oil" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="76" width="441" height="43"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="palmlogo" translatesAutoresizingMaskIntoConstraints="NO" id="KaS-WQ-lHG">
-                    <rect key="frame" x="90" y="131" width="300" height="300"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lestari.png" translatesAutoresizingMaskIntoConstraints="NO" id="EiY-rU-BNM">
+                    <rect key="frame" x="201" y="20" width="78" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="Znt-OQ-sUh"/>
-                        <constraint firstAttribute="width" constant="300" id="fFg-WK-b5L"/>
+                        <constraint firstAttribute="width" secondItem="EiY-rU-BNM" secondAttribute="height" multiplier="11:7" id="jna-XF-8lm"/>
                     </constraints>
                 </imageView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="uLb-w7-DNt">
+                    <rect key="frame" x="0.0" y="436" width="480" height="44"/>
+                    <items/>
+                </toolbar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdb-ye-aez">
+                    <rect key="frame" x="16" y="90" width="448" height="299"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Cdb-ye-aez" secondAttribute="height" multiplier="3:2" id="VWN-XN-zMN"/>
+                    </constraints>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="0.44705882352941179" green="0.75294117647058822" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/5" constant="1" id="5cJ-9S-tgC"/>
-                <constraint firstAttribute="centerX" secondItem="KaS-WQ-lHG" secondAttribute="centerX" id="7tG-AS-Jly"/>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
-                <constraint firstAttribute="centerY" secondItem="KaS-WQ-lHG" secondAttribute="centerY" constant="-41" id="l4q-pR-LKx"/>
+                <constraint firstItem="Cdb-ye-aez" firstAttribute="width" secondItem="Cdb-ye-aez" secondAttribute="height" multiplier="3:2" id="1cI-MT-QMn"/>
+                <constraint firstItem="Cdb-ye-aez" firstAttribute="top" secondItem="EiY-rU-BNM" secondAttribute="bottom" constant="20" id="UkF-Qe-K0u"/>
+                <constraint firstItem="Cdb-ye-aez" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Y7b-MV-xkC"/>
+                <constraint firstItem="EiY-rU-BNM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="ZP3-OD-IXS"/>
+                <constraint firstItem="EiY-rU-BNM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fZr-G2-BXi"/>
+                <constraint firstItem="uLb-w7-DNt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lfl-zx-6wn"/>
+                <constraint firstAttribute="trailing" secondItem="Cdb-ye-aez" secondAttribute="trailing" constant="16" id="m9C-VQ-GPw"/>
+                <constraint firstAttribute="trailing" secondItem="uLb-w7-DNt" secondAttribute="trailing" id="qpX-Ki-x6i"/>
+                <constraint firstItem="EiY-rU-BNM" firstAttribute="width" secondItem="EiY-rU-BNM" secondAttribute="height" multiplier="11:7" id="til-Pg-QR2"/>
+                <constraint firstAttribute="bottom" secondItem="uLb-w7-DNt" secondAttribute="bottom" id="v5K-7f-Ptv"/>
+                <constraint firstItem="Cdb-ye-aez" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="yeG-ys-oIY"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -49,6 +50,6 @@
         </view>
     </objects>
     <resources>
-        <image name="palmlogo" width="612" height="792"/>
+        <image name="lestari.png" width="366" height="215"/>
     </resources>
 </document>

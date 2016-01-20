@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -23,11 +23,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lestari.png" translatesAutoresizingMaskIntoConstraints="NO" id="8hh-HI-W54">
+                                <rect key="frame" x="245" y="20" width="110" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8hh-HI-W54" secondAttribute="height" multiplier="11:7" id="WLT-uK-ceJ"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEy-2c-anm" customClass="BarCodeView" customModule="Palm_Oil" customModuleProvider="target">
-                                <rect key="frame" x="16" y="200" width="568" height="200"/>
+                                <rect key="frame" x="16" y="110" width="568" height="379"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="I0N-Qr-MeG"/>
+                                    <constraint firstAttribute="width" secondItem="GEy-2c-anm" secondAttribute="height" multiplier="3:2" id="34z-WX-3eV"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MpX-hc-bKm" customClass="ResultView" customModule="Palm_Oil" customModuleProvider="target">
@@ -38,7 +44,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place barcode inside marked area" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTN-U6-7EL">
-                                <rect key="frame" x="20" y="420" width="560" height="21"/>
+                                <rect key="frame" x="20" y="509.5" width="560" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="VxB-I1-BU7"/>
                                 </constraints>
@@ -46,15 +52,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fds-Fi-NkW" customClass="PalmOilLogoView" customModule="Palm_Oil" customModuleProvider="target">
-                                <rect key="frame" x="242.5" y="30" width="115" height="164"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Fds-Fi-NkW" secondAttribute="height" multiplier="54:77" id="cyE-ng-Reh"/>
-                                </constraints>
-                            </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Zad-bI-BKc">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
@@ -87,6 +84,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="MpX-hc-bKm" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="3RA-Qp-UWG"/>
+                            <constraint firstItem="GEy-2c-anm" firstAttribute="top" secondItem="8hh-HI-W54" secondAttribute="bottom" constant="20" id="6p5-KC-MDf"/>
                             <constraint firstItem="Xg7-yr-hhd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="8fh-UY-vGM"/>
                             <constraint firstAttribute="centerX" secondItem="GEy-2c-anm" secondAttribute="centerX" id="B37-eT-hZD"/>
                             <constraint firstItem="jTN-U6-7EL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="D15-yI-2aQ"/>
@@ -95,23 +93,23 @@
                             <constraint firstItem="jTN-U6-7EL" firstAttribute="top" secondItem="GEy-2c-anm" secondAttribute="bottom" constant="20" id="KDk-hF-wsi"/>
                             <constraint firstAttribute="trailing" secondItem="Xg7-yr-hhd" secondAttribute="trailing" id="LpT-gK-XOz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MpX-hc-bKm" secondAttribute="trailing" constant="31" id="NyQ-wH-Lwi"/>
-                            <constraint firstItem="GEy-2c-anm" firstAttribute="top" secondItem="Fds-Fi-NkW" secondAttribute="bottom" constant="6" id="QGD-tl-OEH"/>
-                            <constraint firstItem="Xg7-yr-hhd" firstAttribute="centerX" secondItem="Fds-Fi-NkW" secondAttribute="centerX" id="TGo-W6-eiQ"/>
+                            <constraint firstItem="8hh-HI-W54" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Qxh-4G-rdR"/>
                             <constraint firstItem="MpX-hc-bKm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="VoR-vR-2Lu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zad-bI-BKc" secondAttribute="trailing" constant="-20" id="Yzi-8a-tR7"/>
                             <constraint firstItem="jTN-U6-7EL" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="afq-14-GVf"/>
                             <constraint firstItem="GEy-2c-anm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="frp-CT-tox"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Zad-bI-BKc" secondAttribute="bottom" id="g8k-3O-XSH"/>
-                            <constraint firstItem="Fds-Fi-NkW" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="lMB-aG-7e5"/>
                             <constraint firstAttribute="centerX" secondItem="jTN-U6-7EL" secondAttribute="centerX" id="mM7-Dd-4c8"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Xg7-yr-hhd" secondAttribute="bottom" id="pLR-pS-oIq"/>
                             <constraint firstAttribute="centerY" secondItem="GEy-2c-anm" secondAttribute="centerY" id="xA0-QD-f9F"/>
+                            <constraint firstItem="8hh-HI-W54" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="xd5-XV-dCK"/>
                             <constraint firstAttribute="trailing" secondItem="GEy-2c-anm" secondAttribute="trailing" constant="16" id="yqT-W6-s9t"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="Xg7-yr-hhd" id="OdM-mG-zud"/>
                         <outlet property="eanCodeLabel" destination="jTN-U6-7EL" id="6GP-mt-qbF"/>
+                        <outlet property="flashlightButton" destination="xff-ha-3OP" id="Nuv-yh-YBz"/>
                         <outlet property="resultView" destination="MpX-hc-bKm" id="ZbC-dC-Kxv"/>
                         <outlet property="soundButton" destination="gxJ-it-WO2" id="Zl1-so-fus"/>
                         <outlet property="statusView" destination="GEy-2c-anm" id="Tcb-UN-We9"/>
@@ -190,5 +188,6 @@
         <image name="icon-flash" width="32" height="32"/>
         <image name="icon-home" width="32" height="32"/>
         <image name="icon-sound" width="32" height="32"/>
+        <image name="lestari.png" width="366" height="215"/>
     </resources>
 </document>

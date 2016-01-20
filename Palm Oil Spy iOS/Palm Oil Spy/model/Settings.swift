@@ -40,8 +40,8 @@ class Settings {
         Restore settings from persist storage
     */
     private func loadSettings() {
-        firstRun = userDefaults.boolForKey("firstrun") ?? true
-        soundsEnabled = userDefaults.boolForKey("sounds") ?? true
+        firstRun = userDefaults.objectForKey("firstrun") != nil ? userDefaults.boolForKey("firstrun") : true
+        soundsEnabled = userDefaults.objectForKey("firstrun") != nil ? userDefaults.boolForKey("sounds") : true
         print("Settings loaded: firstRun: \(firstRun), sounds: \(soundsEnabled)")
     }
 }

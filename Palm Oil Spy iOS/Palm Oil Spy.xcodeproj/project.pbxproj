@@ -77,7 +77,6 @@
 		7B8AD1711C4CC00F0051F015 /* ViewController+Hacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Hacks.swift"; sourceTree = "<group>"; };
 		7B8AD1731C4CC0E90051F015 /* Flashlight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flashlight.swift; path = model/Flashlight.swift; sourceTree = "<group>"; };
 		7B8AD1751C4CDF0E0051F015 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Main.strings; sourceTree = "<group>"; };
-		7B8AD1761C4CDF0E0051F015 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		7BA1D96E1ADA732600CFF373 /* ApiConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConnector.swift; sourceTree = "<group>"; };
 		7BD5D69C1AD971FA00627117 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7BD5D69E1AD971FF00627117 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -478,7 +477,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				7B81BC1F1AD96323006F1CB7 /* Base */,
-				7B8AD1761C4CDF0E0051F015 /* cs */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
