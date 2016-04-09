@@ -59,6 +59,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -115,6 +116,8 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   private BeepManager beepManager;
   private AmbientLightManager ambientLightManager;
 
+  private ImageButton flashButton;
+
   ViewfinderView getViewfinderView() {
     return viewfinderView;
   }
@@ -141,6 +144,19 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     ambientLightManager = new AmbientLightManager(this);
 
     PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+
+    flashButton = (ImageButton) findViewById(R.id.flashButton);
+
+    flashButton.setOnClickListener(new View.OnClickListener() {
+
+      @Override
+      public void onClick(View arg0) {
+
+        cameraManager.toggleTorch();
+
+      }
+
+    });
   }
 
   @Override

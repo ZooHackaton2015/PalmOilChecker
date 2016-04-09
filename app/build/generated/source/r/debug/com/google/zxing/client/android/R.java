@@ -48,11 +48,11 @@ public final class R {
         public static final int decode=0x7f0a0000;
         public static final int decode_failed=0x7f0a0001;
         public static final int decode_succeeded=0x7f0a0002;
+        public static final int flashButton=0x7f0a0019;
         public static final int format_text_view=0x7f0a000f;
         public static final int help_contents=0x7f0a001b;
         public static final int history_detail=0x7f0a001d;
         public static final int history_title=0x7f0a001c;
-        public static final int imageButton=0x7f0a0019;
         public static final int image_view=0x7f0a001a;
         public static final int launch_product_query=0x7f0a0003;
         public static final int menu_encode=0x7f0a0027;

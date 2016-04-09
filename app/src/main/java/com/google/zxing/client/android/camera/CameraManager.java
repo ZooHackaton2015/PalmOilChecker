@@ -187,6 +187,27 @@ public final class CameraManager {
       }
     }
   }
+  /**
+   * Convenience method for {@link com.google.zxing.client.android.CaptureActivity}
+   *
+   */
+  public synchronized void toggleTorch() {
+    OpenCamera theCamera = camera;
+    if (theCamera != null) {
+
+      boolean wasAutoFocusManager = autoFocusManager != null;
+      if (wasAutoFocusManager) {
+        autoFocusManager.stop();
+        autoFocusManager = null;
+      }
+      configManager.setTorch(theCamera.getCamera(), !configManager.getTorchState(theCamera.getCamera()));
+      if (wasAutoFocusManager) {
+        autoFocusManager = new AutoFocusManager(context, theCamera.getCamera());
+        autoFocusManager.start();
+      }
+
+    }
+  }
 
   /**
    * A single preview frame will be returned to the handler supplied. The data will arrive as byte[]

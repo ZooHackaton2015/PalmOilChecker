@@ -4,29 +4,46 @@
     api-level="22"
     density="560dpi"
     format="7"
-    timestamp="141352838987221" >
+    timestamp="142493940930531" >
 
     <task
         name="javac"
-        duration="4381" />
+        duration="3375" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="1683" />
+        duration="87" />
     <task
         name="verifier"
-        duration="564" />
+        duration="3" />
 
     <artifact
-        location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/res/resources-debug.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
+        type="DEX" />
 
     <build timestamp="141352838987221" >
         <artifact
             location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="142493940930531" >
+        <artifact
+            location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>
