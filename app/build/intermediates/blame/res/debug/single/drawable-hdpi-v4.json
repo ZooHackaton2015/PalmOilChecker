@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon_flash_selected.png",
+        "source": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/drawable-hdpi/icon_flash_selected.png"
+    },
+    {
+        "merged": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/launcher_icon.png",
+        "source": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/drawable-hdpi/launcher_icon.png"
+    },
+    {
+        "merged": "/Users/vaca/Documents/Android/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/launcher_icon.png",
+        "source": "/Users/vaca/Documents/Android/android/app/src/main/res/drawable-hdpi/launcher_icon.png"
+    }
+]
