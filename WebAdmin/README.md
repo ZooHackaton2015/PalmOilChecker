@@ -4,6 +4,9 @@
 
 # End User REST
 
+Administration of the application on OpenShift:
+* https://openshift.redhat.com/app/console/domain/zoohackaton
+
 Try it:
 * http://palmoil-zoohackaton.rhcloud.com/barcodes/3045140105502
    * 200 OK - doesn't contain oil
