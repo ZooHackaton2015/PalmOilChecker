@@ -1,4 +1,20 @@
-# Pal Oil Checker Admin Application
+# Pal Oil Checker Application
+
+
+
+# End User REST
+
+Try it:
+* http://palmoil-zoohackaton.rhcloud.com/barcodes/3045140105502
+   * 200 OK - doesn't contain oil
+* http://palmoil-zoohackaton.rhcloud.com/barcodes/5201360527205
+   * 200 OK - contains oil
+* http://palmoil-zoohackaton.rhcloud.com/barcodes/1234567890123
+   * 404 Not Found ... barcode we don't know
+
+
+
+# Admin Application
 
 ## Data Model
 
@@ -8,12 +24,18 @@ Resources:
     * Bool safe
     * Integer approverId    ... user who approved
     * Long timestamp        ... modification timestamp
+```    
+    { "barcode": 1234567890123, "safe" : true, "approver-id" : 1, "timestamp" : 2147483647 }
+```    
 * user
     * Integer id
     * String email
     * String password
     * DateTime registered
     * Enum role
+```    
+    { }
+```    
 
 ## Workflow
 
