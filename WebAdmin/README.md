@@ -9,7 +9,7 @@ Try it:
    * 200 OK - doesn't contain oil
 * http://palmoil-zoohackaton.rhcloud.com/barcodes/5201360527205
    * 200 OK - contains oil
-* http://palmoil-zoohackaton.rhcloud.com/barcodes/1234567890123
+* http://palmoil-zoohackaton.rhcloud.com/barcodes/0000000000000
    * 404 Not Found ... barcode we don't know
 
 
