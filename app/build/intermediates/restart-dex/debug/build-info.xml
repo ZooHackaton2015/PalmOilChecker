@@ -1,49 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86_64,x86"
+    abi="x86_64"
     api-level="22"
     density="560dpi"
     format="7"
-    timestamp="142493940930531" >
+    timestamp="143048894339251" >
 
     <task
         name="javac"
-        duration="3375" />
+        duration="2538" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="87" />
+        duration="1094" />
     <task
         name="verifier"
-        duration="3" />
+        duration="357" />
 
     <artifact
-        location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/res/resources-debug.ap_"
-        type="RESOURCES" />
-    <artifact
-        location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
-        type="DEX" />
-    <artifact
-        location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
-        type="DEX" />
+        location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="141352838987221" >
+    <build timestamp="143048894339251" >
         <artifact
             location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build timestamp="142493940930531" >
-        <artifact
-            location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/res/resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

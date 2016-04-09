@@ -150,9 +150,13 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     flashButton.setOnClickListener(new View.OnClickListener() {
 
       @Override
-      public void onClick(View arg0) {
+      public void onClick(View button) {
 
-        cameraManager.toggleTorch();
+        if (cameraManager.toggleTorch()) {
+          flashButton.setImageResource(R.drawable.icon_flash_selected);
+        } else {
+          flashButton.setImageResource(R.drawable.icon_flash_selected);
+        }
 
       }
 

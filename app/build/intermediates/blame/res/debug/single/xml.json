@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/vaca/Documents/Android/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
-        "source": "/Users/vaca/Documents/Android/android/app/src/main/res/xml/preferences.xml"
-    },
-    {
         "merged": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
         "source": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/xml/preferences.xml"
     }

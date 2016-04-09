@@ -191,8 +191,9 @@ public final class CameraManager {
    * Convenience method for {@link com.google.zxing.client.android.CaptureActivity}
    *
    */
-  public synchronized void toggleTorch() {
+  public synchronized boolean toggleTorch() {
     OpenCamera theCamera = camera;
+    boolean state = false;
     if (theCamera != null) {
 
       boolean wasAutoFocusManager = autoFocusManager != null;
@@ -200,13 +201,16 @@ public final class CameraManager {
         autoFocusManager.stop();
         autoFocusManager = null;
       }
-      configManager.setTorch(theCamera.getCamera(), !configManager.getTorchState(theCamera.getCamera()));
+      state = !configManager.getTorchState(theCamera.getCamera());
+      configManager.setTorch(theCamera.getCamera(), state);
       if (wasAutoFocusManager) {
         autoFocusManager = new AutoFocusManager(context, theCamera.getCamera());
         autoFocusManager.start();
       }
 
     }
+
+    return state;
   }
 
   /**

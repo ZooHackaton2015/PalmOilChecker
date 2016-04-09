@@ -1,5 +1,0 @@
-CHANGED,/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/google/zxing/client/android/camera/CameraManager$override.class
-CHANGED,/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
-CHANGED,/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/google/zxing/client/android/CaptureActivity$override.class
-CHANGED,/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/google/zxing/client/android/R$id$override.class
-CHANGED,/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/google/zxing/client/android/CaptureActivity$1$override.class

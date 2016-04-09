@@ -1,2 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="4ebfbe2374e2725757645793c01b3f42fb794fbc">
+        <dex dex="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_901b1ffd70fde904def0e6b7b91507b47ad3db6a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="f583c36378d7e5087bc2d57bf2cea425b0296801">
+        <dex dex="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_fabbbea2ab1c71ec761b51d8caca70164b5415a7/classes.dex" />
+    </item>
+
+</items>
