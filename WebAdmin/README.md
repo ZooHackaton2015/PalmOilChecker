@@ -1,0 +1,46 @@
+# Pal Oil Checker Admin Application
+
+## Data Model
+
+Resources:
+* product
+    * Long barcode          ... 32b system 10 digits > 64b system 13 digits needed
+    * Bool safe
+    * Integer approverId    ... user who approved
+    * Long timestamp        ... modification timestamp
+* user
+    * Integer id
+    * String email
+    * String password
+    * DateTime registered
+    * Enum role
+
+## Workflow
+
+End user service use cases:
+* getProduct(barcode) -> OK | NOK | UNKNOWN
+    * 404
+    * 200 { "contains-oil": true }
+    * 200 { "contains-oil": false }
+
+Admin service HTTPS use cases:
+* login()
+* logout()
+
+* **NON USE CASE** getProducts()
+* addProduct(barcode, safe)
+* updateProduct(barcode, safe)
+* deleteProduct(barcode)
+
+* getUsers()
+* addUser(email, password, role) -> id;
+* updateUser(email, password, role)
+* getUser(id)
+* removeUser(username)
+
+Admin service REST:
+* login()
+* addProduct(barcode, safe)
+    * basic authentication
+    * barcodes/
+    * POST { "contains-oil": false; "barcode": 1234567890123 }
