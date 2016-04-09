@@ -74,9 +74,5 @@
     {
         "merged": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/res/merged/debug/layout/history_list_item.xml",
         "source": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/layout/history_list_item.xml"
-    },
-    {
-        "merged": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/res/merged/debug/layout/share.xml",
-        "source": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/layout/share.xml"
     }
 ]

@@ -12,15 +12,7 @@
                     "endOffset": 828
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/arrays.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 2,
-                        "startOffset": 679,
-                        "endLine": 50,
-                        "endColumn": 17,
-                        "endOffset": 1409
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/arrays.xml"
                 }
             },
             {
@@ -33,15 +25,7 @@
                     "endOffset": 1063
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/arrays.xml",
-                    "position": {
-                        "startLine": 56,
-                        "startColumn": 2,
-                        "startOffset": 1582,
-                        "endLine": 60,
-                        "endColumn": 17,
-                        "endOffset": 1812
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/arrays.xml"
                 }
             },
             {
@@ -54,15 +38,7 @@
                     "endOffset": 1233
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/arrays.xml",
-                    "position": {
-                        "startLine": 51,
-                        "startColumn": 2,
-                        "startOffset": 1412,
-                        "endLine": 55,
-                        "endColumn": 17,
-                        "endOffset": 1579
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/arrays.xml"
                 }
             },
             {
@@ -74,14 +50,7 @@
                     "endOffset": 1283
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 2,
-                        "startOffset": 632,
-                        "endColumn": 47,
-                        "endOffset": 677
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml"
                 }
             },
             {
@@ -93,14 +62,7 @@
                     "endOffset": 1331
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 2,
-                        "startOffset": 680,
-                        "endColumn": 45,
-                        "endOffset": 723
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml"
                 }
             },
             {
@@ -112,14 +74,7 @@
                     "endOffset": 1390
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 2,
-                        "startOffset": 726,
-                        "endColumn": 56,
-                        "endOffset": 780
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml"
                 }
             },
             {
@@ -131,14 +86,7 @@
                     "endOffset": 1444
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 2,
-                        "startOffset": 819,
-                        "endColumn": 51,
-                        "endOffset": 868
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml"
                 }
             },
             {
@@ -150,14 +98,7 @@
                     "endOffset": 1494
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 2,
-                        "startOffset": 871,
-                        "endColumn": 47,
-                        "endOffset": 916
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml"
                 }
             },
             {
@@ -169,14 +110,7 @@
                     "endOffset": 1542
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 2,
-                        "startOffset": 955,
-                        "endColumn": 45,
-                        "endOffset": 998
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml"
                 }
             },
             {
@@ -188,14 +122,7 @@
                     "endOffset": 1590
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml",
-                    "position": {
-                        "startLine": 23,
-                        "startColumn": 2,
-                        "startOffset": 1001,
-                        "endColumn": 45,
-                        "endOffset": 1044
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml"
                 }
             },
             {
@@ -207,14 +134,7 @@
                     "endOffset": 1638
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml",
-                    "position": {
-                        "startLine": 24,
-                        "startColumn": 2,
-                        "startOffset": 1047,
-                        "endColumn": 45,
-                        "endOffset": 1090
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml"
                 }
             },
             {
@@ -226,14 +146,7 @@
                     "endOffset": 1686
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml",
-                    "position": {
-                        "startLine": 25,
-                        "startColumn": 2,
-                        "startOffset": 1093,
-                        "endColumn": 45,
-                        "endOffset": 1136
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml"
                 }
             },
             {
@@ -245,14 +158,7 @@
                     "endOffset": 1739
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml",
-                    "position": {
-                        "startLine": 26,
-                        "startColumn": 2,
-                        "startOffset": 1139,
-                        "endColumn": 50,
-                        "endOffset": 1187
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml"
                 }
             },
             {
@@ -264,14 +170,7 @@
                     "endOffset": 1791
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml",
-                    "position": {
-                        "startLine": 27,
-                        "startColumn": 2,
-                        "startOffset": 1226,
-                        "endColumn": 49,
-                        "endOffset": 1273
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/colors.xml"
                 }
             },
             {
@@ -283,14 +182,7 @@
                     "endOffset": 1835
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/dimens.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 2,
-                        "startOffset": 678,
-                        "endColumn": 41,
-                        "endOffset": 717
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/dimens.xml"
                 }
             },
             {
@@ -302,14 +194,7 @@
                     "endOffset": 1883
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/dimens.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 2,
-                        "startOffset": 632,
-                        "endColumn": 45,
-                        "endOffset": 675
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/dimens.xml"
                 }
             },
             {
@@ -321,14 +206,7 @@
                     "endOffset": 1919
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/ids.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 2,
-                        "startOffset": 632,
-                        "endColumn": 33,
-                        "endOffset": 663
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/ids.xml"
                 }
             },
             {
@@ -340,14 +218,7 @@
                     "endOffset": 1962
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/ids.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 2,
-                        "startOffset": 666,
-                        "endColumn": 40,
-                        "endOffset": 704
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/ids.xml"
                 }
             },
             {
@@ -359,14 +230,7 @@
                     "endOffset": 2008
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/ids.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 2,
-                        "startOffset": 707,
-                        "endColumn": 43,
-                        "endOffset": 748
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/ids.xml"
                 }
             },
             {
@@ -378,14 +242,7 @@
                     "endOffset": 2058
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/ids.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 2,
-                        "startOffset": 751,
-                        "endColumn": 47,
-                        "endOffset": 796
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/ids.xml"
                 }
             },
             {
@@ -397,14 +254,7 @@
                     "endOffset": 2092
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/ids.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 2,
-                        "startOffset": 799,
-                        "endColumn": 31,
-                        "endOffset": 828
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/ids.xml"
                 }
             },
             {
@@ -416,14 +266,7 @@
                     "endOffset": 2137
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/ids.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 2,
-                        "startOffset": 831,
-                        "endColumn": 42,
-                        "endOffset": 871
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/ids.xml"
                 }
             },
             {
@@ -435,14 +278,7 @@
                     "endOffset": 2185
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/ids.xml",
-                    "position": {
-                        "startLine": 23,
-                        "startColumn": 2,
-                        "startOffset": 874,
-                        "endColumn": 45,
-                        "endOffset": 917
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/ids.xml"
                 }
             },
             {
@@ -450,8 +286,8 @@
                     "startLine": 66,
                     "startColumn": 4,
                     "startOffset": 2190,
-                    "endColumn": 52,
-                    "endOffset": 2238
+                    "endColumn": 49,
+                    "endOffset": 2235
                 },
                 "from": {
                     "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
@@ -459,8 +295,8 @@
                         "startLine": 17,
                         "startColumn": 2,
                         "startOffset": 632,
-                        "endColumn": 50,
-                        "endOffset": 680
+                        "endColumn": 47,
+                        "endOffset": 677
                     }
                 }
             },
@@ -468,2419 +304,1527 @@
                 "to": {
                     "startLine": 67,
                     "startColumn": 4,
-                    "startOffset": 2243,
+                    "startOffset": 2240,
                     "endColumn": 56,
-                    "endOffset": 2295
+                    "endOffset": 2292
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 2,
-                        "startOffset": 683,
-                        "endColumn": 54,
-                        "endOffset": 735
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 68,
                     "startColumn": 4,
-                    "startOffset": 2300,
+                    "startOffset": 2297,
                     "endColumn": 58,
-                    "endOffset": 2354
+                    "endOffset": 2351
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 2,
-                        "startOffset": 738,
-                        "endColumn": 56,
-                        "endOffset": 792
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 69,
                     "startColumn": 4,
-                    "startOffset": 2359,
+                    "startOffset": 2356,
                     "endColumn": 63,
-                    "endOffset": 2418
+                    "endOffset": 2415
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 2,
-                        "startOffset": 795,
-                        "endColumn": 61,
-                        "endOffset": 854
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 70,
                     "startColumn": 4,
-                    "startOffset": 2423,
+                    "startOffset": 2420,
                     "endColumn": 58,
-                    "endOffset": 2477
+                    "endOffset": 2474
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 2,
-                        "startOffset": 857,
-                        "endColumn": 56,
-                        "endOffset": 911
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 71,
                     "startColumn": 4,
-                    "startOffset": 2482,
+                    "startOffset": 2479,
                     "endColumn": 58,
-                    "endOffset": 2536
+                    "endOffset": 2533
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 2,
-                        "startOffset": 914,
-                        "endColumn": 56,
-                        "endOffset": 968
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 72,
                     "startColumn": 4,
-                    "startOffset": 2541,
+                    "startOffset": 2538,
                     "endColumn": 48,
-                    "endOffset": 2585
+                    "endOffset": 2582
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 23,
-                        "startColumn": 2,
-                        "startOffset": 971,
-                        "endColumn": 46,
-                        "endOffset": 1015
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 73,
                     "startColumn": 4,
-                    "startOffset": 2590,
+                    "startOffset": 2587,
                     "endColumn": 70,
-                    "endOffset": 2656
+                    "endOffset": 2653
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 24,
-                        "startColumn": 2,
-                        "startOffset": 1018,
-                        "endColumn": 68,
-                        "endOffset": 1084
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 74,
                     "startColumn": 4,
-                    "startOffset": 2661,
+                    "startOffset": 2658,
                     "endColumn": 51,
-                    "endOffset": 2708
+                    "endOffset": 2705
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 25,
-                        "startColumn": 2,
-                        "startOffset": 1087,
-                        "endColumn": 49,
-                        "endOffset": 1134
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 75,
                     "startColumn": 4,
-                    "startOffset": 2713,
+                    "startOffset": 2710,
                     "endColumn": 51,
-                    "endOffset": 2760
+                    "endOffset": 2757
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 26,
-                        "startColumn": 2,
-                        "startOffset": 1137,
-                        "endColumn": 49,
-                        "endOffset": 1184
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 76,
                     "startColumn": 4,
-                    "startOffset": 2765,
+                    "startOffset": 2762,
                     "endColumn": 64,
-                    "endOffset": 2825
+                    "endOffset": 2822
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 27,
-                        "startColumn": 2,
-                        "startOffset": 1187,
-                        "endColumn": 62,
-                        "endOffset": 1247
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 77,
                     "startColumn": 4,
-                    "startOffset": 2830,
+                    "startOffset": 2827,
                     "endColumn": 47,
-                    "endOffset": 2873
+                    "endOffset": 2870
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 28,
-                        "startColumn": 2,
-                        "startOffset": 1250,
-                        "endColumn": 45,
-                        "endOffset": 1293
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 78,
                     "startColumn": 4,
-                    "startOffset": 2878,
+                    "startOffset": 2875,
                     "endColumn": 40,
-                    "endOffset": 2914
+                    "endOffset": 2911
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 29,
-                        "startColumn": 2,
-                        "startOffset": 1296,
-                        "endColumn": 38,
-                        "endOffset": 1332
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 79,
                     "startColumn": 4,
-                    "startOffset": 2919,
+                    "startOffset": 2916,
                     "endColumn": 60,
-                    "endOffset": 2975
+                    "endOffset": 2972
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 30,
-                        "startColumn": 2,
-                        "startOffset": 1335,
-                        "endColumn": 58,
-                        "endOffset": 1391
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 80,
                     "startColumn": 4,
-                    "startOffset": 2980,
+                    "startOffset": 2977,
                     "endColumn": 64,
-                    "endOffset": 3040
+                    "endOffset": 3037
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 31,
-                        "startColumn": 2,
-                        "startOffset": 1394,
-                        "endColumn": 62,
-                        "endOffset": 1454
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 81,
                     "startColumn": 4,
-                    "startOffset": 3045,
+                    "startOffset": 3042,
                     "endColumn": 71,
-                    "endOffset": 3112
+                    "endOffset": 3109
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 32,
-                        "startColumn": 2,
-                        "startOffset": 1457,
-                        "endColumn": 69,
-                        "endOffset": 1524
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 82,
                     "startColumn": 4,
-                    "startOffset": 3117,
+                    "startOffset": 3114,
                     "endColumn": 56,
-                    "endOffset": 3169
+                    "endOffset": 3166
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 33,
-                        "startColumn": 2,
-                        "startOffset": 1527,
-                        "endColumn": 54,
-                        "endOffset": 1579
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 83,
                     "startColumn": 4,
-                    "startOffset": 3174,
+                    "startOffset": 3171,
                     "endColumn": 58,
-                    "endOffset": 3228
+                    "endOffset": 3225
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 34,
-                        "startColumn": 2,
-                        "startOffset": 1582,
-                        "endColumn": 56,
-                        "endOffset": 1636
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 84,
                     "startColumn": 4,
-                    "startOffset": 3233,
+                    "startOffset": 3230,
                     "endColumn": 65,
-                    "endOffset": 3294
+                    "endOffset": 3291
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 35,
-                        "startColumn": 2,
-                        "startOffset": 1639,
-                        "endColumn": 63,
-                        "endOffset": 1700
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 85,
                     "startColumn": 4,
-                    "startOffset": 3299,
+                    "startOffset": 3296,
                     "endColumn": 61,
-                    "endOffset": 3356
+                    "endOffset": 3353
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 36,
-                        "startColumn": 2,
-                        "startOffset": 1703,
-                        "endColumn": 59,
-                        "endOffset": 1760
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 86,
                     "startColumn": 4,
-                    "startOffset": 3361,
+                    "startOffset": 3358,
                     "endColumn": 60,
-                    "endOffset": 3417
+                    "endOffset": 3414
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 37,
-                        "startColumn": 2,
-                        "startOffset": 1763,
-                        "endColumn": 58,
-                        "endOffset": 1819
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 87,
                     "startColumn": 4,
-                    "startOffset": 3422,
+                    "startOffset": 3419,
                     "endColumn": 56,
-                    "endOffset": 3474
+                    "endOffset": 3471
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 38,
-                        "startColumn": 2,
-                        "startOffset": 1822,
-                        "endColumn": 54,
-                        "endOffset": 1874
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 88,
                     "startColumn": 4,
-                    "startOffset": 3479,
+                    "startOffset": 3476,
                     "endColumn": 52,
-                    "endOffset": 3527
+                    "endOffset": 3524
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 39,
-                        "startColumn": 2,
-                        "startOffset": 1877,
-                        "endColumn": 50,
-                        "endOffset": 1925
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 89,
                     "startColumn": 4,
-                    "startOffset": 3532,
+                    "startOffset": 3529,
                     "endColumn": 47,
-                    "endOffset": 3575
+                    "endOffset": 3572
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 40,
-                        "startColumn": 2,
-                        "startOffset": 1928,
-                        "endColumn": 45,
-                        "endOffset": 1971
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 90,
                     "startColumn": 4,
-                    "startOffset": 3580,
+                    "startOffset": 3577,
                     "endColumn": 56,
-                    "endOffset": 3632
+                    "endOffset": 3629
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 41,
-                        "startColumn": 2,
-                        "startOffset": 1974,
-                        "endColumn": 54,
-                        "endOffset": 2026
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 91,
                     "startColumn": 4,
-                    "startOffset": 3637,
+                    "startOffset": 3634,
                     "endColumn": 58,
-                    "endOffset": 3691
+                    "endOffset": 3688
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 42,
-                        "startColumn": 2,
-                        "startOffset": 2029,
-                        "endColumn": 56,
-                        "endOffset": 2083
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 92,
                     "startColumn": 4,
-                    "startOffset": 3696,
+                    "startOffset": 3693,
                     "endColumn": 57,
-                    "endOffset": 3749
+                    "endOffset": 3746
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 43,
-                        "startColumn": 2,
-                        "startOffset": 2086,
-                        "endColumn": 55,
-                        "endOffset": 2139
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 93,
                     "startColumn": 4,
-                    "startOffset": 3754,
+                    "startOffset": 3751,
                     "endColumn": 56,
-                    "endOffset": 3806
+                    "endOffset": 3803
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 44,
-                        "startColumn": 2,
-                        "startOffset": 2142,
-                        "endColumn": 54,
-                        "endOffset": 2194
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 94,
                     "startColumn": 4,
-                    "startOffset": 3811,
+                    "startOffset": 3808,
                     "endColumn": 68,
-                    "endOffset": 3875
+                    "endOffset": 3872
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 45,
-                        "startColumn": 2,
-                        "startOffset": 2197,
-                        "endColumn": 66,
-                        "endOffset": 2261
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 95,
                     "startColumn": 4,
-                    "startOffset": 3880,
+                    "startOffset": 3877,
                     "endColumn": 55,
-                    "endOffset": 3931
+                    "endOffset": 3928
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 46,
-                        "startColumn": 2,
-                        "startOffset": 2264,
-                        "endColumn": 53,
-                        "endOffset": 2315
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 96,
                     "startColumn": 4,
-                    "startOffset": 3936,
+                    "startOffset": 3933,
                     "endColumn": 52,
-                    "endOffset": 3984
+                    "endOffset": 3981
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 47,
-                        "startColumn": 2,
-                        "startOffset": 2318,
-                        "endColumn": 50,
-                        "endOffset": 2366
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 97,
                     "startColumn": 4,
-                    "startOffset": 3989,
+                    "startOffset": 3986,
                     "endColumn": 52,
-                    "endOffset": 4037
+                    "endOffset": 4034
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 48,
-                        "startColumn": 2,
-                        "startOffset": 2369,
-                        "endColumn": 50,
-                        "endOffset": 2417
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 98,
                     "startColumn": 4,
-                    "startOffset": 4042,
+                    "startOffset": 4039,
                     "endColumn": 64,
-                    "endOffset": 4102
+                    "endOffset": 4099
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 50,
-                        "startColumn": 2,
-                        "startOffset": 2479,
-                        "endColumn": 62,
-                        "endOffset": 2539
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 99,
                     "startColumn": 4,
-                    "startOffset": 4107,
+                    "startOffset": 4104,
                     "endColumn": 60,
-                    "endOffset": 4163
+                    "endOffset": 4160
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 49,
-                        "startColumn": 2,
-                        "startOffset": 2420,
-                        "endColumn": 58,
-                        "endOffset": 2476
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 100,
                     "startColumn": 4,
-                    "startOffset": 4168,
+                    "startOffset": 4165,
                     "endColumn": 71,
-                    "endOffset": 4235
+                    "endOffset": 4232
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 51,
-                        "startColumn": 2,
-                        "startOffset": 2542,
-                        "endColumn": 69,
-                        "endOffset": 2609
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 101,
                     "startColumn": 4,
-                    "startOffset": 4240,
+                    "startOffset": 4237,
                     "endColumn": 47,
-                    "endOffset": 4283
+                    "endOffset": 4280
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 52,
-                        "startColumn": 2,
-                        "startOffset": 2612,
-                        "endColumn": 45,
-                        "endOffset": 2655
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 102,
                     "startColumn": 4,
-                    "startOffset": 4288,
+                    "startOffset": 4285,
                     "endColumn": 84,
-                    "endOffset": 4368
+                    "endOffset": 4365
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 53,
-                        "startColumn": 2,
-                        "startOffset": 2658,
-                        "endColumn": 82,
-                        "endOffset": 2738
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 103,
                     "startColumn": 4,
-                    "startOffset": 4373,
+                    "startOffset": 4370,
                     "endColumn": 53,
-                    "endOffset": 4422
+                    "endOffset": 4419
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 54,
-                        "startColumn": 2,
-                        "startOffset": 2741,
-                        "endColumn": 51,
-                        "endOffset": 2790
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 104,
                     "startColumn": 4,
-                    "startOffset": 4427,
+                    "startOffset": 4424,
                     "endColumn": 49,
-                    "endOffset": 4472
+                    "endOffset": 4469
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 55,
-                        "startColumn": 2,
-                        "startOffset": 2793,
-                        "endColumn": 47,
-                        "endOffset": 2838
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 105,
                     "startColumn": 4,
-                    "startOffset": 4477,
+                    "startOffset": 4474,
                     "endColumn": 57,
-                    "endOffset": 4530
+                    "endOffset": 4527
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 56,
-                        "startColumn": 2,
-                        "startOffset": 2841,
-                        "endColumn": 55,
-                        "endOffset": 2894
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 106,
                     "startColumn": 4,
-                    "startOffset": 4535,
+                    "startOffset": 4532,
                     "endColumn": 55,
-                    "endOffset": 4586
+                    "endOffset": 4583
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 57,
-                        "startColumn": 2,
-                        "startOffset": 2897,
-                        "endColumn": 53,
-                        "endOffset": 2948
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 107,
                     "startColumn": 4,
-                    "startOffset": 4591,
+                    "startOffset": 4588,
                     "endColumn": 42,
-                    "endOffset": 4629
+                    "endOffset": 4626
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 58,
-                        "startColumn": 2,
-                        "startOffset": 2951,
-                        "endColumn": 40,
-                        "endOffset": 2989
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 108,
                     "startColumn": 4,
-                    "startOffset": 4634,
+                    "startOffset": 4631,
                     "endColumn": 48,
-                    "endOffset": 4678
+                    "endOffset": 4675
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 59,
-                        "startColumn": 2,
-                        "startOffset": 2992,
-                        "endColumn": 46,
-                        "endOffset": 3036
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 109,
                     "startColumn": 4,
-                    "startOffset": 4683,
+                    "startOffset": 4680,
                     "endColumn": 50,
-                    "endOffset": 4729
+                    "endOffset": 4726
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 60,
-                        "startColumn": 2,
-                        "startOffset": 3039,
-                        "endColumn": 48,
-                        "endOffset": 3085
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 110,
                     "startColumn": 4,
-                    "startOffset": 4734,
+                    "startOffset": 4731,
                     "endColumn": 44,
-                    "endOffset": 4774
+                    "endOffset": 4771
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 61,
-                        "startColumn": 2,
-                        "startOffset": 3088,
-                        "endColumn": 42,
-                        "endOffset": 3128
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 111,
                     "startColumn": 4,
-                    "startOffset": 4779,
+                    "startOffset": 4776,
                     "endColumn": 86,
-                    "endOffset": 4861
+                    "endOffset": 4858
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 62,
-                        "startColumn": 2,
-                        "startOffset": 3131,
-                        "endColumn": 84,
-                        "endOffset": 3213
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 112,
                     "startColumn": 4,
-                    "startOffset": 4866,
+                    "startOffset": 4863,
                     "endColumn": 137,
-                    "endOffset": 4999
+                    "endOffset": 4996
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 63,
-                        "startColumn": 2,
-                        "startOffset": 3216,
-                        "endColumn": 135,
-                        "endOffset": 3349
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 113,
                     "startColumn": 4,
-                    "startOffset": 5004,
+                    "startOffset": 5001,
                     "endColumn": 53,
-                    "endOffset": 5053
+                    "endOffset": 5050
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 64,
-                        "startColumn": 2,
-                        "startOffset": 3352,
-                        "endColumn": 51,
-                        "endOffset": 3401
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 114,
                     "startColumn": 4,
-                    "startOffset": 5058,
+                    "startOffset": 5055,
                     "endColumn": 53,
-                    "endOffset": 5107
+                    "endOffset": 5104
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 65,
-                        "startColumn": 2,
-                        "startOffset": 3404,
-                        "endColumn": 51,
-                        "endOffset": 3453
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 115,
                     "startColumn": 4,
-                    "startOffset": 5112,
+                    "startOffset": 5109,
                     "endColumn": 54,
-                    "endOffset": 5162
+                    "endOffset": 5159
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 66,
-                        "startColumn": 2,
-                        "startOffset": 3456,
-                        "endColumn": 52,
-                        "endOffset": 3506
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 116,
                     "startColumn": 4,
-                    "startOffset": 5167,
+                    "startOffset": 5164,
                     "endColumn": 106,
-                    "endOffset": 5269
+                    "endOffset": 5266
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 67,
-                        "startColumn": 2,
-                        "startOffset": 3509,
-                        "endColumn": 104,
-                        "endOffset": 3611
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 117,
                     "startColumn": 4,
-                    "startOffset": 5274,
+                    "startOffset": 5271,
                     "endColumn": 49,
-                    "endOffset": 5319
+                    "endOffset": 5316
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 68,
-                        "startColumn": 2,
-                        "startOffset": 3614,
-                        "endColumn": 47,
-                        "endOffset": 3659
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 118,
                     "startColumn": 4,
-                    "startOffset": 5324,
+                    "startOffset": 5321,
                     "endColumn": 49,
-                    "endOffset": 5369
+                    "endOffset": 5366
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 69,
-                        "startColumn": 2,
-                        "startOffset": 3662,
-                        "endColumn": 47,
-                        "endOffset": 3707
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 119,
                     "startColumn": 4,
-                    "startOffset": 5374,
+                    "startOffset": 5371,
                     "endColumn": 105,
-                    "endOffset": 5475
+                    "endOffset": 5472
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 70,
-                        "startColumn": 2,
-                        "startOffset": 3710,
-                        "endColumn": 103,
-                        "endOffset": 3811
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 120,
                     "startColumn": 4,
-                    "startOffset": 5480,
+                    "startOffset": 5477,
                     "endColumn": 43,
-                    "endOffset": 5519
+                    "endOffset": 5516
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 71,
-                        "startColumn": 2,
-                        "startOffset": 3814,
-                        "endColumn": 41,
-                        "endOffset": 3853
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 121,
                     "startColumn": 4,
-                    "startOffset": 5524,
+                    "startOffset": 5521,
                     "endColumn": 51,
-                    "endOffset": 5571
+                    "endOffset": 5568
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 72,
-                        "startColumn": 2,
-                        "startOffset": 3856,
-                        "endColumn": 49,
-                        "endOffset": 3903
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 122,
                     "startColumn": 4,
-                    "startOffset": 5576,
+                    "startOffset": 5573,
                     "endColumn": 53,
-                    "endOffset": 5625
+                    "endOffset": 5622
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 73,
-                        "startColumn": 2,
-                        "startOffset": 3906,
-                        "endColumn": 51,
-                        "endOffset": 3955
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 123,
                     "startColumn": 4,
-                    "startOffset": 5630,
+                    "startOffset": 5627,
                     "endColumn": 138,
-                    "endOffset": 5764
+                    "endOffset": 5761
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 74,
-                        "startColumn": 2,
-                        "startOffset": 3958,
-                        "endColumn": 136,
-                        "endOffset": 4092
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 124,
                     "startColumn": 4,
-                    "startOffset": 5769,
+                    "startOffset": 5766,
                     "endColumn": 59,
-                    "endOffset": 5824
+                    "endOffset": 5821
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 75,
-                        "startColumn": 2,
-                        "startOffset": 4095,
-                        "endColumn": 57,
-                        "endOffset": 4150
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 125,
                     "startColumn": 4,
-                    "startOffset": 5829,
+                    "startOffset": 5826,
                     "endColumn": 49,
-                    "endOffset": 5874
+                    "endOffset": 5871
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 76,
-                        "startColumn": 2,
-                        "startOffset": 4153,
-                        "endColumn": 47,
-                        "endOffset": 4198
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 126,
                     "startColumn": 4,
-                    "startOffset": 5879,
+                    "startOffset": 5876,
                     "endColumn": 91,
-                    "endOffset": 5966
+                    "endOffset": 5963
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 77,
-                        "startColumn": 2,
-                        "startOffset": 4201,
-                        "endColumn": 89,
-                        "endOffset": 4288
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 127,
                     "startColumn": 4,
-                    "startOffset": 5971,
+                    "startOffset": 5968,
                     "endColumn": 83,
-                    "endOffset": 6050
+                    "endOffset": 6047
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 78,
-                        "startColumn": 2,
-                        "startOffset": 4291,
-                        "endColumn": 81,
-                        "endOffset": 4370
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 128,
                     "startColumn": 4,
-                    "startOffset": 6055,
+                    "startOffset": 6052,
                     "endColumn": 69,
-                    "endOffset": 6120
+                    "endOffset": 6117
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 79,
-                        "startColumn": 2,
-                        "startOffset": 4373,
-                        "endColumn": 67,
-                        "endOffset": 4438
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 129,
                     "startColumn": 4,
-                    "startOffset": 6125,
+                    "startOffset": 6122,
                     "endColumn": 45,
-                    "endOffset": 6166
+                    "endOffset": 6163
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 80,
-                        "startColumn": 2,
-                        "startOffset": 4441,
-                        "endColumn": 43,
-                        "endOffset": 4482
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 130,
                     "startColumn": 4,
-                    "startOffset": 6171,
+                    "startOffset": 6168,
                     "endColumn": 51,
-                    "endOffset": 6218
+                    "endOffset": 6215
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 81,
-                        "startColumn": 2,
-                        "startOffset": 4485,
-                        "endColumn": 49,
-                        "endOffset": 4532
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 131,
                     "startColumn": 4,
-                    "startOffset": 6223,
+                    "startOffset": 6220,
                     "endColumn": 71,
-                    "endOffset": 6290
+                    "endOffset": 6287
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 82,
-                        "startColumn": 2,
-                        "startOffset": 4535,
-                        "endColumn": 69,
-                        "endOffset": 4602
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 132,
                     "startColumn": 4,
-                    "startOffset": 6295,
+                    "startOffset": 6292,
                     "endColumn": 77,
-                    "endOffset": 6368
+                    "endOffset": 6365
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 83,
-                        "startColumn": 2,
-                        "startOffset": 4605,
-                        "endColumn": 75,
-                        "endOffset": 4678
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 133,
                     "startColumn": 4,
-                    "startOffset": 6373,
+                    "startOffset": 6370,
                     "endColumn": 143,
-                    "endOffset": 6512
+                    "endOffset": 6509
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 84,
-                        "startColumn": 2,
-                        "startOffset": 4681,
-                        "endColumn": 141,
-                        "endOffset": 4820
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 134,
                     "startColumn": 4,
-                    "startOffset": 6517,
+                    "startOffset": 6514,
                     "endColumn": 76,
-                    "endOffset": 6589
+                    "endOffset": 6586
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 85,
-                        "startColumn": 2,
-                        "startOffset": 4823,
-                        "endColumn": 74,
-                        "endOffset": 4895
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 135,
                     "startColumn": 4,
-                    "startOffset": 6594,
+                    "startOffset": 6591,
                     "endColumn": 50,
-                    "endOffset": 6640
+                    "endOffset": 6637
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 86,
-                        "startColumn": 2,
-                        "startOffset": 4898,
-                        "endColumn": 48,
-                        "endOffset": 4944
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 136,
                     "startColumn": 4,
-                    "startOffset": 6645,
+                    "startOffset": 6642,
                     "endColumn": 81,
-                    "endOffset": 6722
+                    "endOffset": 6719
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 87,
-                        "startColumn": 2,
-                        "startOffset": 4947,
-                        "endColumn": 79,
-                        "endOffset": 5024
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 137,
                     "startColumn": 4,
-                    "startOffset": 6727,
+                    "startOffset": 6724,
                     "endColumn": 83,
-                    "endOffset": 6806
+                    "endOffset": 6803
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 88,
-                        "startColumn": 2,
-                        "startOffset": 5027,
-                        "endColumn": 81,
-                        "endOffset": 5106
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 138,
                     "startColumn": 4,
-                    "startOffset": 6811,
+                    "startOffset": 6808,
                     "endColumn": 71,
-                    "endOffset": 6878
+                    "endOffset": 6875
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 89,
-                        "startColumn": 2,
-                        "startOffset": 5109,
-                        "endColumn": 69,
-                        "endOffset": 5176
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 139,
                     "startColumn": 4,
-                    "startOffset": 6883,
+                    "startOffset": 6880,
                     "endColumn": 88,
-                    "endOffset": 6967
+                    "endOffset": 6964
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 90,
-                        "startColumn": 2,
-                        "startOffset": 5179,
-                        "endColumn": 86,
-                        "endOffset": 5263
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 140,
                     "startColumn": 4,
-                    "startOffset": 6972,
+                    "startOffset": 6969,
                     "endColumn": 98,
-                    "endOffset": 7066
+                    "endOffset": 7063
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 91,
-                        "startColumn": 2,
-                        "startOffset": 5266,
-                        "endColumn": 96,
-                        "endOffset": 5360
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 141,
                     "startColumn": 4,
-                    "startOffset": 7071,
+                    "startOffset": 7068,
                     "endColumn": 70,
-                    "endOffset": 7137
+                    "endOffset": 7134
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 92,
-                        "startColumn": 2,
-                        "startOffset": 5363,
-                        "endColumn": 68,
-                        "endOffset": 5429
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 142,
                     "startColumn": 4,
-                    "startOffset": 7142,
+                    "startOffset": 7139,
                     "endColumn": 81,
-                    "endOffset": 7219
+                    "endOffset": 7216
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 93,
-                        "startColumn": 2,
-                        "startOffset": 5432,
-                        "endColumn": 79,
-                        "endOffset": 5509
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 143,
                     "startColumn": 4,
-                    "startOffset": 7224,
+                    "startOffset": 7221,
                     "endColumn": 140,
-                    "endOffset": 7360
+                    "endOffset": 7357
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 94,
-                        "startColumn": 2,
-                        "startOffset": 5512,
-                        "endColumn": 138,
-                        "endOffset": 5648
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 144,
                     "startColumn": 4,
-                    "startOffset": 7365,
+                    "startOffset": 7362,
                     "endColumn": 85,
-                    "endOffset": 7446
+                    "endOffset": 7443
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 95,
-                        "startColumn": 2,
-                        "startOffset": 5651,
-                        "endColumn": 83,
-                        "endOffset": 5732
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 145,
                     "startColumn": 4,
-                    "startOffset": 7451,
+                    "startOffset": 7448,
                     "endColumn": 80,
-                    "endOffset": 7527
+                    "endOffset": 7524
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 96,
-                        "startColumn": 2,
-                        "startOffset": 5735,
-                        "endColumn": 78,
-                        "endOffset": 5811
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 146,
                     "startColumn": 4,
-                    "startOffset": 7532,
+                    "startOffset": 7529,
                     "endColumn": 74,
-                    "endOffset": 7602
+                    "endOffset": 7599
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 97,
-                        "startColumn": 2,
-                        "startOffset": 5814,
-                        "endColumn": 72,
-                        "endOffset": 5884
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 147,
                     "startColumn": 4,
-                    "startOffset": 7607,
+                    "startOffset": 7604,
                     "endColumn": 64,
-                    "endOffset": 7667
+                    "endOffset": 7664
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 98,
-                        "startColumn": 2,
-                        "startOffset": 5887,
-                        "endColumn": 62,
-                        "endOffset": 5947
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 148,
                     "startColumn": 4,
-                    "startOffset": 7672,
+                    "startOffset": 7669,
                     "endColumn": 76,
-                    "endOffset": 7744
+                    "endOffset": 7741
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 99,
-                        "startColumn": 2,
-                        "startOffset": 5950,
-                        "endColumn": 74,
-                        "endOffset": 6022
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 149,
                     "startColumn": 4,
-                    "startOffset": 7749,
+                    "startOffset": 7746,
                     "endColumn": 70,
-                    "endOffset": 7815
+                    "endOffset": 7812
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 100,
-                        "startColumn": 2,
-                        "startOffset": 6025,
-                        "endColumn": 68,
-                        "endOffset": 6091
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 150,
                     "startColumn": 4,
-                    "startOffset": 7820,
+                    "startOffset": 7817,
                     "endColumn": 64,
-                    "endOffset": 7880
+                    "endOffset": 7877
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 101,
-                        "startColumn": 2,
-                        "startOffset": 6094,
-                        "endColumn": 62,
-                        "endOffset": 6154
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 151,
                     "startColumn": 4,
-                    "startOffset": 7885,
+                    "startOffset": 7882,
                     "endColumn": 91,
-                    "endOffset": 7972
+                    "endOffset": 7969
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 102,
-                        "startColumn": 2,
-                        "startOffset": 6157,
-                        "endColumn": 89,
-                        "endOffset": 6244
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 152,
                     "startColumn": 4,
-                    "startOffset": 7977,
+                    "startOffset": 7974,
                     "endColumn": 94,
-                    "endOffset": 8067
+                    "endOffset": 8064
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 103,
-                        "startColumn": 2,
-                        "startOffset": 6247,
-                        "endColumn": 92,
-                        "endOffset": 6337
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 153,
                     "startColumn": 4,
-                    "startOffset": 8072,
+                    "startOffset": 8069,
                     "endColumn": 101,
-                    "endOffset": 8169
+                    "endOffset": 8166
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 104,
-                        "startColumn": 2,
-                        "startOffset": 6340,
-                        "endColumn": 99,
-                        "endOffset": 6437
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 154,
                     "startColumn": 4,
-                    "startOffset": 8174,
+                    "startOffset": 8171,
                     "endColumn": 90,
-                    "endOffset": 8260
+                    "endOffset": 8257
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 105,
-                        "startColumn": 2,
-                        "startOffset": 6440,
-                        "endColumn": 88,
-                        "endOffset": 6526
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 155,
                     "startColumn": 4,
-                    "startOffset": 8265,
+                    "startOffset": 8262,
                     "endColumn": 74,
-                    "endOffset": 8335
+                    "endOffset": 8332
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 106,
-                        "startColumn": 2,
-                        "startOffset": 6529,
-                        "endColumn": 72,
-                        "endOffset": 6599
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 156,
                     "startColumn": 4,
-                    "startOffset": 8340,
+                    "startOffset": 8337,
                     "endColumn": 74,
-                    "endOffset": 8410
+                    "endOffset": 8407
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 107,
-                        "startColumn": 2,
-                        "startOffset": 6602,
-                        "endColumn": 72,
-                        "endOffset": 6672
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 157,
                     "startColumn": 4,
-                    "startOffset": 8415,
+                    "startOffset": 8412,
                     "endColumn": 66,
-                    "endOffset": 8477
+                    "endOffset": 8474
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 110,
-                        "startColumn": 2,
-                        "startOffset": 6902,
-                        "endColumn": 64,
-                        "endOffset": 6964
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 158,
                     "startColumn": 4,
-                    "startOffset": 8482,
+                    "startOffset": 8479,
                     "endColumn": 59,
-                    "endOffset": 8537
+                    "endOffset": 8534
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 111,
-                        "startColumn": 2,
-                        "startOffset": 6967,
-                        "endColumn": 57,
-                        "endOffset": 7022
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 159,
                     "startColumn": 4,
-                    "startOffset": 8542,
+                    "startOffset": 8539,
                     "endColumn": 57,
-                    "endOffset": 8595
+                    "endOffset": 8592
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 112,
-                        "startColumn": 2,
-                        "startOffset": 7025,
-                        "endColumn": 55,
-                        "endOffset": 7078
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 160,
                     "startColumn": 4,
-                    "startOffset": 8600,
+                    "startOffset": 8597,
                     "endColumn": 156,
-                    "endOffset": 8752
+                    "endOffset": 8749
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 108,
-                        "startColumn": 2,
-                        "startOffset": 6675,
-                        "endColumn": 154,
-                        "endOffset": 6827
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 161,
                     "startColumn": 4,
-                    "startOffset": 8757,
+                    "startOffset": 8754,
                     "endColumn": 73,
-                    "endOffset": 8826
+                    "endOffset": 8823
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 109,
-                        "startColumn": 2,
-                        "startOffset": 6830,
-                        "endColumn": 71,
-                        "endOffset": 6899
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 162,
                     "startColumn": 4,
-                    "startOffset": 8831,
+                    "startOffset": 8828,
                     "endColumn": 70,
-                    "endOffset": 8897
+                    "endOffset": 8894
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 113,
-                        "startColumn": 2,
-                        "startOffset": 7081,
-                        "endColumn": 68,
-                        "endOffset": 7147
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 163,
                     "startColumn": 4,
-                    "startOffset": 8902,
+                    "startOffset": 8899,
                     "endColumn": 83,
-                    "endOffset": 8981
+                    "endOffset": 8978
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 114,
-                        "startColumn": 2,
-                        "startOffset": 7150,
-                        "endColumn": 81,
-                        "endOffset": 7229
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 164,
                     "startColumn": 4,
-                    "startOffset": 8986,
+                    "startOffset": 8983,
                     "endColumn": 68,
-                    "endOffset": 9050
+                    "endOffset": 9047
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 115,
-                        "startColumn": 2,
-                        "startOffset": 7232,
-                        "endColumn": 66,
-                        "endOffset": 7296
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 165,
                     "startColumn": 4,
-                    "startOffset": 9055,
+                    "startOffset": 9052,
                     "endColumn": 135,
-                    "endOffset": 9186
+                    "endOffset": 9183
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 117,
-                        "startColumn": 2,
-                        "startOffset": 7367,
-                        "endColumn": 133,
-                        "endOffset": 7498
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 166,
                     "startColumn": 4,
-                    "startOffset": 9191,
+                    "startOffset": 9188,
                     "endColumn": 69,
-                    "endOffset": 9256
+                    "endOffset": 9253
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 116,
-                        "startColumn": 2,
-                        "startOffset": 7299,
-                        "endColumn": 67,
-                        "endOffset": 7364
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 167,
                     "startColumn": 4,
-                    "startOffset": 9261,
+                    "startOffset": 9258,
                     "endColumn": 53,
-                    "endOffset": 9310
+                    "endOffset": 9307
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 118,
-                        "startColumn": 2,
-                        "startOffset": 7503,
-                        "endColumn": 51,
-                        "endOffset": 7552
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 168,
                     "startColumn": 4,
-                    "startOffset": 9315,
+                    "startOffset": 9312,
                     "endColumn": 79,
-                    "endOffset": 9390
+                    "endOffset": 9387
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 119,
-                        "startColumn": 2,
-                        "startOffset": 7555,
-                        "endColumn": 77,
-                        "endOffset": 7630
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 169,
                     "startColumn": 4,
-                    "startOffset": 9395,
+                    "startOffset": 9392,
                     "endColumn": 60,
-                    "endOffset": 9451
+                    "endOffset": 9448
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 120,
-                        "startColumn": 2,
-                        "startOffset": 7633,
-                        "endColumn": 58,
-                        "endOffset": 7689
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 170,
                     "startColumn": 4,
-                    "startOffset": 9456,
+                    "startOffset": 9453,
                     "endColumn": 119,
-                    "endOffset": 9571
+                    "endOffset": 9568
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 121,
-                        "startColumn": 2,
-                        "startOffset": 7692,
-                        "endColumn": 117,
-                        "endOffset": 7807
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 171,
                     "startColumn": 4,
-                    "startOffset": 9576,
+                    "startOffset": 9573,
                     "endColumn": 85,
-                    "endOffset": 9657
+                    "endOffset": 9654
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 122,
-                        "startColumn": 2,
-                        "startOffset": 7810,
-                        "endColumn": 83,
-                        "endOffset": 7891
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 172,
                     "startColumn": 4,
-                    "startOffset": 9662,
+                    "startOffset": 9659,
                     "endColumn": 68,
-                    "endOffset": 9726
+                    "endOffset": 9723
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 123,
-                        "startColumn": 2,
-                        "startOffset": 7894,
-                        "endColumn": 66,
-                        "endOffset": 7958
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 173,
                     "startColumn": 4,
-                    "startOffset": 9731,
+                    "startOffset": 9728,
                     "endColumn": 95,
-                    "endOffset": 9822
+                    "endOffset": 9819
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 124,
-                        "startColumn": 2,
-                        "startOffset": 7961,
-                        "endColumn": 93,
-                        "endOffset": 8052
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 174,
                     "startColumn": 4,
-                    "startOffset": 9827,
+                    "startOffset": 9824,
                     "endColumn": 69,
-                    "endOffset": 9892
+                    "endOffset": 9889
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 125,
-                        "startColumn": 2,
-                        "startOffset": 8055,
-                        "endColumn": 67,
-                        "endOffset": 8120
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 175,
                     "startColumn": 4,
-                    "startOffset": 9897,
+                    "startOffset": 9894,
                     "endColumn": 120,
-                    "endOffset": 10013
+                    "endOffset": 10010
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 126,
-                        "startColumn": 2,
-                        "startOffset": 8123,
-                        "endColumn": 118,
-                        "endOffset": 8239
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 176,
                     "startColumn": 4,
-                    "startOffset": 10018,
+                    "startOffset": 10015,
                     "endColumn": 77,
-                    "endOffset": 10091
+                    "endOffset": 10088
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 127,
-                        "startColumn": 2,
-                        "startOffset": 8242,
-                        "endColumn": 75,
-                        "endOffset": 8315
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 177,
                     "startColumn": 4,
-                    "startOffset": 10096,
+                    "startOffset": 10093,
                     "endColumn": 61,
-                    "endOffset": 10153
+                    "endOffset": 10150
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 128,
-                        "startColumn": 2,
-                        "startOffset": 8318,
-                        "endColumn": 59,
-                        "endOffset": 8375
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 178,
                     "startColumn": 4,
-                    "startOffset": 10158,
+                    "startOffset": 10155,
                     "endColumn": 66,
-                    "endOffset": 10220
+                    "endOffset": 10217
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 129,
-                        "startColumn": 2,
-                        "startOffset": 8378,
-                        "endColumn": 64,
-                        "endOffset": 8440
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 179,
                     "startColumn": 4,
-                    "startOffset": 10225,
+                    "startOffset": 10222,
                     "endColumn": 64,
-                    "endOffset": 10285
+                    "endOffset": 10282
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 130,
-                        "startColumn": 2,
-                        "startOffset": 8443,
-                        "endColumn": 62,
-                        "endOffset": 8503
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 180,
                     "startColumn": 4,
-                    "startOffset": 10290,
+                    "startOffset": 10287,
                     "endColumn": 68,
-                    "endOffset": 10354
+                    "endOffset": 10351
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 131,
-                        "startColumn": 2,
-                        "startOffset": 8506,
-                        "endColumn": 66,
-                        "endOffset": 8570
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 181,
                     "startColumn": 4,
-                    "startOffset": 10359,
+                    "startOffset": 10356,
                     "endColumn": 67,
-                    "endOffset": 10422
+                    "endOffset": 10419
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 132,
-                        "startColumn": 2,
-                        "startOffset": 8573,
-                        "endColumn": 65,
-                        "endOffset": 8636
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 182,
                     "startColumn": 4,
-                    "startOffset": 10427,
+                    "startOffset": 10424,
                     "endColumn": 50,
-                    "endOffset": 10473
+                    "endOffset": 10470
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 133,
-                        "startColumn": 2,
-                        "startOffset": 8639,
-                        "endColumn": 48,
-                        "endOffset": 8685
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 183,
                     "startColumn": 4,
-                    "startOffset": 10478,
+                    "startOffset": 10475,
                     "endColumn": 56,
-                    "endOffset": 10530
+                    "endOffset": 10527
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 134,
-                        "startColumn": 2,
-                        "startOffset": 8688,
-                        "endColumn": 54,
-                        "endOffset": 8740
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 184,
                     "startColumn": 4,
-                    "startOffset": 10535,
+                    "startOffset": 10532,
                     "endColumn": 56,
-                    "endOffset": 10587
+                    "endOffset": 10584
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 135,
-                        "startColumn": 2,
-                        "startOffset": 8743,
-                        "endColumn": 54,
-                        "endOffset": 8795
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 185,
                     "startColumn": 4,
-                    "startOffset": 10592,
+                    "startOffset": 10589,
                     "endColumn": 57,
-                    "endOffset": 10645
+                    "endOffset": 10642
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 136,
-                        "startColumn": 2,
-                        "startOffset": 8798,
-                        "endColumn": 55,
-                        "endOffset": 8851
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 186,
                     "startColumn": 4,
-                    "startOffset": 10650,
+                    "startOffset": 10647,
                     "endColumn": 56,
-                    "endOffset": 10702
+                    "endOffset": 10699
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 137,
-                        "startColumn": 2,
-                        "startOffset": 8854,
-                        "endColumn": 54,
-                        "endOffset": 8906
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 187,
                     "startColumn": 4,
-                    "startOffset": 10707,
+                    "startOffset": 10704,
                     "endColumn": 48,
-                    "endOffset": 10751
+                    "endOffset": 10748
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 138,
-                        "startColumn": 2,
-                        "startOffset": 8909,
-                        "endColumn": 46,
-                        "endOffset": 8953
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 188,
                     "startColumn": 4,
-                    "startOffset": 10756,
+                    "startOffset": 10753,
                     "endColumn": 64,
-                    "endOffset": 10816
+                    "endOffset": 10813
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 139,
-                        "startColumn": 2,
-                        "startOffset": 8956,
-                        "endColumn": 62,
-                        "endOffset": 9016
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 189,
                     "startColumn": 4,
-                    "startOffset": 10821,
+                    "startOffset": 10818,
                     "endColumn": 55,
-                    "endOffset": 10872
+                    "endOffset": 10869
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 140,
-                        "startColumn": 2,
-                        "startOffset": 9019,
-                        "endColumn": 53,
-                        "endOffset": 9070
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 190,
                     "startColumn": 4,
-                    "startOffset": 10877,
+                    "startOffset": 10874,
                     "endColumn": 88,
-                    "endOffset": 10961
+                    "endOffset": 10958
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 141,
-                        "startColumn": 2,
-                        "startOffset": 9073,
-                        "endColumn": 86,
-                        "endOffset": 9157
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 191,
                     "startColumn": 4,
-                    "startOffset": 10966,
+                    "startOffset": 10963,
                     "endLine": 196,
                     "endColumn": 10,
-                    "endOffset": 11266
+                    "endOffset": 11263
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/themes.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 2,
-                        "startOffset": 632,
-                        "endLine": 22,
-                        "endColumn": 10,
-                        "endOffset": 932
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/themes.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 197,
                     "startColumn": 4,
-                    "startOffset": 11271,
+                    "startOffset": 11268,
                     "endLine": 201,
                     "endColumn": 10,
-                    "endOffset": 11526
+                    "endOffset": 11523
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/styles.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 2,
-                        "startOffset": 633,
-                        "endLine": 22,
-                        "endColumn": 10,
-                        "endOffset": 888
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/styles.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 202,
                     "startColumn": 4,
-                    "startOffset": 11531,
+                    "startOffset": 11528,
                     "endLine": 205,
                     "endColumn": 10,
-                    "endOffset": 11745
+                    "endOffset": 11742
                 },
                 "from": {
-                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/styles.xml",
-                    "position": {
-                        "startLine": 23,
-                        "startColumn": 2,
-                        "startOffset": 891,
-                        "endLine": 26,
-                        "endColumn": 10,
-                        "endOffset": 1105
-                    }
+                    "file": "/Users/vaca/Documents/Android/Palm Oil Spy Android/app/src/main/res/values/styles.xml"
                 }
             }
         ]

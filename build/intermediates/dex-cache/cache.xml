@@ -2,11 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/Users/vaca/Documents/Android/android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="21.1.2"
-        sha1="775873345712a59fac3e61276a191fac47f67b04">
-        <dex dex="/Users/vaca/Documents/Android/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_f07c031156c873e2b0b9e610c9eec9ef5c7f3889/classes.dex" />
+        sha1="518d76428ccf6d25b7d6ffabbfe5703e49b9694d">
+        <dex dex="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_901b1ffd70fde904def0e6b7b91507b47ad3db6a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="c4cdc0d06d17988a6dc4135830586095c59a8cf4">
+        <dex dex="/Users/vaca/Documents/Android/Palm Oil Spy Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_fabbbea2ab1c71ec761b51d8caca70164b5415a7/classes.dex" />
     </item>
 
 </items>
