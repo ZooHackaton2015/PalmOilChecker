@@ -1,6 +1,4 @@
-# Pal Oil Checker Application
-
-# End User REST on OpenShift
+# Pal Oil Checker End User App on OpenShift
 
 Administration of the application on OpenShift:
 * https://openshift.redhat.com/app/console/domain/zoohackaton
