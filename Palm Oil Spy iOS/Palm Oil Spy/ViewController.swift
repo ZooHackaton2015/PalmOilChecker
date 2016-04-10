@@ -9,6 +9,10 @@
 import UIKit
 import AVFoundation
 
+private extension Selector {
+    static let flashlightButtonPressed = #selector(ViewController.setFlashlightButtonIcon)
+}
+
 class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, ApiConnectorDelegate {
 
     @IBOutlet weak var cameraView: UIView!
@@ -31,7 +35,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, 
         loadSettings()
 
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "setFlashlightButtonIcon",
+            selector: .flashlightButtonPressed,
             name: UIApplicationDidBecomeActiveNotification,
             object: nil)
     }

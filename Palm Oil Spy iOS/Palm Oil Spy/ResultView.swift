@@ -15,6 +15,10 @@ enum OilResults {
     case Dunno
 }
 
+private extension Selector {
+    static let cleanStatus = #selector(ResultView.cleanStatus)
+}
+
 class ResultView: UIView {
     
     let sound = Sounds()
@@ -30,7 +34,6 @@ class ResultView: UIView {
     
     
     override func drawRect(rect: CGRect) {
-        
         switch oilStatus {
         case .Good:
             if settings!.soundsEnabled {
@@ -51,11 +54,12 @@ class ResultView: UIView {
         }
     }
     
+    
     func runCleaningTimer() {
         timer?.invalidate()
         timer = NSTimer.scheduledTimerWithTimeInterval(3.0,
             target: self,
-            selector: "cleanStatus",
+            selector: .cleanStatus,
             userInfo: nil,
             repeats: false)
     }
