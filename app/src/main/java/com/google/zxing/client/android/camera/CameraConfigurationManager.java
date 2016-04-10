@@ -26,7 +26,6 @@ import android.view.Display;
 import android.view.Surface;
 import android.view.WindowManager;
 
-import com.google.zxing.client.android.PreferencesActivity;
 import com.google.zxing.client.android.camera.open.CameraFacing;
 import com.google.zxing.client.android.camera.open.OpenCamera;
 
@@ -157,28 +156,7 @@ final class CameraConfigurationManager {
 
     initializeTorch(parameters, prefs, safeMode);
 
-    CameraConfigurationUtils.setFocus(
-        parameters,
-        prefs.getBoolean(PreferencesActivity.KEY_AUTO_FOCUS, true),
-        prefs.getBoolean(PreferencesActivity.KEY_DISABLE_CONTINUOUS_FOCUS, true),
-        safeMode);
-
-    if (!safeMode) {
-      if (prefs.getBoolean(PreferencesActivity.KEY_INVERT_SCAN, false)) {
-        CameraConfigurationUtils.setInvertColor(parameters);
-      }
-
-      if (!prefs.getBoolean(PreferencesActivity.KEY_DISABLE_BARCODE_SCENE_MODE, true)) {
-        CameraConfigurationUtils.setBarcodeSceneMode(parameters);
-      }
-
-      if (!prefs.getBoolean(PreferencesActivity.KEY_DISABLE_METERING, true)) {
-        CameraConfigurationUtils.setVideoStabilization(parameters);
-        CameraConfigurationUtils.setFocusArea(parameters);
-        CameraConfigurationUtils.setMetering(parameters);
-      }
-
-    }
+    CameraConfigurationUtils.setFocus(parameters, true, true, safeMode);
 
     parameters.setPreviewSize(bestPreviewSize.x, bestPreviewSize.y);
 
@@ -242,10 +220,6 @@ final class CameraConfigurationManager {
 
   private void doSetTorch(Camera.Parameters parameters, boolean newSetting, boolean safeMode) {
     CameraConfigurationUtils.setTorch(parameters, newSetting);
-    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-    if (!safeMode && !prefs.getBoolean(PreferencesActivity.KEY_DISABLE_EXPOSURE, true)) {
-      CameraConfigurationUtils.setBestExposure(parameters, newSetting);
-    }
   }
 
 }

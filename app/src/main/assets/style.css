@@ -1,28 +1,5 @@
-body {
-  background-color: #000000;
-  color: #FFFFFF;
-}
-img {
-  margin: 3px;
-}
-li {
-  padding-top: 3px;
-  padding-bottom: 3px;
-  margin-left: -3px;
-}
-ul.touchable li {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-a:link {
-  color: #FFFFFF;
-}
-a:visited {
-  color: #C0C0C0;
-}
-td {
-  vertical-align: top;
-}
-p.imgcenter {
-  text-align:center;
-}
+body {color: rgb(58, 61, 61);}
+h1 {font-size: 2em; font-weight:300;}
+h2 {font-size: 1.8em; font-weight:300; margin-bottom: 0.6em; margin-top: 1.6em;}
+a {color: rgb(98, 93, 46);}
+img {width: 100%; max-width: 240px; margin: 20px auto; display: block;}
