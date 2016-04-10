@@ -1,5 +1,18 @@
 # Pal Oil Checker Admin Application
 
+# Prerequisites
+OpenShift environment variables:
+```
+OPENSHIFT_MONGODB_DB_GEAR_DNS=570a10472d52717c48000004-zoohackaton.rhcloud.com
+OPENSHIFT_MONGODB_DB_GEAR_UUID=570a10472d52717c48000004
+OPENSHIFT_MONGODB_DB_HOST=570a10472d52717c48000004-zoohackaton.rhcloud.com
+OPENSHIFT_MONGODB_DB_PASSWORD=QzfJY8-mhELh
+OPENSHIFT_MONGODB_DB_PORT=54861
+OPENSHIFT_MONGODB_DB_URL=mongodb://admin:QzfJY8-mhELh@570a10472d52717c48000004-zoohackaton.rhcloud.com:54861/
+OPENSHIFT_MONGODB_DB_USERNAME=admin
+OPENSHIFT_MONGODB_LD_LIBRARY_PATH_ELEMENT=/opt/rh/v8314/root/usr/lib64:/opt/rh/mongodb24/root/usr/lib64
+```
+
 ## Data Model
 
 Resources:
