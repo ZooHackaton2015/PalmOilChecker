@@ -1,4 +1,29 @@
-# Pal Oil Checker Admin Application
+# Pal Oil Checker Application
+
+# End User REST on OpenShift
+
+Administration of the application on OpenShift:
+* https://openshift.redhat.com/app/console/domain/zoohackaton
+
+Try it:
+* http://palmoil-zoohackaton.rhcloud.com/barcodes/3045140105502
+   * 200 OK - doesn't contain oil
+* http://palmoil-zoohackaton.rhcloud.com/barcodes/5201360527205
+   * 200 OK - contains oil
+* http://palmoil-zoohackaton.rhcloud.com/barcodes/0000000000000
+   * 404 Not Found ... barcode we don't know
+
+Administration:
+* OpenShift admin:
+   * https://openshift.redhat.com/app/console/applications
+* Node.js to Mongo connection status:
+   * http://palmoil-zoohackaton.rhcloud.com/db-connection-status
+* HA proxy:
+   * http://palmoiladmin-zoohackaton.rhcloud.com/haproxy-status/
+* PING to load data from Mongo to Node.js cache - to be called by admin app:
+   * http://palmoil-zoohackaton.rhcloud.com/watermark
+
+
 
 ## Data Model
 
@@ -50,3 +75,5 @@ Admin service REST:
     * basic authentication
     * barcodes/
     * POST { "contains-oil": false; "barcode": 1234567890123 }
+
+---
