@@ -11,19 +11,26 @@ use MongoDB\Client;
 
 class Products extends BaseService
 {
+    const COLLECTION_NAME = 'products';
+
     public function __construct(Client $client)
     {
         parent::__construct($client);
-        $this->collection = $this->client->hackathon->products;
+        $this->collection = $this->client->selectCollection(self::DATABASE_NAME, self::COLLECTION_NAME);
     }
 
-    public function setProductSafe($productCode, $safe)
+    public function setProductSafe($barcode, $safe)
     {
+        $this->collection->updateOne(['barcode' => $barcode], ['safe' => !!$safe]);
+    }
 
+    public function findAll()
+    {
+        return $this->collection->find();
     }
 
     public function findLike($like, $limit)
     {
-        $this->collection->find(['barcode' => 'like']);
+        return $this->collection->find(['barcode' => 'like']);
     }
 }

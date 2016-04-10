@@ -14,11 +14,13 @@ use MongoDB\Client;
 
 class Users extends BaseService
 {
+    const COLLECTION_NAME = 'users';
+
 
     public function __construct(Client $client)
     {
         parent::__construct($client);
-        $this->collection = $this->client->hackathon->users;
+        $this->collection = $this->client->selectCollection(self::DATABASE_NAME, self::COLLECTION_NAME);
     }
     
     public function findAll()

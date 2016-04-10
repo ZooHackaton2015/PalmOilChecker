@@ -37,7 +37,8 @@ class ProductsPresenter extends BasePresenter
 
     public function renderDefault()
 	{
-        $this->renderProducts($this->mockProducts());
+        $products = $this->products->findAll();
+        $this->renderProducts($products);
 	}
 
     private function renderProducts($products = [])

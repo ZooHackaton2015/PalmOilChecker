@@ -33,7 +33,8 @@ services:
 
 	mongodb:
 		class: MongoDB\Client
-#		arguments:
+#		parameters:
 #			uri: 'mongodb://localhost:44445'
-#			uriOptions: ['aloha' => 'lel']
+#			uriOptions: []
 #			driverOptions: []
+		factory: Components\MongodbFactory::create

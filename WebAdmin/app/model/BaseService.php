@@ -13,6 +13,8 @@ use MongoDB\Collection;
 
 class BaseService
 {
+    const DATABASE_NAME = 'admin';
+
     /** @var Client */
     protected $client;
 

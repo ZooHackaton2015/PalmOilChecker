@@ -4,7 +4,6 @@ $(document).ready(function(){
 
 function prepareSearchForm(){
     var $form = $("#search-product-form");
-    alert($form.find("input[name=barcode]").size());
     $form.find("input[name=barcode]").change(function(){
         console.log(':]');
 
