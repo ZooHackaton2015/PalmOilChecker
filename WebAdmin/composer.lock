@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "659bb17211affe1f7e54e9aeea6083d2",
-    "content-hash": "d8b4ed04613a2f8b7b6f67a193d20b76",
+    "hash": "bb14eb9210da6762e41bc05fdf8ab90e",
+    "content-hash": "22c5a64c3bcbd6380fd99c05c2d98672",
     "packages": [
         {
             "name": "latte/latte",
@@ -447,12 +447,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/di.git",
-                "reference": "c3edfe510a6e3cf3cf4946af8b6deee1ef752046"
+                "reference": "630a63b5c0e7adf8c6f681e3e957e40a38548067"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/di/zipball/c3edfe510a6e3cf3cf4946af8b6deee1ef752046",
-                "reference": "c3edfe510a6e3cf3cf4946af8b6deee1ef752046",
+                "url": "https://api.github.com/repos/nette/di/zipball/630a63b5c0e7adf8c6f681e3e957e40a38548067",
+                "reference": "630a63b5c0e7adf8c6f681e3e957e40a38548067",
                 "shasum": ""
             },
             "require": {
@@ -497,7 +497,7 @@
             ],
             "description": "Nette Dependency Injection Component",
             "homepage": "https://nette.org",
-            "time": "2016-04-05 23:21:06"
+            "time": "2016-04-10 11:30:08"
         },
         {
             "name": "nette/finder",
@@ -1199,25 +1199,6 @@
     ],
     "packages-dev": [
         {
-            "name": "dg/adminer-custom",
-            "version": "v1.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dg/adminer-custom.git",
-                "reference": "9866cc99392904ea99f139c41064cc81932e39aa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dg/adminer-custom/zipball/9866cc99392904ea99f139c41064cc81932e39aa",
-                "reference": "9866cc99392904ea99f139c41064cc81932e39aa",
-                "shasum": ""
-            },
-            "type": "project",
-            "notification-url": "https://packagist.org/downloads/",
-            "description": "Customization for the best database management tool written in PHP, Adminer",
-            "time": "2016-02-06 21:42:41"
-        },
-        {
             "name": "nette/tester",
             "version": "v1.7.1",
             "source": {
@@ -1280,7 +1261,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.6.0"
+        "php": ">=5.4.0"
     },
     "platform-dev": []
 }
