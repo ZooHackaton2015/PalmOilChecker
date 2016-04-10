@@ -1,0 +1,41 @@
+{block content}
+<div class="row">
+    <div class="col-lg-12 text-center">
+        <form class="form-inline" id="search-product-form">
+            <label for="barcode">Hledat</label>
+            <input type="text" class="form-control" name="barcode" placeholder="Produktový kód">
+        </form>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Kód</th>
+                <th>Stav</th>
+                <th>Akce</th>
+            </tr>
+        </thead>
+        <tbody n:snippet="products">
+            <tr n:foreach="$products as $product">
+                {var $safe = $product->getSafe() }
+                <td>{$product->getBarcode()}</td>
+                <td>
+                    <span n:class="label, $safe ? label-success : label-warning">
+                        <span n:class="glyphicon, $safe ? glyphicon-thumbs-up : glyphicon-thumbs-down"></span>
+                    </span>
+                </td>
+                <td>
+                    <span class="btn-group">
+                        <a n:href="setProductSafe! $product->getBarcode(), !$safe" n:class="btn, $safe ? btn-warning : btn-success">
+                            <span n:class="glyphicon, $safe ? glyphicon-thumbs-down : glyphicon-thumbs-up"></span>
+                        </a>
+                    </span>
+                    <a n:href="delete $product->getBarcode()" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

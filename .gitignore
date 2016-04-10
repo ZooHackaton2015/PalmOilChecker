@@ -200,3 +200,7 @@ Server/Server.iml
 Server/.idea/
 WebAadmin/.idea/.name
 WebAadmin/.idea/
+WebAdmin/.idea/
+WebAdmin/.vagrant/
+WebAdmin/puphpet/puppet/modules/puphpet/manifests/adminer.pp
+WebAdmin/puphpet/

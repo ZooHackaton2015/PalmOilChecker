@@ -1,0 +1,39 @@
+#
+# WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+# https://nette.org/security-warning
+#
+parameters:
+
+
+php:
+	date.timezone: Europe/Prague
+
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+
+
+
+session:
+	expiration: 14 days
+
+
+services:
+	- App\Model\UserManager
+	- App\Model\Users
+
+	- App\Forms\FormFactory
+	- App\Forms\SignFormFactory
+	- App\Forms\AddNewUserFactory
+
+	router: App\RouterFactory::createRouter
+
+	mongodb:
+		class: MongoDB\Client
+#		arguments:
+#			uri: 'mongodb://localhost:44445'
+#			uriOptions: ['aloha' => 'lel']
+#			driverOptions: []

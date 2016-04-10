@@ -1,0 +1,44 @@
+{block content}
+<div n:if="$canAddNewUser">
+    <form n:name="addUserForm">
+        <div class="row">
+            <div class="col-md-3 col-md-offset-2">
+                {input email}
+            </div>
+            <div class="col-md-3">
+                {input password}
+            </div>
+            <div class="col-md-2">
+                {input save}
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Akce</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr n:foreach="$users as $u">
+                    <td>
+                        {$u->getEmail()}
+                    </td>
+                    <td>
+                        <a n:href="edit $u->getId()" class="btn btn-default" data-tooltip="Upravit">
+                            <span class="glyphicon glyphicon-wrench"></span>
+                        </a>
+                        <a n:href="delete $u->getId()" class="btn btn-default" data-tooltip="Odebrat">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

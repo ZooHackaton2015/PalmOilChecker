@@ -1,0 +1,8 @@
+log/*
+temp/*
+vendor/*
+!.gitignore
+!.htaccess
+!web.config
+app/config/config.local.neon
+puphpet/config-custom.yaml
