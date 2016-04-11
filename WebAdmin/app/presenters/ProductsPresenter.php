@@ -4,29 +4,29 @@ namespace App\Presenters;
 
 use App\Model\Entities\Product;
 use App\Model\Products;
+use Components\Forms\IAddProductFormFactory;
 use Nette;
 use App\Model;
-
-use App\Model\Users;
 
 
 class ProductsPresenter extends BasePresenter
 {
 
-    /** @var Products  */
-    private $products;
+    /** @var Products @inject */
+    public $products;
+
+    /** @var IAddProductFormFactory @inject  */
+    public $addProductFormFactory;
 
     protected function startup()
     {
         parent::startup();
-        $this->products = new Products($this->mongoClient);
     }
 
-    public function handleFindProduct($like = 2)
+    public function handleFindProducts($barcode = 20)
     {
-        //$products = $this->products->findLike($like, 20);
-        $products = $this->mockProducts($like);
-        $this->renderProducts($products);
+        $this->renderDefault($barcode);
+        $this->redrawControl('products');
     }
 
     public function handleSetProductSafe($productCode, $safe)
@@ -35,19 +35,14 @@ class ProductsPresenter extends BasePresenter
     }
 
 
-    public function renderDefault()
+    public function renderDefault($barcode = 0)
 	{
-        $products = $this->products->findAll();
-        $this->renderProducts($products);
-	}
 
-    private function renderProducts($products = [])
-    {
+//        $products = $this->products->findAll();
+        $products = $this->mockProducts($barcode);
+
         $this->template->products = $products;
-        if($products) {
-            $this->redrawControl('products');
-        }
-    }
+	}
 
     public function actionDelete($barcode)
     {
@@ -55,21 +50,28 @@ class ProductsPresenter extends BasePresenter
     }
     
     
-    public function createComponentProductForm()
+    public function createComponentAddProductForm()
     {
+        $form = $this->addProductFormFactory->create();
 
+        return $form;
     }
 
     private function mockProducts($e = 0){
+        $e *= 1;
+
         $products = [];
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 9; $i++) {
             $product = new Product();
+            srand($e + $i);
             $code = '';
             for ($c = 0; $c < 13; $c++) {
-                $code .= ($i ^ $c + $c * 3) % 10;
+                $code .= rand(0,9);
             }
             $product->setBarcode($code);
-            $product->setSafe((($i ^ 6 + $c * 3) % 2) == 0);
+
+            $product->setSafe($i % 5 == 0 || $i % 3 == 2);
+
             $products[] = $product;
         }
         return $products;

@@ -3,11 +3,25 @@ $(document).ready(function(){
 });
 
 function prepareSearchForm(){
-    var $form = $("#search-product-form");
-    $form.find("input[name=barcode]").change(function(){
-        console.log(':]');
+    var $form = $("#products-search");
+    $form.submit(function(e){
+        e.preventDefault();
+        return false;
+    });
 
-        var value = $(this).value();
-        $(".navbar-brand").text(value);
+    $form.find("input[name=barcode]").change(function(){
+        findProducts();
+    });
+}
+
+function findProducts(){
+    var value = $("#products-search").find("input[name=barcode]").val();
+    var link = $("a#link").attr('href');
+    link = link.replace('420', value);
+    console.log(link);
+
+    $.get(link, function(payload){
+        console.log("payload got");
+        $.nette.success(payload);
     });
 }

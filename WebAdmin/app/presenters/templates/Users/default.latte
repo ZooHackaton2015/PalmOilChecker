@@ -1,18 +1,6 @@
 {block content}
 <div n:if="$canAddNewUser">
-    <form n:name="addUserForm">
-        <div class="row">
-            <div class="col-md-3 col-md-offset-2">
-                {input email}
-            </div>
-            <div class="col-md-3">
-                {input password}
-            </div>
-            <div class="col-md-2">
-                {input save}
-            </div>
-        </div>
-    </form>
+    {control addUserForm}
 </div>
 
 <div class="row">

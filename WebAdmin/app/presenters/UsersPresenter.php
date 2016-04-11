@@ -2,9 +2,8 @@
 
 namespace App\Presenters;
 
-use App\Forms\FormFactory;
+use Components\Forms\IAddNewUserFormFactory;
 use Nette;
-use App\Forms\AddNewUserFactory;
 
 use App\Model;
 use App\Model\Users;
@@ -12,17 +11,15 @@ use App\Model\Users;
 
 class UsersPresenter extends BasePresenter
 {
-    /** @var AddNewUserFactory @inject  */
-    private $addUserFactory;
+    /** @var IAddNewUserFormFactory @inject  */
+    public $addUserFactory;
 
-    /** @var Users */
-    private $users;
+    /** @var Users @inject*/
+    public $users;
 
     protected function startup()
     {
         parent::startup();
-        $this->users = new Users($this->mongoClient);
-        $this->addUserFactory = new AddNewUserFactory();
     }
 
 

@@ -48,3 +48,15 @@ form .error {
 	color: #D00;
 	font-weight: bold;
 }
+
+.products-table {
+    max-height: 160px;
+    overflow-y: scroll;
+}
+
+.products-table tr.safe{
+    background: lightgreen;
+}
+.products-table tr.unsafe{
+    background: khaki;
+}

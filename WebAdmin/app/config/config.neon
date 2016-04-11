@@ -24,10 +24,14 @@ session:
 services:
 	- App\Model\UserManager
 	- App\Model\Users
+	- App\Model\Products
 
 	- App\Forms\FormFactory
 	- App\Forms\SignFormFactory
-	- App\Forms\AddNewUserFactory
+
+	- Components\Forms\IAddNewUserFormFactory
+	- Components\Forms\IAddProductFormFactory
+
 
 	router: App\RouterFactory::createRouter
 
