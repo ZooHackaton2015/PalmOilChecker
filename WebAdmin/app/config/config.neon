@@ -41,4 +41,4 @@ services:
 #			uri: 'mongodb://localhost:44445'
 #			uriOptions: []
 #			driverOptions: []
-		factory: Components\MongodbFactory::create
+		factory: Libs\MongodbFactory::create
