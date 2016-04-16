@@ -29,7 +29,7 @@ services:
 	- App\Forms\FormFactory
 	- App\Forms\SignFormFactory
 
-	- Components\Forms\IAddNewUserFormFactory
+	- Components\Forms\IEditUserFormFactory
 	- Components\Forms\IAddProductFormFactory
 
 

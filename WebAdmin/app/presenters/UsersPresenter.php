@@ -2,54 +2,94 @@
 
 namespace App\Presenters;
 
-use Components\Forms\IAddNewUserFormFactory;
+use App\Forms\FormFactory;
+use App\Model\Entities\User;
+use App\Model\UserManager;
+use Components\Forms\IEditUserFormFactory;
 use Nette;
 
 use App\Model;
 use App\Model\Users;
+use Nette\Application\UI\Form;
 
 
 class UsersPresenter extends BasePresenter
 {
-    /** @var IAddNewUserFormFactory @inject  */
-    public $addUserFactory;
+	const USERS_PER_PAGE = 20;
 
-    /** @var Users @inject*/
-    public $users;
+	/** @var FormFactory @inject */
+	public $formFactory;
 
-    protected function startup()
-    {
-        parent::startup();
-    }
+	/** @var IEditUserFormFactory @inject */
+	public $editUserFormFactory;
 
+	/** @var UserManager @inject */
+	public $userManager;
 
-    public function actionDefault()
+	/** @var Users @inject */
+	public $users;
+
+	protected function startup()
 	{
-        $this->template->users = $this->users->findAll();
-
-        $this->template->canAddNewUser = true;
+		parent::startup();
 	}
 
-    public function actionEdit($id)
-    {
-        $user = $this->users->find($id);
+
+	public function actionDefault($page = 1)
+	{
+		$this->template->users = $this->users->findMany(self::USERS_PER_PAGE, $page - 1);
+
+		$this->template->canAddNewUser = true;
+	}
+
+	public function actionEdit($id)
+	{
+		$user = $this->users->find($id);
+
+		$this['addUserForm']->setDefaults($user->asArray());
 
 
-        $this['addUserForm']->setDefaults($user->asArray());
+	}
 
-        dump($this['addUserForm']);exit;
-    }
+	public function actionDelete($id)
+	{
 
-    public function actionDelete($id)
-    {
+	}
 
-    }
+	public function createComponentAddUserForm()
+	{
+		/** @var Form $form */
+		$form = $this->formFactory->create();
 
-    public function createComponentAddUserForm()
-    {
-        $form = $this->addUserFactory->create();
+		$form->addText('email', 'Email')
+			->addRule(Form::EMAIL, 'Zadany řetězec nevypadá jako email')
+			->setAttribute('placeholder', 'Email');
+		$form->addPassword('password')
+			->addRule(Form::MIN_LENGTH, 'Heslo musí být alespoň %d znaků dlouhé', 6)
+			->setAttribute('placeholder', 'Heslo');
+		$form->addSubmit('save', 'Přidat uživatele');
 
-        return $form;
-    }
+
+		$form->onSuccess[] = function ($form, $values) {
+			$this->userManager->add($values->email, $values->password);
+			$this->redirect('this');
+		};
+		return $form;
+	}
+
+	public function createComponentEditUserForm()
+	{
+		$form = $this->editUserFormFactory->create();
+
+		$form->onSave[] = function ($form, $values) {
+			$id_user = $values->id_user;
+			$user = new User;
+			$user->setEmail($values->email);
+			$user->setPassword($values->password);
+			$this->users->update($user);
+			dump($values);exit;
+		};
+		return $form;
+	}
 
 }
