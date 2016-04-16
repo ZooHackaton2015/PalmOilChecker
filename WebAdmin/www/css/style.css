@@ -1,52 +1,65 @@
 body {
-	font-size: 15px;
-	line-height: 1.6;
-	color: #333;
-	background: white;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    background: white;
+    margin-bottom: 60px; /* footer height */
 }
 
 h1 {
-	color: #3484D2;
+    color: #3484D2;
 }
 
 #ajax-spinner {
-	margin: 15px 0 0 15px;
-	padding: 13px;
-	background: white url('../images/spinner.gif') no-repeat 50% 50%;
-	font-size: 0;
-	z-index: 123456;
-	display: none;
+    margin: 15px 0 0 15px;
+    padding: 13px;
+    background: white url('../images/spinner.gif') no-repeat 50% 50%;
+    font-size: 0;
+    z-index: 123456;
+    display: none;
 }
 
 div.flash {
-	color: black;
-	background: #FFF9D7;
-	border: 1px solid #E2C822;
-	padding: 1em;
-	margin: 1em 0;
+    color: black;
+    background: #FFF9D7;
+    border: 1px solid #E2C822;
+    padding: 1em;
+    margin: 1em 0;
 }
 
 a[href^="#error:"] {
-	background: red;
-	color: white;
+    background: red;
+    color: white;
 }
 
 form th, form td {
-	vertical-align: top;
-	font-weight: normal;
+    vertical-align: top;
+    font-weight: normal;
 }
 
 form th {
-	text-align: right;
+    text-align: right;
 }
 
 form .required label {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 form .error {
-	color: #D00;
-	font-weight: bold;
+    color: #D00;
+    font-weight: bold;
+}
+
+.footer {
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+.footer p {
+    padding: 0 15px;
+    margin: 18px 0;
 }
 
 .products-table {
@@ -54,9 +67,10 @@ form .error {
     overflow-y: scroll;
 }
 
-.products-table tr.safe{
+.products-table tr.safe {
     background: lightgreen;
 }
-.products-table tr.unsafe{
+
+.products-table tr.unsafe {
     background: khaki;
 }

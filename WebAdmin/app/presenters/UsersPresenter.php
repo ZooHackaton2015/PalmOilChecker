@@ -2,23 +2,24 @@
 
 namespace App\Presenters;
 
-use App\Forms\FormFactory;
+use Components\AddUserFormFactory;
+use Components\Forms\IEditUserFormFactory;
+
 use App\Model\Entities\User;
 use App\Model\UserManager;
-use Components\Forms\IEditUserFormFactory;
+
 use Nette;
 
 use App\Model;
 use App\Model\Users;
-use Nette\Application\UI\Form;
 
 
 class UsersPresenter extends BasePresenter
 {
-	const USERS_PER_PAGE = 20;
+	const USERS_PER_PAGE = 10;
 
-	/** @var FormFactory @inject */
-	public $formFactory;
+	/** @var AddUserFormFactory @inject */
+	public $addUserFormFactory;
 
 	/** @var IEditUserFormFactory @inject */
 	public $editUserFormFactory;
@@ -40,38 +41,39 @@ class UsersPresenter extends BasePresenter
 		$this->template->users = $this->users->findMany(self::USERS_PER_PAGE, $page - 1);
 
 		$this->template->canAddNewUser = true;
+		$this->template->currentPage = $page;
+
+
+		$this['paginator']->setPagesInfo($this->users->count(), self::USERS_PER_PAGE, $page);;
 	}
 
 	public function actionEdit($id)
 	{
-		$user = $this->users->find($id);
+		$user = $this->users->find($id * 1);
 
-		$this['addUserForm']->setDefaults($user->asArray());
+		$this['editUserForm']->setDefaults($user->asArray());
 
 
 	}
 
-	public function actionDelete($id)
+	public function actionDelete($id, $page = 1)
 	{
-
+		$user = $this->users->delete($id);
+		if(!$user){
+			$this->flashMessage('Při mazání uživatele nastaly neočekávané potíže.');
+		} else {
+			$this->flashMessage('Uživatel '. $user->getEmail() .' byl odebrán ze systému.');
+		}
+		$this->redirect('default', $page);
 	}
 
 	public function createComponentAddUserForm()
 	{
-		/** @var Form $form */
-		$form = $this->formFactory->create();
-
-		$form->addText('email', 'Email')
-			->addRule(Form::EMAIL, 'Zadany řetězec nevypadá jako email')
-			->setAttribute('placeholder', 'Email');
-		$form->addPassword('password')
-			->addRule(Form::MIN_LENGTH, 'Heslo musí být alespoň %d znaků dlouhé', 6)
-			->setAttribute('placeholder', 'Heslo');
-		$form->addSubmit('save', 'Přidat uživatele');
-
+		$form = $this->addUserFormFactory->create();
 
 		$form->onSuccess[] = function ($form, $values) {
 			$this->userManager->add($values->email, $values->password);
+			$this->flashMessage('Uživatel '. $values->email .' byl přidán.');
 			$this->redirect('this');
 		};
 		return $form;
@@ -82,14 +84,10 @@ class UsersPresenter extends BasePresenter
 		$form = $this->editUserFormFactory->create();
 
 		$form->onSave[] = function ($form, $values) {
-			$id_user = $values->id_user;
-			$user = new User;
-			$user->setEmail($values->email);
-			$user->setPassword($values->password);
-			$this->users->update($user);
-			dump($values);exit;
+			$this->userManager->update($values);
+			$this->flashMessage('Uživatel '. $values->email .' byl upraven.');
+			$this->redirect('this');
 		};
 		return $form;
 	}
-
 }

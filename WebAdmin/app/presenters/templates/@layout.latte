@@ -10,7 +10,6 @@
     <meta name="author" content="">
 
     <title>{ifset title}{include title|striptags} | {/ifset}Palm oil checker</title>
-    {dump $basePath}
     <!-- Bootstrap Core CSS -->
     <link href="{$basePath}/css/bootstrap.min.css" rel="stylesheet">
 
@@ -61,6 +60,12 @@
     <script type="text/javascript" src="{$basePath}/js/jquery.nette.js"></script>
     <script src="{$basePath}/js/main.js"></script>
 {/block}
+
+<footer class="footer navbar-fixed-bottom">
+    <div class="container">
+        <p class="text-muted text-center">&copy; Zoo Hackathon 2016</p>
+    </div>
+</footer>
 
 </body>
 

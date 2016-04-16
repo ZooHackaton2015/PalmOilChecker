@@ -2,7 +2,7 @@
 
 namespace Components\Forms;
 
-use App\Forms\FormFactory;
+use Components\FormFactory;
 use Nette;
 use Nette\Application\UI;
 use Nette\Application\UI\Form;
@@ -42,7 +42,7 @@ class AddProductForm extends UI\Control
             0 => 'Obsahuje palmový olej',
         ]);
 
-        $prototype = $form->addSubmit('save', 'Přidat')
+        $prototype = $form->addSubmit('save', 'Uložit')
             ->getControlPrototype();
         $prototype->class[] = 'btn';
         $prototype->class[] = 'btn-primary';

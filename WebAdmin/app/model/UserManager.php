@@ -58,15 +58,29 @@ class UserManager extends Nette\Object implements Nette\Security\IAuthenticator
 	public function add($email, $password)
 	{
 		try {
-			$user = new User($this->users->getNextId());
-			$user->setEmail($email);
-			$user->setPassword(Passwords::hash($password));
+			$id_user = $this->users->getNextId();
 
-			$this->users->insert($user);
+			$password = Passwords::hash($password);
+
+			$this->users->_update($id_user, $email, $password);
 
 		} catch (MongoDuplicateKeyException $e) {
 			throw new DuplicateNameException;
 		}
+	}
+
+	public function update($values)
+	{
+		$id_user = $values->id_user * 1;
+		$email = $values->email;
+		$oldValues = $this->users->find($id_user)->asArray();
+		if(!empty($values->password)){
+			$password = Passwords::hash($values->password);
+		} else {
+			$password = $oldValues['password'];
+		}
+
+		$this->users->_update($id_user, $email, $password);
 	}
 
 }

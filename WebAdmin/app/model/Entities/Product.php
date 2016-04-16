@@ -10,11 +10,13 @@ namespace App\Model\Entities;
  */
 class Product extends BaseEntity
 {
-    private $barcode;
+    public $barcode;
 
-    private $checked;
+    public $checked;
 
-    private $safe;
+    public $safe;
+
+    public $timestamp;
 
     /**
      * @return mixed
@@ -63,6 +65,23 @@ class Product extends BaseEntity
     {
         $this->safe = $safe;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getTimestamp()
+    {
+        return $this->timestamp;
+    }
+
+    /**
+     * @param mixed $timestamp
+     */
+    public function setTimestamp($timestamp)
+    {
+        $this->timestamp = $timestamp;
+    }
+
 
 
 }

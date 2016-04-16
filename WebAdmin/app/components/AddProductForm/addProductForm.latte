@@ -3,7 +3,7 @@
     {input barcode}
 
     {label safe/}
-    <div class="btn-group" data-toggle="buttons">
+    <div class="btn-group btn-group-vertical" data-toggle="buttons">
         {foreach $form[safe]->items as $key => $label }
             <label n:name="safe:$key" n:class="btn, !!$key ? btn-success : btn-warning, $iterator->first ? active">
                 <input n:name="safe:$key" {first}checked{/first}> {$label}

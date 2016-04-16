@@ -2,44 +2,56 @@
 <div class="row">
     <div class="col-lg-12 text-center">
         <div class="well">
-            <div class="h3">Přidat produkt</div>
+            <div class="h3">Přidat nebo upravit produkt</div>
             {control addProductForm}
         </div>
     </div>
     <div class="col-lg-12">
 
         <div class="panel panel-default">
-            <div class="panel-heading">
-                {include '../components/searchProductForm.latte'}
+            {*
+            <div class="panel-heading text-right">
+                    {include '../components/searchProductForm.latte'}
             </div>
+            *}
 
-                <table class="table products-table">
-                    <thead>
-                        <tr>
-                            <th>Kód</th>
-                            <th>Akce</th>
-                        </tr>
-                    </thead>
-                    {dump $products}
-                    <tbody n:snippet="products">
-                        <tr n:foreach="$products as $product" n:class="$product->getSafe() ? safe : unsafe">
-                            {var $safe = $product->getSafe() }
-                            <td>{$product->getBarcode()}</td>
-                            <td>
-                                <span class="btn-group">
-                                    <a n:href="setProductSafe! $product->getBarcode(), !$safe" n:class="btn, $safe ? btn-warning : btn-success">
-                                        <span n:class="glyphicon, $safe ? glyphicon-thumbs-down : glyphicon-thumbs-up"></span>
-                                    </a>
-                                </span>
-                                <a n:href="delete $product->getBarcode()" class="btn btn-danger">
-                                    <span class="glyphicon glyphicon-trash"></span>
-                                </a>
+            <table class="table products-table">
+                <thead>
+                <tr>
+                    <th>Kód</th>
+                    <th>Akce</th>
+                </tr>
+                </thead>
+                <tbody n:snippet="products">
+                <tr n:foreach="$products as $product" n:class="$product->getSafe() ? safe : unsafe">
+                    {var $safe = $product->getSafe() }
+                    <td>
+                        {$product->getBarcode()}
+                    </td>
+                    <td>
+                        <span class="btn-group">
+                            <a n:href="setProductSafe! $product->getBarcode(), !$safe" n:class="btn, $safe ? btn-warning : btn-success, ajax">
+                                <span n:class="glyphicon, $safe ? glyphicon-thumbs-down : glyphicon-thumbs-up"></span>
+                            </a>
+                        </span>
+                        <a n:href="delete $product->getBarcode(), $currentPage" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
 
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                    </td>
 
+                </tr>
+                <tr n:if="empty($products)">
+                    <td colspan="2" class="text-muted text-center">Nebyly nalezeny žádné produkty</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="panel-footer text-center">
+                Celkem evidováno produktů: {$productCounts['total']} z toho s palmovým olejem: {$productCounts['unsafe']}
+            </div>
+        </div>
+        <div class="text-center">
+            {control paginator}
         </div>
     </div>
 </div>

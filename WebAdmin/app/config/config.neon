@@ -26,8 +26,9 @@ services:
 	- App\Model\Users
 	- App\Model\Products
 
-	- App\Forms\FormFactory
-	- App\Forms\SignFormFactory
+	- Components\FormFactory
+	- Components\SignFormFactory
+	- Components\AddUserFormFactory
 
 	- Components\Forms\IEditUserFormFactory
 	- Components\Forms\IAddProductFormFactory

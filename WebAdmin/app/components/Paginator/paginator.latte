@@ -1,0 +1,22 @@
+{*
+  @param $paginator
+  @param link
+*}
+
+<ul class="pagination">
+    <li n:if="$currentPage > 1">
+        <a href="{plink $link ($currentPage - 1)}">&lt;</a>
+    </li>
+
+    <li n:for="$page = 1; $page <= $pageCount; $page++" n:class="$page == $currentPage?active">
+        {if $page != $currentPage}
+            <a href="{plink $link $page}">{$page}</a>
+        {else}
+            <span class="active">{$page}</span>
+        {/if}
+    </li>
+
+    <li n:if="$currentPage < $pageCount">
+        <a href="{plink $link ($currentPage + 1)}">&gt;</a>
+    </li>
+</ul>

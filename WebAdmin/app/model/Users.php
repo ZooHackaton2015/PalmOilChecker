@@ -38,13 +38,19 @@ class Users extends BaseService
 
 	public function findMany($count = 10, $offsetPage = 0)
 	{
-		$cursor = $this->collection->find();
-		$users = [];
+		$options = [
+			'sort' => ['id_user' => 1],
+			'limit' => $count,
+			'skip'
 
+		];
+
+		$cursor = $this->collection->find();
+
+		$users = [];
 		/** @var BSONDocument $item */
 		foreach($cursor as $item){
-			$user = new User();
-			$user->bsonUnserialize($item->getArrayCopy());
+			$user = $this->bsonToUser($item);
 			$users[] = $user;
 		}
 
@@ -64,25 +70,17 @@ class Users extends BaseService
 
 	/**
 	 * @param $id
-	 * @return User
+	 * @return User|null
 	 */
 	public function find($id)
 	{
-		$user = new User();
-		$user->setId($id);
-		$user->setEmail('email.' . $id . '@mail.cz');
-		$user->setPassword('pass' . $id);
-		return $user;
-	}
-
-	public function insert(User $user)
-	{
-		$this->collection->insertOne($user->bsonSerialize());
+		$row = $this->collection->findOne(['id_user' => $id * 1]);
+		return $this->bsonToUser($row);
 	}
 
 	/**
 	 * @param $BSONDocument
-	 * @return null
+	 * @return User|null
 	 */
 	private function bsonToUser($BSONDocument){
 		if(!$BSONDocument){
@@ -93,5 +91,49 @@ class Users extends BaseService
 		$user = new User();
 		$user->bsonUnserialize($rowArray);
 		return $user;
+	}
+
+	public function hasEntries()
+	{
+		$entry = $this->collection->findOne();
+		return !!$entry;
+	}
+
+	public function count()
+	{
+		$cursor = $this->collection->aggregate([
+			['$group' => ['_id' => 'foo', 'count' => ['$sum' => 1]]]
+		]);
+		foreach($cursor as $entry){
+			return ($entry->count);
+		}
+		return 0;
+	}
+
+	/**
+	 * @param $id
+	 * @return User|null
+	 */
+	public function delete($id)
+	{
+		$user = $this->collection->findOne(['id_user' => $id * 1]);
+		$this->collection->deleteOne(['id_user' => $id * 1]);
+		return $this->bsonToUser($user);
+	}
+
+	/** to be only used from UserManager to keep password hashing at one place */
+	public function _update($id_user, $email, $password)
+	{
+		$filter = ['id_user' => $id_user];
+		$update = [
+			'id_user' => $id_user,
+			'email' => $email,
+			'password' => $password,
+		];
+		$options = [
+			'upsert' => true,
+		];
+		$document = $this->collection->replaceOne($filter, $update, $options);
+		return $document->isAcknowledged();
 	}
 }

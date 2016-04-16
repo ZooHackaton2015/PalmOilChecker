@@ -1,12 +1,13 @@
 {block content}
+<h1>Správa uživatelů</h1>
+
 <div n:if="$canAddNewUser" class="text-center">
-    {*{control addUserForm}*}
     {include 'components/addUserForm.latte'}
 </div>
 
 <div class="row">
     <div class="col-lg-12 text-center">
-        <table class="table">
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Email</th>
@@ -22,12 +23,13 @@
                         <a n:href="edit $u->getId()" class="btn btn-default" data-tooltip="Upravit">
                             <span class="glyphicon glyphicon-wrench"></span>
                         </a>
-                        <a n:href="delete $u->getId()" class="btn btn-default" data-tooltip="Odebrat">
+                        <a n:href="delete $u->getId(), $currentPage" n:if="$user->identity->id_user != $u->id_user" class="btn btn-default" data-tooltip="Odebrat">
                             <span class="glyphicon glyphicon-trash"></span>
                         </a>
                     </td>
                 </tr>
             </tbody>
         </table>
+        {control paginator}
     </div>
 </div>

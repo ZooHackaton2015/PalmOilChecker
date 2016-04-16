@@ -12,69 +12,72 @@ use App\Model;
 class ProductsPresenter extends BasePresenter
 {
 
-    /** @var Products @inject */
-    public $products;
+	const PRODUCTS_PER_PAGE = 10;
 
-    /** @var IAddProductFormFactory @inject  */
-    public $addProductFormFactory;
+	/** @var Products @inject */
+	public $products;
 
-    protected function startup()
-    {
-        parent::startup();
-    }
+	/** @var IAddProductFormFactory @inject */
+	public $addProductFormFactory;
 
-    public function handleFindProducts($barcode = 20)
-    {
-        $this->renderDefault($barcode);
-        $this->redrawControl('products');
-    }
-
-    public function handleSetProductSafe($productCode, $safe)
-    {
-        $this->products->setProductSafe($productCode, $safe);
-    }
-
-
-    public function renderDefault($barcode = 0)
+	protected function startup()
 	{
-
-//        $products = $this->products->findAll();
-        $products = $this->mockProducts($barcode);
-
-        $this->template->products = $products;
+		parent::startup();
 	}
 
-    public function actionDelete($barcode)
-    {
+	/*
+	public function handleFindProducts($barcode = 20)
+	{
+		$this->renderDefault($barcode);
+		$this->redrawControl('products');
+	}
+	*/
 
-    }
-    
-    
-    public function createComponentAddProductForm()
-    {
-        $form = $this->addProductFormFactory->create();
+	public function handleSetProductSafe($productCode, $safe)
+	{
+		$this->products->setProductSafe($productCode, $safe, $this->user->id);
+	}
 
-        return $form;
-    }
 
-    private function mockProducts($e = 0){
-        $e *= 1;
+	public function renderDefault($page = 1, $barcodeSearch = null)
+	{
+		$counts = $this->products->count();
+		$totalProducts = $counts['total'];
+		$products = $this->products->findMany(self::PRODUCTS_PER_PAGE, $page - 1);
 
-        $products = [];
-        for ($i = 0; $i < 9; $i++) {
-            $product = new Product();
-            srand($e + $i);
-            $code = '';
-            for ($c = 0; $c < 13; $c++) {
-                $code .= rand(0,9);
-            }
-            $product->setBarcode($code);
+		$this->template->products = $products;
+		$this->template->productCounts = $counts;
+		$this->template->currentPage = $page;
 
-            $product->setSafe($i % 5 == 0 || $i % 3 == 2);
+		$this['paginator']->setPagesInfo($totalProducts, self::PRODUCTS_PER_PAGE, $page);;
+	}
 
-            $products[] = $product;
-        }
-        return $products;
-    }
+	public function actionDelete($barcode, $page = 1)
+	{
+		$this->products->delete($barcode);
+		$this->flashMessage('Záznam s kódem '. $barcode .' byl odebrán.');
+		$this->redirect('default', $page);
+	}
+
+
+	public function createComponentAddProductForm()
+	{
+		$form = $this->addProductFormFactory->create();
+
+		$form->onSave[] = function ($form, $values) {
+			$this->processAddProductForm($form, $values);
+			$this->flashMessage('Informace o produktu byla přidána');
+			$this->redirect('this');
+		};
+
+		return $form;
+	}
+
+	public function processAddProductForm($form, $values)
+	{
+		$barcode = $values->barcode;
+		$safe = $values->safe;
+		$this->products->setProductSafe($barcode, $safe, $this->user->id);
+	}
 
 }

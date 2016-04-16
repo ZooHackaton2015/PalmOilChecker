@@ -2,7 +2,7 @@
 
 namespace Components\Forms;
 
-use App\Forms\FormFactory;
+use Components\FormFactory;
 use Nette;
 use Nette\Application\UI;
 use Nette\Application\UI\Form;
@@ -22,7 +22,7 @@ class EditUserForm extends UI\Control
 
 	public function render()
 	{
-		$this->template->setFile(__DIR__ . '/addNewUserForm.latte');
+		$this->template->setFile(__DIR__ . '/editUserForm.latte');
 		$this->template->render();
 	}
 
@@ -43,11 +43,11 @@ class EditUserForm extends UI\Control
 		$field->getControlPrototype()->class[] = 'form-control';
 
 
-		$prototype = $form->addPassword('password', 'Heslo:')
-			->setAttribute('placeholder', 'Heslo')
-			->setRequired('Pole heslo je povinné.')
-			->addRule(Form::MIN_LENGTH, 'Heslo musí být alespoň %d znaků dlouhé', 6)
-			->getControlPrototype();
+		$password = $form->addPassword('password', 'Heslo:')
+			->setAttribute('placeholder', 'Heslo');
+		$password->addCondition(Form::FILLED)
+			->addRule(Form::MIN_LENGTH, 'Heslo musí být alespoň %d znaků dlouhé', 6);
+		$prototype = $password->getControlPrototype();
 		$prototype->class[] = 'form-control';
 
 		$prototype = $form->addSubmit('save', 'Uložit změny')
