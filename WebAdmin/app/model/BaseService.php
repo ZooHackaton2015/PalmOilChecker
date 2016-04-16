@@ -11,18 +11,19 @@ namespace App\Model;
 use \MongoDB\Client;
 use MongoDB\Collection;
 
-class BaseService
+abstract class BaseService
 {
-    const DATABASE_NAME = 'admin';
+	const DATABASE_NAME = 'admin';
 
-    /** @var Client */
-    protected $client;
+	/** @var Client */
+	protected $client;
 
-    /** @var Collection  */
-    protected $collection;
+	/** @var Collection */
+	protected $collection;
 
-    public function __construct(Client $client)
-    {
-        $this->client = $client;
-    }
+	public function __construct(Client $client)
+	{
+		$this->client = $client;
+	}
+
 }

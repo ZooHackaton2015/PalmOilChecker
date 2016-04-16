@@ -8,15 +8,40 @@
 
 namespace App\Model\Entities;
 
+use MongoDB\BSON\Persistable;
 
-abstract class BaseEntity
+
+abstract class BaseEntity implements Persistable
 {
-    public function asArray()
-    {
-        $array = [];
-        foreach($user as $field => $value){
-            $array[$field] = $value;
-        }
-        return $array;
-    }
+	protected $unserialized;
+
+	public function __construct()
+	{
+		$this->unserialized = false;
+	}
+
+	public function asArray()
+	{
+		$array = [];
+		foreach ($this as $field => $value) {
+			$array[$field] = $value;
+		}
+		unset($array['unserialized']);
+		return $array;
+	}
+
+	public function bsonSerialize()
+	{
+		return $this->asArray();
+	}
+
+	public function bsonUnserialize(array $data)
+	{
+		foreach ($data as $key => $value) {
+			$this->$key = $value;
+		}
+		$this->unserialized = true;
+	}
+
+
 }

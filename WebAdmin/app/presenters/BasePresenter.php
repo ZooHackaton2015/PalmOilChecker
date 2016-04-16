@@ -25,13 +25,21 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
     protected function startup()
     {
         parent::startup();
-        /*
-        if(!$this->user->isLoggedIn() && !($this->getPresenter() instanceof SignPresenter)){
+        $allowedView = $this->isPubliclyOpenView();
+        if(!$this->user->isLoggedIn() && !$allowedView){
             $this->flashMessage('Pro vstup do aplikace musíte být přihlášeni.');
             $this->redirect('Sign:in');
         }
-        */
+
         $this->template->navbar = NavbarBuilder::createNavbar();
+    }
+
+    private function isPubliclyOpenView()
+    {
+        $presenter = $this->getPresenter();
+        if($presenter instanceof SignPresenter || $presenter instanceof HomepagePresenter){
+            return true;
+        }
     }
 
 }

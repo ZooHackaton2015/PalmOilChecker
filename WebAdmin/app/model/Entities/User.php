@@ -10,59 +10,65 @@ namespace App\Model\Entities;
  */
 class User extends BaseEntity
 {
-    private $id;
+	public $id_user;
 
-    private $email;
+	public $email;
 
-    private $password;
+	public $password;
 
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
+	public function __construct($id = 0)
+	{
+		parent::__construct();
+		$this->id_user = $id;
+	}
 
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
+	/**
+	 * @return mixed
+	 */
+	public function getId()
+	{
+		return $this->id_user;
+	}
 
-    /**
-     * @return mixed
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
+	/**
+	 * @param mixed $id
+	 */
+	public function setId($id)
+	{
+		$this->id_user = $id;
+	}
 
-    /**
-     * @param mixed $email
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-    }
+	/**
+	 * @return mixed
+	 */
+	public function getEmail()
+	{
+		return $this->email;
+	}
 
-    /**
-     * @return mixed
-     */
-    public function getPassword()
-    {
-        return $this->password;
-    }
+	/**
+	 * @param mixed $email
+	 */
+	public function setEmail($email)
+	{
+		$this->email = $email;
+	}
 
-    /**
-     * @param mixed $password
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-    }
+	/**
+	 * @return mixed
+	 */
+	public function getPassword()
+	{
+		return $this->password;
+	}
+
+	/**
+	 * @param mixed $password
+	 */
+	public function setPassword($password)
+	{
+		$this->password = $password;
+	}
 
 
 }

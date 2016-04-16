@@ -1,6 +1,7 @@
 {block content}
-<div n:if="$canAddNewUser">
-    {control addUserForm}
+<div n:if="$canAddNewUser" class="text-center">
+    {*{control addUserForm}*}
+    {include 'components/addUserForm.latte'}
 </div>
 
 <div class="row">

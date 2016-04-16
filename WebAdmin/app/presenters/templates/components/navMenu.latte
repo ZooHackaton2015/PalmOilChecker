@@ -14,14 +14,18 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li n:foreach="$navbar->links as $link">
+                <li n:foreach="$navbar->links as $link" n:if="isset($link->allowed) || $user->isLoggedIn()">
                     <a n:href="$link->code">{$link->label}</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav pull-right">
                 {if $user->isLoggedIn()}
+                    {dump $user}
                     <li>
-                        <span>{$user->getName()}</span>
+                        <a style="cursor:default;">{$user->getIdentity()->email}</a>
+                    </li>
+                    <li>
+                        <a n:href="Sign:out">Odhlásit se</a>
                     </li>
                 {else}
                     <li>

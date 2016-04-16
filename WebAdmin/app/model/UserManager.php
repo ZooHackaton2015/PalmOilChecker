@@ -2,6 +2,8 @@
 
 namespace App\Model;
 
+use App\Model\Entities\User;
+use MongoDuplicateKeyException;
 use Nette;
 use Nette\Security\Passwords;
 
@@ -17,7 +19,7 @@ class UserManager extends Nette\Object implements Nette\Security\IAuthenticator
     private $users;
 
 
-    public function __construct(Nette\Database\Context $database, Users $users)
+    public function __construct(Users $users)
 	{
         $this->users = $users;
     }
@@ -32,23 +34,18 @@ class UserManager extends Nette\Object implements Nette\Security\IAuthenticator
 	{
 		list($email, $password) = $credentials;
 
-		$row = $this->users->findByEmail($email);
+		$user = $this->users->findByEmail($email);
 
-		if (!$row) {
+		if (!$user) {
 			throw new Nette\Security\AuthenticationException('Zadaný email nebyl rozpoznán.', self::IDENTITY_NOT_FOUND);
 
-		} elseif (!Passwords::verify($password, $row[self::COLUMN_PASSWORD_HASH])) {
+		} elseif (!Passwords::verify($password, $user->getPassword())) {
 			throw new Nette\Security\AuthenticationException('Heslo nebylo zadáno správně.', self::INVALID_CREDENTIAL);
-
-		} elseif (Passwords::needsRehash($row[self::COLUMN_PASSWORD_HASH])) {
-			$row->update([
-				self::COLUMN_PASSWORD_HASH => Passwords::hash($password),
-			]);
 		}
 
-		$arr = $row->toArray();
-		unset($arr[self::COLUMN_PASSWORD_HASH]);
-		return new Nette\Security\Identity($row[self::COLUMN_ID], $row[self::COLUMN_ROLE], $arr);
+		$arr = $user->asArray();
+		unset($arr['password']);
+		return new Nette\Security\Identity($user->getId(), 'supervisor', $arr);
 	}
 
 
@@ -57,16 +54,17 @@ class UserManager extends Nette\Object implements Nette\Security\IAuthenticator
 	 * @param  string
 	 * @param  string
 	 * @return void
-	 * @throws DuplicateNameException
 	 */
-	public function add($username, $password)
+	public function add($email, $password)
 	{
 		try {
-			$this->database->table(self::TABLE_NAME)->insert([
-				self::COLUMN_NAME => $username,
-				self::COLUMN_PASSWORD_HASH => Passwords::hash($password),
-			]);
-		} catch (Nette\Database\UniqueConstraintViolationException $e) {
+			$user = new User($this->users->getNextId());
+			$user->setEmail($email);
+			$user->setPassword(Passwords::hash($password));
+
+			$this->users->insert($user);
+
+		} catch (MongoDuplicateKeyException $e) {
 			throw new DuplicateNameException;
 		}
 	}
