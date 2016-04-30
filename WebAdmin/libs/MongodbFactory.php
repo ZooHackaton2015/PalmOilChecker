@@ -19,7 +19,6 @@ class MongodbFactory
 	public static function create(Container $container)
 	{
 		$uri = getenv('OPENSHIFT_MONGODB_DB_URL');
-		$uri = 'mongodb://admin:QzfJY8-mhELh@570a10472d52717c48000004-zoohackaton.rhcloud.com:54861/';
 		if ($uri) {
 			return new Client($uri);
 		}
