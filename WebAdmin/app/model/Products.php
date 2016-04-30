@@ -108,4 +108,9 @@ class Products extends BaseService
 	{
 		$this->collection->deleteOne(['barcode' => $barcode]);
 	}
+
+	public function add(Product $product)
+	{
+		return $this->setProductSafe($product->getBarcode(), $product->getSafe(), $product->getApproverid());
+	}
 }

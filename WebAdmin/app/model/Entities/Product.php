@@ -12,11 +12,28 @@ class Product extends BaseEntity
 {
     public $barcode;
 
-    public $checked;
+    public $approver_id;
 
     public $safe;
 
     public $timestamp;
+
+    /**
+     * Product constructor.
+     * @param $barcode
+     * @param $approver_id
+     * @param $safe
+     * @param $timestamp
+     */
+    public function __construct($barcode = '', $approver_id = 0, $safe = false, $timestamp = null)
+    {
+        parent::__construct();
+        $this->barcode = $barcode;
+        $this->approver_id = $approver_id;
+        $this->safe = $safe;
+        $this->timestamp = $timestamp;
+    }
+
 
     /**
      * @return mixed
@@ -37,17 +54,17 @@ class Product extends BaseEntity
     /**
      * @return mixed
      */
-    public function getChecked()
+    public function getApproverid()
     {
-        return $this->checked;
+        return $this->approver_id;
     }
 
     /**
-     * @param mixed $checked
+     * @param mixed $approver_id
      */
-    public function setChecked($checked)
+    public function setApproverid($approver_id)
     {
-        $this->checked = $checked;
+        $this->approver_id = $approver_id;
     }
 
     /**
