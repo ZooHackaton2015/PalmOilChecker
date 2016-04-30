@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f028432fb896310ce1a09e4634a7700d",
-    "content-hash": "b504048c4ee420c81787da9c7cbceddc",
+    "hash": "1807dd0cd3a546f2223286c73d4b9e56",
+    "content-hash": "b5a57f0927de0ffbe91ba818640a8594",
     "packages": [
         {
             "name": "latte/latte",
@@ -61,61 +61,6 @@
                 "twig"
             ],
             "time": "2016-04-10 23:40:55"
-        },
-        {
-            "name": "mongodb/mongodb",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mongodb/mongo-php-library.git",
-                "reference": "faf8a1d86b5c10684ef91fa6c81475b0c7f95240"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/faf8a1d86b5c10684ef91fa6c81475b0c7f95240",
-                "reference": "faf8a1d86b5c10684ef91fa6c81475b0c7f95240",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mongodb": "^1.1.0",
-                "php": ">=5.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "MongoDB\\": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Jeremy Mikola",
-                    "email": "jmikola@gmail.com"
-                },
-                {
-                    "name": "Hannes Magnusson",
-                    "email": "bjori@mongodb.com"
-                },
-                {
-                    "name": "Derick Rethans",
-                    "email": "github@derickrethans.nl"
-                }
-            ],
-            "description": "MongoDB driver library",
-            "homepage": "https://jira.mongodb.org/browse/PHPLIB",
-            "keywords": [
-                "database",
-                "driver",
-                "mongodb",
-                "persistence"
-            ],
-            "time": "2016-03-30 19:10:28"
         },
         {
             "name": "nette/application",

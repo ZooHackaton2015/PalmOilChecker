@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    prepareSearchForm();
+    //prepareSearchForm();
+
+    prepareAjaxButtons();
 });
 
 function prepareSearchForm(){
@@ -24,4 +26,20 @@ function findProducts(){
         console.log("payload got");
         $.nette.success(payload);
     });
+}
+
+function prepareAjaxButtons() {
+    $('.products-table').on('click','a.ajax', function(e){
+        e.preventDefault();
+        var $this = $(this);
+        var link = $this.attr('href');
+        console.log(link);
+
+        $.get(link, function(payload){
+            console.log("payload got");
+            $.nette.success(payload);
+        });
+    });
+
+
 }

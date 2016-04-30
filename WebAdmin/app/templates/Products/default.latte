@@ -30,7 +30,7 @@
                     </td>
                     <td>
                         <span class="btn-group">
-                            <a n:href="setProductSafe! $product->getBarcode(), !$safe" n:class="btn, $safe ? btn-warning : btn-success, ajax">
+                            <a n:href="setProductSafe! $product->getBarcode(), !$safe, $currentPage" n:class="ajax, btn, $safe ? btn-warning : btn-success">
                                 <span n:class="glyphicon, $safe ? glyphicon-thumbs-down : glyphicon-thumbs-up"></span>
                             </a>
                         </span>

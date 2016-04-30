@@ -30,16 +30,13 @@ services:
 	- Components\SignFormFactory
 	- Components\AddUserFormFactory
 
+	- Components\Forms\ISignInFormFactory
 	- Components\Forms\IEditUserFormFactory
 	- Components\Forms\IAddProductFormFactory
 
 
 	router: App\RouterFactory::createRouter
 
-	mongodb:
-		class: MongoDB\Client
-#		parameters:
-#			uri: 'mongodb://localhost:44445'
-#			uriOptions: []
-#			driverOptions: []
+	mongo:
+		class: MongoClient
 		factory: Libs\MongodbFactory::create

@@ -45,7 +45,12 @@ class UserManager extends Nette\Object implements Nette\Security\IAuthenticator
 
 		$arr = $user->asArray();
 		unset($arr['password']);
-		return new Nette\Security\Identity($user->getId(), 'supervisor', $arr);
+		$role = User::verifyRole($user->getRole());
+		if(!$role){
+			$role = User::ROLE_USER;
+			$arr['message'] = 'Při načítání Vaší role nastaly potíže. Kontaktujte správce';
+		}
+		return new Nette\Security\Identity($user->getId(), $role, $arr);
 	}
 
 
@@ -55,14 +60,14 @@ class UserManager extends Nette\Object implements Nette\Security\IAuthenticator
 	 * @param  string
 	 * @return void
 	 */
-	public function add($email, $password)
+	public function add($email, $password, $role = User::ROLE_CONTRIBUTOR)
 	{
 		try {
 			$id_user = $this->users->getNextId();
 
 			$password = Passwords::hash($password);
 
-			$this->users->_update($id_user, $email, $password);
+			$this->users->_update($id_user, $email, $password, $role);
 
 		} catch (MongoDuplicateKeyException $e) {
 			throw new DuplicateNameException;
@@ -79,8 +84,9 @@ class UserManager extends Nette\Object implements Nette\Security\IAuthenticator
 		} else {
 			$password = $oldValues['password'];
 		}
+		$role = $values->role;
 
-		$this->users->_update($id_user, $email, $password);
+		$this->users->_update($id_user, $email, $password, $role);
 	}
 
 }

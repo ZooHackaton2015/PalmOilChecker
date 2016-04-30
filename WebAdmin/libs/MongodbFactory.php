@@ -2,7 +2,7 @@
 
 namespace Libs;
 
-use MongoDB\Client;
+use MongoClient as Client;
 use Nette\DI\Container;
 
 /**
@@ -14,11 +14,12 @@ use Nette\DI\Container;
 class MongodbFactory
 {
 	/**
-	 * @return \MongoDB\Client
+	 * @return Client
 	 */
 	public static function create(Container $container)
 	{
-		$uri = filter_input(INPUT_ENV, 'OPENSHIFT_MONGODB_DB_URL');
+		$uri = getenv('OPENSHIFT_MONGODB_DB_URL');
+		$uri = 'mongodb://admin:QzfJY8-mhELh@570a10472d52717c48000004-zoohackaton.rhcloud.com:54861/';
 		if ($uri) {
 			return new Client($uri);
 		}

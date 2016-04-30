@@ -1,15 +1,13 @@
 <form n:name="form">
     <div class="row">
         <div class="col-md-3">
-            {input email}
+            {input email, class => 'form-control'}
         </div>
         <div class="col-md-3">
-            {input password}
+            {input password, class => 'form-control'}
         </div>
         <div class="col-md-3">
-            <select disabled="true" class="form-control">
-                <option>Role</option>
-            </select>
+            {input role, class => 'form-control'}
         </div>
         <div class="col-md-3">
             {input save}

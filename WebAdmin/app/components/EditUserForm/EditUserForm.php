@@ -2,6 +2,7 @@
 
 namespace Components\Forms;
 
+use App\Model\Entities\User;
 use Components\FormFactory;
 use Nette;
 use Nette\Application\UI;
@@ -40,15 +41,13 @@ class EditUserForm extends UI\Control
 			->addRule(Form::EMAIL, 'Pole email je požadované.');
 
 		$field->addCondition(Form::EMAIL);
-		$field->getControlPrototype()->class[] = 'form-control';
-
 
 		$password = $form->addPassword('password', 'Heslo:')
 			->setAttribute('placeholder', 'Heslo');
 		$password->addCondition(Form::FILLED)
 			->addRule(Form::MIN_LENGTH, 'Heslo musí být alespoň %d znaků dlouhé', 6);
-		$prototype = $password->getControlPrototype();
-		$prototype->class[] = 'form-control';
+
+		$form->addSelect('role', null, User::getRoles());
 
 		$prototype = $form->addSubmit('save', 'Uložit změny')
 			->getControlPrototype();

@@ -9,15 +9,14 @@
 namespace App\Model;
 
 use App\Model\Entities\User;
-use MongoDB\Client;
-use MongoDB\Model\BSONDocument;
+use MongoClient;
 
 
 class Users extends BaseService
 {
 	const COLLECTION_NAME = 'users';
 
-	public function __construct(Client $client)
+	public function __construct(MongoClient $client)
 	{
 		parent::__construct($client);
 		$this->collection = $this->client->selectCollection(self::DATABASE_NAME, self::COLLECTION_NAME);
@@ -27,12 +26,10 @@ class Users extends BaseService
 		$options = [
 			'sort' => ['id_user' => -1],
 		];
-		$last = $this->collection->findOne([], $options);
-		if(!$last){
-			$next_id = 1;
-		} else {
-			$next_id = $last->id_user + 1;
-		}
+		$cursor = $this->collection->find();
+		$cursor->sort($options['sort']);
+		$user = $cursor->getNext();
+		$next_id = $user['id_user'] + 1;
 		return $next_id;
 	}
 
@@ -41,15 +38,16 @@ class Users extends BaseService
 		$options = [
 			'sort' => ['id_user' => 1],
 			'limit' => $count,
-			'skip'
-
+			'skip' => $offsetPage * $count
 		];
 
+
 		$cursor = $this->collection->find();
+		$cursor->skip($options['skip']);
+		$cursor->limit($options['limit']);
 
 		$users = [];
-		/** @var BSONDocument $item */
-		foreach($cursor as $item){
+		while($item = $cursor->getNext()){
 			$user = $this->bsonToUser($item);
 			$users[] = $user;
 		}
@@ -63,7 +61,6 @@ class Users extends BaseService
 	 */
 	public function findByEmail($email)
 	{
-		/** @var BSONDocument $row */
 		$row = $this->collection->findOne(['email' => $email]);
 		return $this->bsonToUser($row);
 	}
@@ -86,7 +83,9 @@ class Users extends BaseService
 		if(!$BSONDocument){
 			return null;
 		}
-		$rowArray = $BSONDocument->getArrayCopy();
+
+		$rowArray = (array)$BSONDocument;
+
 		unset($rowArray['_id']);
 		$user = new User();
 		$user->bsonUnserialize($rowArray);
@@ -99,17 +98,6 @@ class Users extends BaseService
 		return !!$entry;
 	}
 
-	public function count()
-	{
-		$cursor = $this->collection->aggregate([
-			['$group' => ['_id' => 'foo', 'count' => ['$sum' => 1]]]
-		]);
-		foreach($cursor as $entry){
-			return ($entry->count);
-		}
-		return 0;
-	}
-
 	/**
 	 * @param $id
 	 * @return User|null
@@ -117,23 +105,26 @@ class Users extends BaseService
 	public function delete($id)
 	{
 		$user = $this->collection->findOne(['id_user' => $id * 1]);
-		$this->collection->deleteOne(['id_user' => $id * 1]);
+		$result = $this->collection->remove(['id_user' => $id * 1]);
 		return $this->bsonToUser($user);
 	}
 
 	/** to be only used from UserManager to keep password hashing at one place */
-	public function _update($id_user, $email, $password)
+	public function _update($id_user, $email, $password, $role = User::ROLE_CONTRIBUTOR)
 	{
 		$filter = ['id_user' => $id_user];
 		$update = [
 			'id_user' => $id_user,
 			'email' => $email,
 			'password' => $password,
+			'role' => $role,
 		];
 		$options = [
 			'upsert' => true,
+			'new' => true,
 		];
-		$document = $this->collection->replaceOne($filter, $update, $options);
-		return $document->isAcknowledged();
+		$document = $this->collection->findAndModify($filter, $update, null, $options);
+
+		return $document;
 	}
 }

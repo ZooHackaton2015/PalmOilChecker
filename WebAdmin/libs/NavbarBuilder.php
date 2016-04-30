@@ -2,6 +2,8 @@
 
 namespace Libs;
 
+use Nette\Security\User;
+use App\Model\Entities\User as EntUser;
 use Nette\Utils\ArrayHash;
 
 /**
@@ -12,13 +14,16 @@ use Nette\Utils\ArrayHash;
  */
 class NavbarBuilder
 {
-    public static function createNavbar(){
-    $menu = [];
-    $menu['appName'] = 'Palm oil checker';
-    $menu['links'] = [
-        ['label' => 'Produktové kódy',  'code' => 'Products:'],
-        ['label' => 'Správa uživatelů',  'code' => 'Users:'],
-    ];
+    public static function createNavbar(User $user)
+    {
+        $menu = [];
+        $menu['appName'] = 'Palm oil checker';
+        $menu['links'] = [
+            ['label' => 'Produktové kódy', 'code' => 'Products:'],
+        ];
+        if ($user->isInRole(EntUser::ROLE_ADMIN)) {
+            $menu['links'][] = ['label' => 'Správa uživatelů', 'code' => 'Users:'];
+        }
 
         return ArrayHash::from($menu);
 

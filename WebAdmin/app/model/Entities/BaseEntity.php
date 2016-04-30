@@ -8,10 +8,9 @@
 
 namespace App\Model\Entities;
 
-use MongoDB\BSON\Persistable;
 
 
-abstract class BaseEntity implements Persistable
+abstract class BaseEntity
 {
 	protected $unserialized;
 

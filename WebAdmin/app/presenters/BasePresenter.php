@@ -6,7 +6,7 @@ use Components\Paginator;
 use Nette;
 use App\Model;
 use Libs\NavbarBuilder;
-use MongoDB\Client;
+use MongoClient as Client;
 
 
 /**
@@ -32,7 +32,7 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 			$this->redirect('Sign:in');
 		}
 
-		$this->template->navbar = NavbarBuilder::createNavbar();
+		$this->template->navbar = NavbarBuilder::createNavbar($this->user);
 	}
 
 	private function isPubliclyOpenView()
@@ -47,6 +47,19 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 	public function createComponentPaginator()
 	{
 		return new Paginator;
+	}
+
+	public function beforeRender()
+	{
+		$identity = $this->user->getIdentity();
+		if(!$identity || empty($identity->data)){
+			return;
+		}
+		$data = $identity->data;
+		if(isset($data['message'])){
+			$this->flashMessage($data['message']);
+		}
+
 	}
 
 }

@@ -8,8 +8,8 @@
 
 namespace App\Model;
 
-use \MongoDB\Client;
-use MongoDB\Collection;
+use \MongoClient as Client;
+use \MongoCollection as Collection;
 
 abstract class BaseService
 {
@@ -24,6 +24,14 @@ abstract class BaseService
 	public function __construct(Client $client)
 	{
 		$this->client = $client;
+	}
+
+
+	public function count()
+	{
+
+		$cursor = $this->collection->find();
+		return $cursor->count();
 	}
 
 }

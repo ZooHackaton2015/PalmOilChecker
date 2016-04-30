@@ -33,6 +33,10 @@ class UsersPresenter extends BasePresenter
 	protected function startup()
 	{
 		parent::startup();
+		if(!$this->user->isInRole(User::ROLE_ADMIN)){
+			$this->flashMessage('Správa uživatelů je přístupná pouze administrátorům');
+			$this->redirect('Homepage:');
+		}
 	}
 
 

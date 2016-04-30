@@ -2,17 +2,18 @@
 
 namespace App\Presenters;
 
+use App\Model\Entities\User;
 use App\Model\UserManager;
 use App\Model\Users;
 use Components\AddUserFormFactory;
+use Components\Forms\ISignInFormFactory;
 use Nette;
-use Components\SignFormFactory;
 use Nette\Application\UI\Form;
 
 
 class SignPresenter extends BasePresenter
 {
-	/** @var SignFormFactory @inject */
+	/** @var ISignInFormFactory @inject */
 	public $signInFormFactory;
 
 	/** @var AddUserFormFactory @inject  */
@@ -28,12 +29,12 @@ class SignPresenter extends BasePresenter
 
 	public function actionOut()
 	{
-		$this->getUser()->logout();
+		$this->getUser()->logout(true);
 		$this->redirect('Homepage:');
 	}
 
 	public function renderInit(){
-		if($this->users->hasEntries()){
+		if(false && $this->users->hasEntries()){
 			$this->flashMessage('Inicializace je možna pouze pokud ještě neexistují žádní další uživatelé');
 			$this->redirect('in');
 		}
@@ -47,7 +48,7 @@ class SignPresenter extends BasePresenter
 	protected function createComponentSignInForm()
 	{
 		$form = $this->signInFormFactory->create();
-		$form->onSuccess[] = function ($form, $values) {
+		$form->onSave[] = function ($form, $values) {
 			$this->signInFormSucceeded($form, $values);
 			if($this->user->isLoggedIn()){
 				$this->redirect('Homepage:');
@@ -77,7 +78,7 @@ class SignPresenter extends BasePresenter
 		$form = $this->addUserFormFactory->create();
 
 		$form->onSuccess[] = function($form, $values){
-			$this->userManager->add($values->email, $values->password);
+			$this->userManager->add($values->email, $values->password, User::ROLE_ADMIN);
 			$this->flashMessage('První uživatel byl úspěšně vytvořen');
 			$this->redirect('in');
 		};

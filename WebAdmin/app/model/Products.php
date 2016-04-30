@@ -8,10 +8,9 @@
 namespace App\Model;
 
 use App\Model\Entities\Product;
-use MongoDB\BSON\UTCDatetime;
-use MongoDB\Client;
-use MongoDB\Driver\Cursor;
-use MongoDB\Operation\FindOneAndUpdate;
+use MongoDate;
+use MongoClient as Client;
+use MongoCursor as Cursor;
 
 class Products extends BaseService
 {
@@ -26,7 +25,8 @@ class Products extends BaseService
 	public function setProductSafe($barcode, $safe, $approver_id = 0)
 	{
 		$filter = ['barcode' => $barcode];
-		$date = new UTCDatetime(round(microtime(true) * 1000));
+		$date = new MongoDate(strtotime('now'));
+
 		$update = [
 			'barcode' => $barcode,
 			'timestamp' => $date,
@@ -35,10 +35,9 @@ class Products extends BaseService
 		];
 		$options = [
 			'upsert' => true,
-			'returnDocument' => FindOneAndUpdate::RETURN_DOCUMENT_AFTER,
 		];
-		$document = $this->collection->replaceOne($filter, $update, $options);
-		return $document->isAcknowledged();
+		$document = $this->collection->findAndModify($filter, $update, null, $options);
+		return $document;
 	}
 
 	public function findMany($count, $offsetPage = 0)
@@ -49,30 +48,20 @@ class Products extends BaseService
 			'skip' => $offsetPage * $count,
 		];
 
-		$cursor = $this->collection->find([], $options);
+		$cursor = $this->collection->find();
+		$cursor->sort($options['sort']);
+		$cursor->skip($options['skip']);
+		$cursor->limit($options['limit']);
 
 		return $this->cursorToProducts($cursor);
 	}
-
-	/*
-	public function findLike($like, $limit = 10)
-	{
-		$filter = ['barcode' => $like];
-		$options = ['sort' => ['barcode' => 1], 'limit' => $limit];
-
-		$cursor = $this->collection->find($filter, $options);
-
-		return $this->cursorToProducts($cursor);
-	}
-	*/
 
 	private function cursorToProducts(Cursor $cursor)
 	{
 		$products = [];
-		/** @var BSONDocument $item */
-		foreach ($cursor as $item) {
-			$user = $this->bsonToProduct($item);
-			$products[] = $user;
+
+		while ($product = $cursor->getNext()) {
+			$products[] = $this->bsonToProduct($product);
 		}
 
 		return $products;
@@ -83,7 +72,7 @@ class Products extends BaseService
 		if (!$BSONDocument) {
 			return null;
 		}
-		$rowArray = $BSONDocument->getArrayCopy();
+		$rowArray = $BSONDocument;
 		unset($rowArray['_id']);
 		$user = new Product();
 		$user->bsonUnserialize($rowArray);
@@ -96,17 +85,19 @@ class Products extends BaseService
 			['$group' => ['_id' => '$safe', 'count' => ['$sum' => 1]]]
 		]);
 		$arr = ['total' => 0];
-		foreach ($cursor as $key =>$entry) {
-			$count = $entry->count;
+		$arr['safe'] = $arr['unsafe'] = 0;
+
+		foreach ($cursor['result'] as $entry) {
+			$count = $entry['count'];
 			$arr['total'] += $count;
-			$arr[$entry->_id?'safe' : 'unsafe'] = $count;
+			$arr[$entry['_id'] ? 'safe' : 'unsafe'] = $count;
 		}
 		return ($arr);
 	}
 
 	public function delete($barcode)
 	{
-		$this->collection->deleteOne(['barcode' => $barcode]);
+		$this->collection->remove(['barcode' => $barcode]);
 	}
 
 	public function add(Product $product)

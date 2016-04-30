@@ -33,9 +33,13 @@ class ProductsPresenter extends BasePresenter
 	}
 	*/
 
-	public function handleSetProductSafe($productCode, $safe)
+	public function handleSetProductSafe($productCode, $safe, $page = 1)
 	{
-		$this->products->setProductSafe($productCode, $safe, $this->user->id);
+
+		$this->products->setProductSafe($productCode, !!$safe, $this->user->id);
+
+		$this->renderDefault($page);
+		$this->redrawControl('products');
 	}
 
 
