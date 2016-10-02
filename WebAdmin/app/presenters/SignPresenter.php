@@ -41,10 +41,6 @@ class SignPresenter extends BasePresenter
 	}
 
 
-	/**
-	 * Sign-in form factory.
-	 * @return Nette\Application\UI\Form
-	 */
 	protected function createComponentSignInForm()
 	{
 		$form = $this->signInFormFactory->create();
@@ -54,6 +50,7 @@ class SignPresenter extends BasePresenter
 				$this->redirect('Homepage:');
 			}
 		};
+
 		return $form;
 	}
 

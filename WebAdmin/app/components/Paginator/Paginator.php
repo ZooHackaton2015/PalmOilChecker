@@ -4,12 +4,6 @@ namespace Components;
 
 use Nette\Application\UI;
 
-/**
- * Created by PhpStorm.
- * User: Stepan
- * Date: 16.04.2016
- * Time: 21:48
- */
 class Paginator extends UI\Control
 {
 

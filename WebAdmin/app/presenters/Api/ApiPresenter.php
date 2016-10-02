@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Stepan
- * Date: 30.04.2016
- * Time: 14:19
- */
 
 namespace App\Presenters;
 
@@ -13,6 +7,7 @@ use App\Model\Products;
 use App\Model\Users;
 use Nette\Application\Request;
 use Nette\Application\UI\Presenter;
+use Nette\Http\IResponse;
 use Nette\Security\AuthenticationException;
 use Nette\Utils\Json;
 
@@ -35,7 +30,7 @@ class ApiPresenter extends Presenter
 	{
 		parent::startup();
 		if(!$this->user->isLoggedIn() && $this->getAction() != 'login'){
-			$this->respond(self::STATUS_ERROR, 'Přihlášení je povinné', 0);
+			$this->sendJsonError('Přihlášení je povinné', IResponse::S401_UNAUTHORIZED);
 		}
 		$this->request = $this->getRequest();
 		$this->requestBody = Json::decode(file_get_contents('php://input'));
@@ -46,26 +41,45 @@ class ApiPresenter extends Presenter
 		$password = filter_input(INPUT_POST, 'password');
 		try{
 			$this->user->login($email, $password);
-			$this->respond(self::STATUS_OK, 'Přihlášení úspěšné');
+			$this->sendJsonSuccess([], 'Přihlášení úspěšné');
 		} catch (AuthenticationException $e){
-			$this->respond(self::STATUS_ERROR, $e->getMessage(), 1);
+			$this->sendJsonError($e->getMessage(), IResponse::S401_UNAUTHORIZED);
 		}
 	}
 
 	public function actionLogout(){
 		$this->user->logout();
-		$this->respond(self::STATUS_OK, 'Odhlášení proběhlo úspěšně');
+		$this->sendJsonSuccess([], 'Odhlášení proběhlo úspěšně');
 	}
 
+    protected function sendJsonSuccess($data, $message = '', $code = IResponse::S200_OK)
+    {
+        $this->sendJson($data, self::STATUS_OK, $message, $code);
+    }
 
-	protected function respond($status, $message, $code = 0)
+	protected function sendJsonError($message, $code = IResponse::S500_INTERNAL_SERVER_ERROR, $data = [])
+    {
+        $this->sendJson($data, self::STATUS_ERROR, $message, $code);
+    }
+
+    /**
+     * @param $status
+     * @param $message
+     * @param null|int $code
+     */
+	public function sendJson($data, $status = self::STATUS_OK, $message = '', $code = IResponse::S200_OK)
 	{
-		$data = [
-			'status' => $status,
-			'code' => $code,
-			'message' => $message
-		];
-		$this->sendJson($data);
+	    if (!is_int($code)) {
+	        $code = IResponse::S500_INTERNAL_SERVER_ERROR;
+        }
+        $this->getHttpResponse()->setCode($code);
+
+		$data['status'] = $status;
+        if($message){
+            $data['message'] = $message;
+        }
+
+        parent::sendJson($data);
 	}
 
 }

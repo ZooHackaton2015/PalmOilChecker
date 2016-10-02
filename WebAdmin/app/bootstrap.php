@@ -1,7 +1,5 @@
 <?php
 
-//phpinfo(); exit;
-
 require __DIR__ . '/../vendor/autoload.php';
 
 $configurator = new Nette\Configurator;
@@ -23,7 +21,6 @@ $configurator->createRobotLoader()
 	->register();
 
 $configurator->addConfig(__DIR__ . '/config/config.neon');
-$configurator->addConfig(__DIR__ . '/config/config.local.neon');
 
 $container = $configurator->createContainer();
 

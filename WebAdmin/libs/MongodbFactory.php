@@ -2,7 +2,7 @@
 
 namespace Libs;
 
-use MongoClient as Client;
+use MongoClient;
 use Nette\DI\Container;
 
 /**
@@ -14,14 +14,14 @@ use Nette\DI\Container;
 class MongodbFactory
 {
 	/**
-	 * @return Client
+	 * @return MongoClient
 	 */
 	public static function create(Container $container)
 	{
 		$uri = getenv('OPENSHIFT_MONGODB_DB_URL');
 		if ($uri) {
-			return new Client($uri);
+			return new MongoClient($uri);
 		}
-		return new Client;
+		return new MongoClient;
 	}
 }
