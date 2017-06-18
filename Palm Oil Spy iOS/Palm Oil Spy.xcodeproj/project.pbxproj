@@ -37,7 +37,6 @@
 		7BD5D6A11AD9722700627117 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD5D6A01AD9722700627117 /* Foundation.framework */; };
 		7BD5D6A31AD9722D00627117 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD5D6A21AD9722D00627117 /* UIKit.framework */; };
 		7BD5D6A51AD97B6400627117 /* PalmOilGlyphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5D6A41AD97B6400627117 /* PalmOilGlyphs.swift */; };
-		7BD5D6A81AD97B8300627117 /* BarCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5D6A71AD97B8300627117 /* BarCodeView.swift */; };
 		7BDC61791ADA627900D2E23F /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDC61781ADA627900D2E23F /* ResultView.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,7 +88,6 @@
 		7BD5D6A01AD9722700627117 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BD5D6A21AD9722D00627117 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7BD5D6A41AD97B6400627117 /* PalmOilGlyphs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalmOilGlyphs.swift; sourceTree = "<group>"; };
-		7BD5D6A71AD97B8300627117 /* BarCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarCodeView.swift; sourceTree = "<group>"; };
 		7BDC61781ADA627900D2E23F /* ResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		9CCAD5C9CECCE8192328EFE6 /* libPods-Palm OilTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Palm OilTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F567BA7B9DC7EF9178078C5A /* Pods-Palm Oil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palm Oil.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Palm Oil/Pods-Palm Oil.debug.xcconfig"; sourceTree = "<group>"; };
@@ -240,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				7BD5D6A41AD97B6400627117 /* PalmOilGlyphs.swift */,
-				7BD5D6A71AD97B8300627117 /* BarCodeView.swift */,
 				7BDC61781ADA627900D2E23F /* ResultView.swift */,
 				7B427B491AEA8FB9006E8AD6 /* PalmOilLogoView.swift */,
 				7B269D1A1C4CEDAF002E0B37 /* InfoStoryboardSegue.swift */,
@@ -451,7 +448,6 @@
 				7B3669621C4E3C25007D5740 /* ShadowView.swift in Sources */,
 				7B8AD1741C4CC0E90051F015 /* Flashlight.swift in Sources */,
 				7B269D1B1C4CEDAF002E0B37 /* InfoStoryboardSegue.swift in Sources */,
-				7BD5D6A81AD97B8300627117 /* BarCodeView.swift in Sources */,
 				7BD59F3B1EF6CE5E007BAC0C /* Config.swift in Sources */,
 				7B269D191C4CE752002E0B37 /* InfoViewController.swift in Sources */,
 				7BA1D96F1ADA732600CFF373 /* ApiConnector.swift in Sources */,

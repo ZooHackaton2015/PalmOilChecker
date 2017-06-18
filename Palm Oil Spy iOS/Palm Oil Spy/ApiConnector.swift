@@ -30,7 +30,8 @@ class ApiConnector: NSObject, URLSessionDataDelegate {
     
     func eanCodeIdentify(_ code: String) {
         let url = self.urlAddress(code)
-        if let dataTask = session?.dataTask(with: url!, completionHandler: { (data: Data?, response: URLResponse?, error: NSError?) -> Void in
+        if let dataTask = session?.dataTask(with: url!, completionHandler: {
+            (data: Data?, response: URLResponse?, error: NSError?) in
 
             guard let response = response as? HTTPURLResponse,
                 let data = data else {return}
@@ -40,7 +41,10 @@ class ApiConnector: NSObject, URLSessionDataDelegate {
                 self.delegate?.didRecieveAnswer(.unknow)
             case 200:
                 do {
-                    guard let responseData = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()) as? [String:Bool],
+                    guard let responseData = try JSONSerialization.jsonObject(
+                            with: data,
+                            options: JSONSerialization.ReadingOptions()
+                        ) as? [String:Bool],
                         let containsOil = responseData["contains-oil"] as Bool?
                         else { return }
                     self.delegate?.didRecieveAnswer(containsOil ? .bad : .good)

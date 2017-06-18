@@ -9,18 +9,18 @@
 import UIKit
 import AVFoundation
 
-private extension Selector {
-    static let flashlightButtonPressed = #selector(ScannerViewController.setFlashlightButtonIcon)
+fileprivate extension Selector {
+    static let flashlightButtonPressed = #selector(ScannerViewController.flashButtonPressed(_:))
 }
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, ApiConnectorDelegate {
 
     @IBOutlet weak var cameraView: UIView!
-    @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var eanCodeLabel: UILabel!
     @IBOutlet weak var resultView: ResultView!
     @IBOutlet weak var soundButton: UIBarButtonItem!
     @IBOutlet weak var flashlightButton: UIBarButtonItem!
+    @IBOutlet var helpButton: UIBarButtonItem!
     
     
     /// Session that handle camera.
@@ -55,6 +55,15 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             name: .UIApplicationDidBecomeActive,
             object: nil
         )
+        
+        updateSoundButtonAppearance()
+        flashlightButton.image = PalmOilGlyphs.imageOfFlashlightOff()
+        setAppearance()
+    }
+    
+    
+    func setAppearance() {
+        helpButton.image = PalmOilGlyphs.imageOfInformation()
     }
     
     
@@ -188,9 +197,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         if isDemoActive {
             DispatchQueue.main.async(execute: {
                 switch code {
-                case "3045140105502":
+                case "4008381178000":
                     self.resultView.oilStatus = .bad
-                case "8594057636340":
+                case "85909311":
                     self.resultView.oilStatus = .good
                 default:
                     self.resultView.oilStatus = .unknow
@@ -210,7 +219,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     
     @IBAction func flashButtonPressed(_ sender: UIBarButtonItem) {
-        guard let flashlight = flashlight else {return}
+        guard let flashlight = flashlight else { return }
         
         switch flashlight.device.isTorchActive {
         case false:
@@ -219,20 +228,18 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             flashlight.turnOff()
         }
         
-        setFlashlightButtonIcon()
+        updateFlashlightButtonIcon(flashlight: flashlight)
     }
     
     
-    func setFlashlightButtonIcon() {
-        guard let flashlight = flashlight else {return}
-        
+    func updateFlashlightButtonIcon(flashlight: Flashlight) {
         switch flashlight.device.torchMode {
         case .on:
-            flashlightButton.image = UIImage(named: "icon-flash-selected")
+            flashlightButton.image = PalmOilGlyphs.imageOfFlashlightOn()
         case .off:
-            flashlightButton.image = UIImage(named: "icon-flash")
+            flashlightButton.image = PalmOilGlyphs.imageOfFlashlightOff()
         case .auto:
-            flashlightButton.image = UIImage(named: "icon-flash")
+            flashlightButton.image = PalmOilGlyphs.imageOfFlashlightOff()
         }
     }
     
@@ -241,14 +248,21 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     
     @IBAction func soundButtonPressed(_ sender: UIBarButtonItem) {
-        guard let settings = appDelegate.settings else {return}
+        guard let settings = appDelegate.settings else { return }
         
         settings.soundsEnabled = !settings.soundsEnabled
+        updateSoundButtonAppearance()
+    }
+    
+    
+    func updateSoundButtonAppearance() {
+        guard let settings = appDelegate.settings else { return }
+        
         switch settings.soundsEnabled {
         case true:
-            sender.image = UIImage(named: "icon-sound")
+            soundButton.image = PalmOilGlyphs.imageOfSoundsOff()
         case false:
-            sender.image = UIImage(named: "icon-sound-selected")
+            soundButton.image = PalmOilGlyphs.imageOfSoundsOff()
         }
     }
 

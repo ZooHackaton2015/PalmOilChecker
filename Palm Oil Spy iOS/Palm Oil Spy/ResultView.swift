@@ -34,18 +34,19 @@ class ResultView: UIView {
             if settings!.soundsEnabled {
                 sound.play(sound: .good)
             }
-            PalmOilGlyphs.drawThumbOK(frame: self.bounds, thumbColor: UIColor.green)
+            PalmOilGlyphs.drawThumbOK(frame: self.bounds, goodColor: PalmOilGlyphs.noOilColor)
             runCleaningTimer()
         case .bad:
             if settings!.soundsEnabled {
                 sound.play(sound: .bad)
             }
-            PalmOilGlyphs.drawThumbKO(frame: self.bounds, thumbColor: UIColor.red)
+            PalmOilGlyphs.drawThumbKO(frame: self.bounds, alertColor: PalmOilGlyphs.oilColor)
             runCleaningTimer()
         case .none:
             print("Ready to go")
         case .unknow:
-            print("Something wrong happened with oil result status")
+            PalmOilGlyphs.drawUnknown(frame: self.bounds, borderColor: UIColor.white)
+            runCleaningTimer()
         }
     }
     
