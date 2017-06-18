@@ -1,0 +1,6 @@
+framework module DTKeychain {
+  umbrella header "DTKeychain-umbrella.h"
+
+  export *
+  module * { export * }
+}

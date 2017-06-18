@@ -7,25 +7,20 @@
 //
 
 import UIKit
+import AVFoundation
 
-enum OilResults {
-    case None
-    case Good
-    case Bad
-    case Dunno
-}
 
 private extension Selector {
     static let cleanStatus = #selector(ResultView.cleanStatus)
 }
 
+
 class ResultView: UIView {
     
-    let sound = Sounds()
-    var timer: NSTimer?
+    let sound = InterfaceFeedback(player: AVPlayer())
+    var timer: Timer?
     var settings: Settings?
-    
-    var oilStatus: OilResults = .None {
+    var oilStatus: OilCheckResult = .none {
         didSet {
             setNeedsDisplay()
             animateStatusChange()
@@ -33,23 +28,23 @@ class ResultView: UIView {
     }
     
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         switch oilStatus {
-        case .Good:
+        case .good:
             if settings!.soundsEnabled {
-                sound.playSound(.Good)
+                sound.play(sound: .good)
             }
-            PalmOilGlyphs.drawThumbOK(frame: self.bounds, thumbColor: UIColor.greenColor())
+            PalmOilGlyphs.drawThumbOK(frame: self.bounds, thumbColor: UIColor.green)
             runCleaningTimer()
-        case .Bad:
+        case .bad:
             if settings!.soundsEnabled {
-                sound.playSound(.Bad)
+                sound.play(sound: .bad)
             }
-            PalmOilGlyphs.drawThumbKO(frame: self.bounds, thumbColor: UIColor.redColor())
+            PalmOilGlyphs.drawThumbKO(frame: self.bounds, thumbColor: UIColor.red)
             runCleaningTimer()
-        case .None:
+        case .none:
             print("Ready to go")
-        case .Dunno:
+        case .unknow:
             print("Something wrong happened with oil result status")
         }
     }
@@ -57,27 +52,29 @@ class ResultView: UIView {
     
     func runCleaningTimer() {
         timer?.invalidate()
-        timer = NSTimer.scheduledTimerWithTimeInterval(3.0,
+        timer = Timer.scheduledTimer(
+            timeInterval: 3.0,
             target: self,
             selector: .cleanStatus,
             userInfo: nil,
-            repeats: false)
+            repeats: false
+        )
     }
 
     
     func cleanStatus() {
-        oilStatus = .None
+        oilStatus = .none
     }
     
     
     func animateStatusChange() {
-        UIView.animateWithDuration(0.2, animations: {
-            self.alpha = 0.0
-        }) { (success) -> Void in
-            UIView.animateWithDuration(0.4, animations: {
-                self.alpha = 0.8
-            })
-        }
+        UIView.animate(withDuration: 0.2, animations: { [weak self] in
+            self?.alpha = 0.0
+        }, completion: { (success) -> Void in
+            UIView.animate(withDuration: 0.4) { [weak self] in
+                self?.alpha = 0.8
+            }
+        }) 
     }
 
 }

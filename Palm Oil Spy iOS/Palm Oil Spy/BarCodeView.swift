@@ -8,11 +8,13 @@
 
 import UIKit
 
+
 class BarCodeView: UIView {
 
-    override func drawRect(rect: CGRect) {
+    
+    override func draw(_ rect: CGRect) {
         self.layer.cornerRadius = 5.0
-        PalmOilGlyphs.drawBarcodeBar(frame: self.bounds, borderColor: UIColor.whiteColor())
+        PalmOilGlyphs.drawBarcodeBar(frame: self.bounds, borderColor: UIColor.white)
     }
 
 }

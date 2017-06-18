@@ -8,10 +8,12 @@
 
 import UIKit
 
+
 class PalmOilLogoView: UIView {
 
-    override func drawRect(rect: CGRect) {
-        PalmOilGlyphs.drawPalmOilLogo(frame: self.bounds, borderColor: UIColor.whiteColor())
+    
+    override func draw(_ rect: CGRect) {
+        PalmOilGlyphs.drawPalmOilLogo(frame: self.bounds, borderColor: UIColor.white)
     }
 
 }

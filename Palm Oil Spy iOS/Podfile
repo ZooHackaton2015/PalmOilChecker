@@ -1,7 +1,7 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '8.0'
+platform :ios, '9.0'
 # Uncomment this line if you're using Swift
-# use_frameworks!
+use_frameworks!
 
 target 'Palm Oil' do
     use_frameworks!
@@ -9,9 +9,10 @@ target 'Palm Oil' do
     pod 'Fabric'
     # report bugs
     pod 'Crashlytics'
+    # product layer SDK - API connector
+    pod 'ProductLayerSDK', :git => 'https://github.com/Lweek/ProductLayer-SDK-for-iOS.git', :branch => 'swift3'
 end
 
-target 'Palm OilTests' do
-
-end
+#target 'Palm OilTests' do
+#end
 

@@ -8,19 +8,23 @@
 
 import UIKit
 
+
 class InfoStoryboardSegue: UIStoryboardSegue, UIViewControllerTransitioningDelegate {
     
 
     override func perform() {
-        destinationViewController.modalPresentationStyle = .Custom
-        destinationViewController.transitioningDelegate = self
+        destination.modalPresentationStyle = .custom
+        destination.transitioningDelegate = self
         
         super.perform()
     }
     
     
-    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
-        return InfoPresentationController(presentedViewController: presented,
-            presentingViewController: presenting)
+    func presentationController(
+        forPresented presented: UIViewController,
+        presenting: UIViewController?, source: UIViewController
+    ) -> UIPresentationController? {
+        return InfoPresentationController(presentedViewController: presented, presenting: presenting)
     }
+    
 }

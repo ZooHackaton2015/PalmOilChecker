@@ -4,7 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DTFoundation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DTKeychain.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Palm Oil.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ProductLayerSDK-ProductLayerSDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ProductLayerSDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -12,7 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>58B794E84F4D80EEE782E6DFDCC35173</key>
+		<key>243391B8FBA40B95FCF40B907CC04B34</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F4844CD76140ABCF1F8CB7994BCE790</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>642D7FD4F00EF5CEA53E6C9B4FC22BC9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8DE685C7C469154FA287889DDF2BCA5B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBA49D43EED522C1CD62CB3D9829B861</key>
 		<dict>
 			<key>primary</key>
 			<true/>

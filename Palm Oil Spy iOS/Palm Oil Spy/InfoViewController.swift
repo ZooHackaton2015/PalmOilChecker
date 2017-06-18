@@ -10,6 +10,7 @@ import UIKit
 
 class InfoViewController: UIViewController, UIWebViewDelegate, UIViewControllerTransitioningDelegate {
 
+    
     @IBOutlet weak var webView: UIWebView!
     
     
@@ -22,41 +23,48 @@ class InfoViewController: UIViewController, UIWebViewDelegate, UIViewControllerT
         webView.scrollView.showsVerticalScrollIndicator = false
         webView.alpha = 0
         
-        if let url = NSBundle.mainBundle().URLForResource("home", withExtension: "html") {
-            let request = NSURLRequest(URL: url)
+        if let url = Bundle.main.url(forResource: "home", withExtension: "html") {
+            let request = URLRequest(url: url)
             webView.loadRequest(request)
         }
     }
 
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
-    @IBAction func closeButtonPressed(sender: UIButton) {
-        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func closeButtonPressed(_ sender: UIButton) {
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
     
-// MARK: - WebView delegate
+    //
+    // MARK: - UIWebViewDelegate
+    //
     
     
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        if let url = request.URL where navigationType == .LinkClicked {
-            UIApplication.sharedApplication().openURL(url)
+    func webView(
+        _ webView: UIWebView,
+        shouldStartLoadWith request: URLRequest,
+        navigationType: UIWebViewNavigationType
+    ) -> Bool {
+        if let url = request.url, navigationType == .linkClicked {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+            
             return false
         }
+        
         return true
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         UIView.beginAnimations(nil, context: nil)
         UIView.setAnimationDuration(0.3)
         webView.alpha = 1
@@ -64,12 +72,17 @@ class InfoViewController: UIViewController, UIWebViewDelegate, UIViewControllerT
     }
     
     
-// MARK: - Transition delegate
+    //
+    // MARK: - UIViewControllerTransitioningDelegate
+    //
     
     
-    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
-        return InfoPresentationController(presentedViewController: presented,
-            presentingViewController: presenting)
+    func presentationController(
+        forPresented presented: UIViewController,
+        presenting: UIViewController?,
+        source: UIViewController
+    ) -> UIPresentationController? {
+        return InfoPresentationController(presentedViewController: presented, presenting: presenting)
     }
 
 }

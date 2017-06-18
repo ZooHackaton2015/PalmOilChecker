@@ -8,54 +8,61 @@
 
 import UIKit
 
-class ApiConnector: NSObject, NSURLSessionDataDelegate {
+
+class ApiConnector: NSObject, URLSessionDataDelegate {
     
-    var session: NSURLSession?
+    weak var delegate: ApiConnectorDelegate?
+    
+    var session: URLSession?
+    
     
     override init() {
         super.init()
         
-        self.session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        self.session = URLSession(configuration: URLSessionConfiguration.default)
     }
     
-    var delegate: ApiConnectorDelegate?
+
+    //
+    // MARK: - API
+    //
     
-    // MARK: api
     
-    func eanCodeIdentify(code: String) {
+    func eanCodeIdentify(_ code: String) {
         let url = self.urlAddress(code)
-        if let dataTask = session?.dataTaskWithURL(url!, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+        if let dataTask = session?.dataTask(with: url!, completionHandler: { (data: Data?, response: URLResponse?, error: NSError?) -> Void in
+
+            guard let response = response as? HTTPURLResponse,
+                let data = data else {return}
             
-            if let response = response as? NSHTTPURLResponse {
-                if response.statusCode == 404 {
-                    self.delegate?.didRecieveAnswer(OilResults.Dunno)
-                }
-                else if response.statusCode == 200 {
-                    
-                    var responseData = (try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions())) as! [String:Bool]
-                    
-                    if responseData["palmOil"] == true {
-                        self.delegate?.didRecieveAnswer(OilResults.Bad)
-                    }
-                    else {
-                        self.delegate?.didRecieveAnswer(OilResults.Good)
-                    }
-                }
+            switch response.statusCode {
+            case 404:
+                self.delegate?.didRecieveAnswer(.unknow)
+            case 200:
+                do {
+                    guard let responseData = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()) as? [String:Bool],
+                        let containsOil = responseData["contains-oil"] as Bool?
+                        else { return }
+                    self.delegate?.didRecieveAnswer(containsOil ? .bad : .good)
+                } catch {}
+            default: break
             }
-        
-            // process response
-        }) as NSURLSessionDataTask? {
+            
+        } as! (Data?, URLResponse?, Error?) -> Void) as URLSessionDataTask? {
             dataTask.resume()
         }
     }
    
-    func urlAddress(code: String) -> NSURL? {
-        let path = "http://10.38.131.166:80/v1/barcodes/\(code)"
-        let url = NSURL(string: path)
+    
+    func urlAddress(_ code: String) -> URL? {
+        let path = "\(apiURLPath)/barcodes/\(code)"
+        let url = URL(string: path)
+        
         return url
     }
+    
 }
 
-protocol ApiConnectorDelegate {
-    func didRecieveAnswer(answer: OilResults)
+protocol ApiConnectorDelegate: class {
+    func didRecieveAnswer(_ answer: OilCheckResult)
 }

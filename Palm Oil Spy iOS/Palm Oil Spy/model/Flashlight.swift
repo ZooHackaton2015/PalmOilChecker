@@ -9,50 +9,48 @@
 import Foundation
 import AVFoundation
 
+
 class Flashlight {
     
     
+    /// Current device.
     let device: AVCaptureDevice
     
     
-    /**
-        - parameter device: Current device
-    */
+    /// Create instance of Flashlight.
+    ///
+    /// - Parameter device: Current device.
     init(device: AVCaptureDevice) {
         self.device = device
     }
     
     
-    /**
-        Turn torch on
-    */
+    /// Turn on torch.
     func turnOn() {
         guard device.hasTorch else { return }
         
         do {
             try device.lockForConfiguration()
-            device.torchMode = .On
+            device.torchMode = .on
             device.unlockForConfiguration()
         }
         catch {
-            
+            // FIXME: log error
         }
     }
     
     
-    /**
-        Turn torch off
-    */
+    /// Turn off torch.
     func turnOff() {
         guard device.hasTorch else { return }        
         
         do {
             try device.lockForConfiguration()
-            device.torchMode = .Off
+            device.torchMode = .off
             device.unlockForConfiguration()
         }
         catch {
-            
+            // FIXME: log error
         }
     }
     

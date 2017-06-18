@@ -8,40 +8,53 @@
 
 import Foundation
 
+
+/// Handle user settings.
 class Settings {
     
     /// Persistance storage
-    let userDefaults = NSUserDefaults.standardUserDefaults()
+    let storage: PersistableStorage
     
     /// System sounds
-    var soundsEnabled: Bool = true
+    var soundsEnabled: Bool {
+        get {
+            return !storage.bool(forKey: "sounds")
+        }
+        set {
+            storage.set(!newValue, forKey: "sounds")
+            _ = storage.synchronize()
+        }
+    }
     
     /// First run indicator
-    var firstRun: Bool = true
-    
-    
-    init() {
-        loadSettings()
+    var isFirstRun: Bool {
+        get {
+            return !storage.bool(forKey: "firstrun")
+        }
+        set {
+            storage.set(!newValue, forKey: "firstrun")
+            _ = storage.synchronize()
+        }
     }
     
     
-    /**
-        Persist settings
-    */
-    func saveSettings() {
-        userDefaults.setBool(soundsEnabled, forKey: "sounds")
-        userDefaults.setBool(firstRun, forKey: "firstrun")
-        userDefaults.synchronize()
-        print("Settings saved: firstRun: \(firstRun), sounds: \(soundsEnabled)")
+    /// Initiate settings
+    ///
+    /// - Parameter storage: Proper persistent storage.
+    init(storage: PersistableStorage) {
+        self.storage = storage
     }
     
-    
-    /**
-        Restore settings from persist storage
-    */
-    private func loadSettings() {
-        firstRun = userDefaults.objectForKey("firstrun") != nil ? userDefaults.boolForKey("firstrun") : true
-        soundsEnabled = userDefaults.objectForKey("firstrun") != nil ? userDefaults.boolForKey("sounds") : true
-        print("Settings loaded: firstRun: \(firstRun), sounds: \(soundsEnabled)")
-    }
 }
+
+
+// Following code allows proper unit testing.
+
+protocol PersistableStorage {
+    func bool(forKey: String) -> Bool
+    func set(_: Bool, forKey: String)
+    func synchronize() -> Bool
+}
+
+extension UserDefaults: PersistableStorage {}
+
