@@ -197,9 +197,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         if isDemoActive {
             DispatchQueue.main.async(execute: {
                 switch code {
-                case "4008381178000":
+                case "8593894905992":
                     self.resultView.oilStatus = .bad
-                case "85909311":
+                case "8593894905992-X":
                     self.resultView.oilStatus = .good
                 default:
                     self.resultView.oilStatus = .unknow
@@ -260,9 +260,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         switch settings.soundsEnabled {
         case true:
-            soundButton.image = PalmOilGlyphs.imageOfSoundsOff()
+            soundButton.image = PalmOilGlyphs.imageOfFeedbackOn
         case false:
-            soundButton.image = PalmOilGlyphs.imageOfSoundsOff()
+            soundButton.image = PalmOilGlyphs.imageOfFeedbackOff
         }
     }
 

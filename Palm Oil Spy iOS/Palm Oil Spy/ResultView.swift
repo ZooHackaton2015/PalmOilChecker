@@ -17,7 +17,7 @@ private extension Selector {
 
 class ResultView: UIView {
     
-    let sound = InterfaceFeedback(player: AVPlayer())
+    let feedback: InterfaceFeedback
     var timer: Timer?
     var settings: Settings?
     var oilStatus: OilCheckResult = .none {
@@ -27,24 +27,40 @@ class ResultView: UIView {
         }
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        
+        if #available(iOS 10.0, *) {
+            self.feedback = InterfaceFeedback(generator: UINotificationFeedbackGenerator())
+        } else {
+            self.feedback = InterfaceFeedback(generator: nil)
+        }
+        
+        super.init(coder: aDecoder)
+        
+        
+    }
+    
     
     override func draw(_ rect: CGRect) {
         switch oilStatus {
         case .good:
             if settings!.soundsEnabled {
-                sound.play(sound: .good)
+                feedback.trigger(event: .good)
             }
             PalmOilGlyphs.drawThumbOK(frame: self.bounds, goodColor: PalmOilGlyphs.noOilColor)
             runCleaningTimer()
         case .bad:
             if settings!.soundsEnabled {
-                sound.play(sound: .bad)
+                feedback.trigger(event: .bad)
             }
             PalmOilGlyphs.drawThumbKO(frame: self.bounds, alertColor: PalmOilGlyphs.oilColor)
             runCleaningTimer()
         case .none:
             print("Ready to go")
         case .unknow:
+            if settings!.soundsEnabled {
+                feedback.trigger(event: .unknown)
+            }
             PalmOilGlyphs.drawUnknown(frame: self.bounds, borderColor: UIColor.white)
             runCleaningTimer()
         }

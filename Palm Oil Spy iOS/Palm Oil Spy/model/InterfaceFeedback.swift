@@ -6,43 +6,49 @@
 //  Copyright © 2016 GDGSCL. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import AVFoundation
 
 
 class InterfaceFeedback {
     
     
-    /// List of possible sounds.
+    /// List of possible feedbacks.
     ///
-    /// - Good: Sound when product doesn't contain palm oil.
-    /// - Bad: Sound when product does contain palm oil.
-    enum Sound: String {
-        case good = "good"
-        case bad = "bad"
+    /// - good: Feedback when product doesn't contain palm oil.
+    /// - bad: Feedback when product does contain palm oil.
+    /// - unknown: Feedback when product does list in online DB.
+    enum Events {
+        case good
+        case bad
+        case unknown
     }
     
     
-    /// Player.
-    let player: Player
+    /// Feedback generator.
+    let generator: Generator?
     
     
     /// Initialize player.
-    init(player: Player) {
-        self.player = player
+    init(generator: Generator?) {
+        self.generator = generator
     }
     
     
     /// Play system sound.
     ///
-    /// - Parameter sound: Sound that will be played if file exists.
-    func play(sound: Sound) {
-        guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: "wav")
-            else { return }
-
-        let item = AVPlayerItem(url: url)
-        player.replaceCurrentItem(with: item)
-        player.play()
+    /// - Parameter event: Events that will be presented.
+    func trigger(event: Events) {
+        if let generator = generator {
+            switch event {
+            case .good: generator.notificationOccurred(.success)
+            case .bad: AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                //generator.notificationOccurred(.error)
+            case .unknown: generator.notificationOccurred(.warning)
+            }
+        } else {
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        }
     }
     
 }
@@ -50,9 +56,9 @@ class InterfaceFeedback {
 
 // Following code allows proper unit testing.
 
-protocol Player {
-    func play()
-    func replaceCurrentItem(with item: AVPlayerItem?)
+protocol Generator {
+   func notificationOccurred(_ notificationType: UINotificationFeedbackType)
 }
 
-extension AVPlayer: Player {}
+@available(iOS 10.0, *)
+extension UINotificationFeedbackGenerator: Generator {}
